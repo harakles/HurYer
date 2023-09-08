@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SystemModelStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="AboutUs">
+      <EntityTypeMapping TypeName="SystemModel.AboutU">
+        <MappingFragment StoreEntitySet="AboutUs">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="AboutUsTextEditor" ColumnName="AboutUsTextEditor" />
+          <ScalarProperty Name="AboutUsTittle" ColumnName="AboutUsTittle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="SystemModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="ApplicationCaseID" ColumnName="ApplicationCaseID" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="ApplicationEmail" ColumnName="ApplicationEmail" />
+          <ScalarProperty Name="ApplicationPhoneNumber" ColumnName="ApplicationPhoneNumber" />
+          <ScalarProperty Name="ApplicationBloodTypeID" ColumnName="ApplicationBloodTypeID" />
+          <ScalarProperty Name="ApplicationStaffID" ColumnName="ApplicationStaffID" />
+          <ScalarProperty Name="ApplicationDistrictID" ColumnName="ApplicationDistrictID" />
+          <ScalarProperty Name="ApplicationProvinceID" ColumnName="ApplicationProvinceID" />
+          <ScalarProperty Name="ApplicationWorkPlaceName" ColumnName="ApplicationWorkPlaceName" />
+          <ScalarProperty Name="ApplicationOrganisationID" ColumnName="ApplicationOrganisationID" />
+          <ScalarProperty Name="ApplicationEducationID" ColumnName="ApplicationEducationID" />
+          <ScalarProperty Name="ApplicationGenderID" ColumnName="ApplicationGenderID" />
+          <ScalarProperty Name="ApplicationBornDate" ColumnName="ApplicationBornDate" />
+          <ScalarProperty Name="ApplicationBornPlace" ColumnName="ApplicationBornPlace" />
+          <ScalarProperty Name="ApplicationMotherName" ColumnName="ApplicationMotherName" />
+          <ScalarProperty Name="ApplicationFatherName" ColumnName="ApplicationFatherName" />
+          <ScalarProperty Name="ApplicationIdentityNumber" ColumnName="ApplicationIdentityNumber" />
+          <ScalarProperty Name="ApplicationSurname" ColumnName="ApplicationSurname" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationBloodTypes">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationBloodType">
+        <MappingFragment StoreEntitySet="ApplicationBloodType">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationCases">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationCase">
+        <MappingFragment StoreEntitySet="ApplicationCase">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Situation" ColumnName="Situation" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationDistricts">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationDistrict">
+        <MappingFragment StoreEntitySet="ApplicationDistrict">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="District" ColumnName="District" />
+          <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationEducations">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationEducation">
+        <MappingFragment StoreEntitySet="ApplicationEducation">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationGenders">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationGender">
+        <MappingFragment StoreEntitySet="ApplicationGender">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationOrganisations">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationOrganisation">
+        <MappingFragment StoreEntitySet="ApplicationOrganisation">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="OrganisationName" ColumnName="OrganisationName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationProvinces">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationProvince">
+        <MappingFragment StoreEntitySet="ApplicationProvince">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Province" ColumnName="Province" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationStaffs">
+      <EntityTypeMapping TypeName="SystemModel.ApplicationStaff">
+        <MappingFragment StoreEntitySet="ApplicationStaff">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Staff" ColumnName="Staff" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BranchMembers">
+      <EntityTypeMapping TypeName="SystemModel.BranchMember">
+        <MappingFragment StoreEntitySet="BranchMembers">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="EMailAdress" ColumnName="EMailAdress" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Branchs">
+      <EntityTypeMapping TypeName="SystemModel.Branch">
+        <MappingFragment StoreEntitySet="Branchs">
+          <ScalarProperty Name="BranchNumber" ColumnName="BranchNumber" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="BranchEMail" ColumnName="BranchEMail" />
+          <ScalarProperty Name="BranchPhone" ColumnName="BranchPhone" />
+          <ScalarProperty Name="BranchAdress" ColumnName="BranchAdress" />
+          <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Broadcasts">
+      <EntityTypeMapping TypeName="SystemModel.Broadcast">
+        <MappingFragment StoreEntitySet="Broadcasts">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="BroadcastTextEditor" ColumnName="BroadcastTextEditor" />
+          <ScalarProperty Name="BroadcastName" ColumnName="BroadcastName" />
+          <ScalarProperty Name="BroadcastClassID" ColumnName="BroadcastClassID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BrodcastClasses">
+      <EntityTypeMapping TypeName="SystemModel.BrodcastClass">
+        <MappingFragment StoreEntitySet="BrodcastClasses">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dropdowns">
+      <EntityTypeMapping TypeName="SystemModel.Dropdown">
+        <MappingFragment StoreEntitySet="Dropdowns">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="DropdownIcon" ColumnName="DropdownIcon" />
+          <ScalarProperty Name="DropdownName" ColumnName="DropdownName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FileGalleries">
+      <EntityTypeMapping TypeName="SystemModel.FileGallery">
+        <MappingFragment StoreEntitySet="FileGallery">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="FileID" ColumnName="FileID" />
+          <ScalarProperty Name="BrodcastID" ColumnName="BrodcastID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Files">
+      <EntityTypeMapping TypeName="SystemModel.File">
+        <MappingFragment StoreEntitySet="Files">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Galleries">
+      <EntityTypeMapping TypeName="SystemModel.Gallery">
+        <MappingFragment StoreEntitySet="Gallery">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="GelleryTypeID" ColumnName="GelleryTypeID" />
+          <ScalarProperty Name="UrlID" ColumnName="UrlID" />
+          <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GalleryTypes">
+      <EntityTypeMapping TypeName="SystemModel.GalleryType">
+        <MappingFragment StoreEntitySet="GalleryType">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaTypes">
+      <EntityTypeMapping TypeName="SystemModel.MediaType">
+        <MappingFragment StoreEntitySet="MediaTypes">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MediaUrls">
+      <EntityTypeMapping TypeName="SystemModel.MediaUrl">
+        <MappingFragment StoreEntitySet="MediaUrl">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="FileName" ColumnName="FileName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="SystemModel.Member">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Funders" ColumnName="Funders" />
+          <ScalarProperty Name="CentralDiscipline" ColumnName="CentralDiscipline" />
+          <ScalarProperty Name="CentralCheckers" ColumnName="CentralCheckers" />
+          <ScalarProperty Name="CentralDirectors" ColumnName="CentralDirectors" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="MemberPhoto" ColumnName="MemberPhoto" />
+          <ScalarProperty Name="MemberPosition" ColumnName="MemberPosition" />
+          <ScalarProperty Name="MemberTCNo" ColumnName="MemberTCNo" />
+          <ScalarProperty Name="MemberEmail" ColumnName="MemberEmail" />
+          <ScalarProperty Name="MemberYoutube" ColumnName="MemberYoutube" />
+          <ScalarProperty Name="MemberTwitter" ColumnName="MemberTwitter" />
+          <ScalarProperty Name="MemberFacebook" ColumnName="MemberFacebook" />
+          <ScalarProperty Name="MemberInstagram" ColumnName="MemberInstagram" />
+          <ScalarProperty Name="MemberPhoneNumber" ColumnName="MemberPhoneNumber" />
+          <ScalarProperty Name="MemberSurname" ColumnName="MemberSurname" />
+          <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Principles">
+      <EntityTypeMapping TypeName="SystemModel.Principle">
+        <MappingFragment StoreEntitySet="Principles">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Principle1" ColumnName="Principle" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="SystemModel.Question">
+        <MappingFragment StoreEntitySet="Questions">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="AnswerTextEditor" ColumnName="AnswerTextEditor" />
+          <ScalarProperty Name="Question1" ColumnName="Question" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubBranches">
+      <EntityTypeMapping TypeName="SystemModel.SubBranch">
+        <MappingFragment StoreEntitySet="SubBranches">
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="SubBranchName" ColumnName="SubBranchName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemInformations">
+      <EntityTypeMapping TypeName="SystemModel.SystemInformation">
+        <MappingFragment StoreEntitySet="SystemInformation">
+          <ScalarProperty Name="SystemMapsLink" ColumnName="SystemMapsLink" />
+          <ScalarProperty Name="SystemAdress" ColumnName="SystemAdress" />
+          <ScalarProperty Name="SystemTelephone" ColumnName="SystemTelephone" />
+          <ScalarProperty Name="WhatsAppApi" ColumnName="WhatsAppApi" />
+          <ScalarProperty Name="YoutubeLink" ColumnName="YoutubeLink" />
+          <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+          <ScalarProperty Name="InstagramLink" ColumnName="InstagramLink" />
+          <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+          <ScalarProperty Name="SystemIcon" ColumnName="SystemIcon" />
+          <ScalarProperty Name="SystemLogo" ColumnName="SystemLogo" />
+          <ScalarProperty Name="SystemEmailPassword" ColumnName="SystemEmailPassword" />
+          <ScalarProperty Name="SystemEmail" ColumnName="SystemEmail" />
+          <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemMedias">
+      <EntityTypeMapping TypeName="SystemModel.SystemMedia">
+        <MappingFragment StoreEntitySet="SystemMedia">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="MediaLastDate" ColumnName="MediaLastDate" />
+          <ScalarProperty Name="MediaDate" ColumnName="MediaDate" />
+          <ScalarProperty Name="MediaCoverPhoto" ColumnName="MediaCoverPhoto" />
+          <ScalarProperty Name="MediaTextEditor" ColumnName="MediaTextEditor" />
+          <ScalarProperty Name="MediaQuote" ColumnName="MediaQuote" />
+          <ScalarProperty Name="MediaTittle" ColumnName="MediaTittle" />
+          <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Unions">
+      <EntityTypeMapping TypeName="SystemModel.Union">
+        <MappingFragment StoreEntitySet="Unions">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="UnionPrezLinkedin" ColumnName="UnionPrezLinkedin" />
+          <ScalarProperty Name="UnionPrezInstagram" ColumnName="UnionPrezInstagram" />
+          <ScalarProperty Name="UnionPrezFacebook" ColumnName="UnionPrezFacebook" />
+          <ScalarProperty Name="UnionPrezEmail" ColumnName="UnionPrezEmail" />
+          <ScalarProperty Name="UnionPrezPhone" ColumnName="UnionPrezPhone" />
+          <ScalarProperty Name="UnionPrez" ColumnName="UnionPrez" />
+          <ScalarProperty Name="UnionName" ColumnName="UnionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserClasses">
+      <EntityTypeMapping TypeName="SystemModel.UserClass">
+        <MappingFragment StoreEntitySet="UserClasses">
+          <ScalarProperty Name="Permissions" ColumnName="Permissions" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="UserClassName" ColumnName="UserClassName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPages">
+      <EntityTypeMapping TypeName="SystemModel.UserPage">
+        <MappingFragment StoreEntitySet="UserPages">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="UrlParameter" ColumnName="UrlParameter" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="CotrollerName" ColumnName="CotrollerName" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserPermissions">
+      <EntityTypeMapping TypeName="SystemModel.UserPermission">
+        <MappingFragment StoreEntitySet="UserPermissions">
+          <ScalarProperty Name="UrlParameter" ColumnName="UrlParameter" />
+          <ScalarProperty Name="DropdownID" ColumnName="DropdownID" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="Icon" ColumnName="Icon" />
+          <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SystemModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="RememberCookie" ColumnName="RememberCookie" />
+          <ScalarProperty Name="ResetCode" ColumnName="ResetCode" />
+          <ScalarProperty Name="Theme" ColumnName="Theme" />
+          <ScalarProperty Name="UserClassID" ColumnName="UserClassID" />
+          <ScalarProperty Name="UserProfilePic" ColumnName="UserProfilePic" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
+          <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisitLogs">
+      <EntityTypeMapping TypeName="SystemModel.VisitLog">
+        <MappingFragment StoreEntitySet="VisitLog">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Ip" ColumnName="Ip" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,193 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model SystemMedia
+@{
+    ViewBag.Title = "Add";
+    var gallery = Model.Galleries.ToList();
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">@Model.MediaType.TypeName Formu</h5>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Media/Add" method="POST" enctype="multipart/form-data">
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.MediaTypeID)
+                    @Html.HiddenFor(x => x.MediaTextEditor)
+                    @Html.HiddenFor(x => x.MediaCoverPhoto)
+                    <div class="row mb-4">
+                        <div class="col-sm-5">
+                            <div class="card mb-4">
+                                <h5 class="card-header">Kapak Fotoğrafı</h5>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <img src="@Model.MediaCoverPhoto"
+                                             alt="Kapak Fotosu"
+                                             class="d-block w-px-100 h-px-100 rounded"
+                                             id="uploadedAvatar" />
+                                        <div class="button-wrapper">
+                                            <label for="upload" class="btn btn-primary me-2 mb-3" tabindex="0">
+                                                <span class="d-none d-sm-block">Yeni Fotoğraf Yükle</span>
+                                                <i class="ti ti-upload d-block d-sm-none"></i>
+                                                <input type="file"
+                                                       id="upload"
+                                                       name="MediaCoverPhoto"
+                                                       value="@Model.MediaCoverPhoto"
+                                                       class="account-file-input"
+                                                       hidden
+                                                       accept="image/png, image/jpeg , .jpg" />
+                                            </label>
+                                            <button type="button" class="btn btn-label-secondary account-image-reset mb-3">
+                                                <i class="ti ti-refresh-dot d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Sıfırla</span>
+                                            </button>
+
+                                            <div class="text-muted">JPG , jpeg yada PNG Kabul Ediyor.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="MediaTittle">Başlık</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control MediaTittle"
+                                       id="MediaTittle"
+                                       name="MediaTittle"
+                                       value="@Model.MediaTittle"
+                                       autocomplete="off"
+                                       placeholder="Başlık"
+                                       aria-label="MediaTittle"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="MediaDate">Tarih</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-calendar-event"></i>
+                                </span>
+                                <input type="text"
+                                       id="MediaDate"
+                                       name="MediaDate"
+                                       value="@Model.MediaDate"
+                                       autocomplete="off"
+                                       class="form-control datepicker"
+                                       placeholder="Tarih"
+                                       aria-label="MediaDate"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="MediaLastDate">Son Tarih(varsa)</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text"><i class="ti ti-calendar-plus"></i></span>
+                                <input type="text"
+                                       id="MediaLastDate"
+                                       name="MediaLastDate"
+                                       value="@Model.MediaLastDate"
+                                       autocomplete="off"
+                                       class="form-control datepicker"
+                                       placeholder="Son Tarih(varsa)"
+                                       aria-label="MediaLastDate"
+                                       aria-describedby="basic-icon-default-email2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="MediaQuote">Medya Özeti</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <textarea class="form-control" id="MediaQuote" name="MediaQuote" rows="2">@Model.MediaQuote</textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <h5 class="card-header">Metin Editörü</h5>
+                            <div class="card-body">
+                                <div id="full-editor">
+                                    @Html.Raw(Model.MediaTextEditor)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button id="showFileInput" type="button" class="btn btn-primary me-sm-2 me-1 form-submit-a">Dosya Ekle</button>
+                                <div id="fileInputsContainer">
+                                    @foreach (var x in Model.Galleries)
+                                    {
+                                        <input hidden name="files" id="@Html.Raw(x.MediaUrl.FileName+@x.MediaUrl.Id)" value="@x.MediaUrl.Id" type="text" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Dosya Listesi
+                                <small class="text-muted float-end"> kabul edilen dosyalar .jpg , .jpeg ve .png</small>
+                            </div>
+                            <div class="card-body">
+                                <input type="file" id="fileInput" accept=".jpg, .jpeg , .png " hidden />
+
+                                <table id="fileTable" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Önizleme</th>
+                                            <th>Dosya Adı</th>
+                                            <th>Eylem</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model.Galleries)
+                                        {
+                                            <tr><td class="img-rew"><img src="@x.MediaUrl.Url"/></td><td>@x.MediaUrl.FileName</td><td><button type='button' class='deleteButton btn btn-primary' data-filename='@x.MediaUrl.FileName' data-fileid='@x.MediaUrl.Id'>Sil</button></td></tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="MediaValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    <script>
+        const FotoStr = "@Html.Raw(Model.MediaCoverPhoto)";
+    </script>
+    <script>
+        const GalleryStr = [
+            @foreach(var x in gallery) { @Html.Raw("\""+x.MediaUrl.Url+"\"")  @Html.Raw(",")  } ];
+    </script>
+}
+
+@section Scripts
+{
+    <script src="~/assets/PageScripts/MediaAdd.js"></script>
+}
+

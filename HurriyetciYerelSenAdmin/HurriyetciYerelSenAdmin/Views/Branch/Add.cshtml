@@ -1,0 +1,146 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model Branch
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Şube Ekle</h5>
+                <small class="text-muted float-end"></small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Branch/Add" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Şube Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="BranchName"
+                                       name="BranchName"
+                                       required="required"
+                                       value="@Model.BranchName"
+                                       autocomplete="off"
+                                       placeholder="Şube Adı"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Şube Telefon</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control phone-mask"
+                                       id="BranchPhone"
+                                       name="BranchPhone"
+                                       required="required"
+                                       value="@Model.BranchPhone"
+                                       autocomplete="off"
+                                       placeholder="Şube Telefon"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Şube Maili</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="BranchEMail"
+                                       name="BranchEMail"
+                                       required="required"
+                                       value="@Model.BranchEMail"
+                                       autocomplete="off"
+                                       placeholder="Mail Adresi"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Şube Plaka</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control "
+                                       id="BranchNumber"
+                                       name="BranchNumber"
+                                       required="required"
+                                       value="@Model.BranchNumber"
+                                       autocomplete="off"
+                                       placeholder="Şube Plaka"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (Model.Id != 0)
+                    {
+                        <div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0">İlçe Şubeleri Listesi</h5>
+                                    <small class="text-muted float-end"> <a href="/Branch/SubBranchAdd?Id=@Model.Id" class="btn btn-primary">İlçe Şubesi Ekle</a></small>
+                                </div>
+                                <div class="card-datatable text-nowrap">
+                                    <table id="SubBranchdatatable" class="datatables-ajax table overflow-scroll"></table>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                        </div>
+                        <div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0">Şube Üyeleri Listesi</h5>
+                                    <small class="text-muted float-end"> <a href="/Branch/BranchMemberAdd?Id=@Model.Id" class="btn btn-primary">Şube Üye Ekle</a></small>
+                                </div>
+                                <div class="card-datatable text-nowrap">
+                                    <table id="BranchMemberdatatable" class="datatables-ajax table overflow-scroll"></table>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                        </div>
+                        @section InPageList{
+                            <script>
+                                const BranchID = @Html.Raw(Model.Id);
+                            </script>
+                            <script src="~/assets/PageScripts/BranchUpdateList.js"></script>
+                        }
+                    }
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</button>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+         const provinceID = @Html.Raw(Model.Id);
+    </script>
+    <script src="~/assets/PageScripts/BranchAdd.js"></script>
+}
+

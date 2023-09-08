@@ -1,0 +1,1907 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AboutUs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AboutUsTittle" Type="nvarchar(max)" />
+          <Property Name="AboutUsTextEditor" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicationName" Type="nvarchar(max)" />
+          <Property Name="ApplicationSurname" Type="nvarchar(max)" />
+          <Property Name="ApplicationIdentityNumber" Type="nvarchar(max)" />
+          <Property Name="ApplicationFatherName" Type="nvarchar(max)" />
+          <Property Name="ApplicationMotherName" Type="nvarchar(max)" />
+          <Property Name="ApplicationBornPlace" Type="nvarchar(max)" />
+          <Property Name="ApplicationBornDate" Type="date" />
+          <Property Name="ApplicationGenderID" Type="int" />
+          <Property Name="ApplicationEducationID" Type="int" />
+          <Property Name="ApplicationOrganisationID" Type="int" />
+          <Property Name="ApplicationWorkPlaceName" Type="nvarchar(max)" />
+          <Property Name="ApplicationProvinceID" Type="int" />
+          <Property Name="ApplicationDistrictID" Type="int" />
+          <Property Name="ApplicationStaffID" Type="int" />
+          <Property Name="ApplicationBloodTypeID" Type="int" />
+          <Property Name="ApplicationPhoneNumber" Type="nvarchar(max)" />
+          <Property Name="ApplicationEmail" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="ApplicationCaseID" Type="int" />
+        </EntityType>
+        <EntityType Name="ApplicationBloodType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BloodType" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationCase">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Situation" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationDistrict">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProvinceId" Type="int" />
+          <Property Name="District" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationEducation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EducationName" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationGender">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationOrganisation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrganisationName" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationProvince">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Province" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ApplicationStaff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Staff" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="BranchMembers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="EMailAdress" Type="nvarchar(max)" />
+          <Property Name="Position" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="BranchID" Type="int" />
+        </EntityType>
+        <EntityType Name="Branchs">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BranchName" Type="nvarchar(max)" />
+          <Property Name="BranchAdress" Type="nvarchar(max)" />
+          <Property Name="BranchPhone" Type="nvarchar(max)" />
+          <Property Name="BranchEMail" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="BranchNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="Broadcasts">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BroadcastClassID" Type="int" />
+          <Property Name="BroadcastName" Type="nvarchar(max)" />
+          <Property Name="BroadcastTextEditor" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="BrodcastClasses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Dropdowns">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DropdownName" Type="nvarchar(max)" />
+          <Property Name="DropdownIcon" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="FileGallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BrodcastID" Type="int" />
+          <Property Name="FileID" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Files">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar(max)" />
+          <Property Name="FilePath" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Gallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MediaID" Type="int" />
+          <Property Name="UrlID" Type="int" />
+          <Property Name="GelleryTypeID" Type="int" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="GalleryType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="MediaTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="MediaUrl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar(max)" />
+          <Property Name="Url" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Members">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MemberName" Type="nvarchar(max)" />
+          <Property Name="MemberSurname" Type="nvarchar(max)" />
+          <Property Name="MemberPhoneNumber" Type="nvarchar(max)" />
+          <Property Name="MemberInstagram" Type="nvarchar(max)" />
+          <Property Name="MemberFacebook" Type="nvarchar(max)" />
+          <Property Name="MemberTwitter" Type="nvarchar(max)" />
+          <Property Name="MemberYoutube" Type="nvarchar(max)" />
+          <Property Name="MemberEmail" Type="nvarchar(max)" />
+          <Property Name="MemberTCNo" Type="nvarchar(max)" />
+          <Property Name="MemberPosition" Type="nvarchar(max)" />
+          <Property Name="MemberPhoto" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="CentralDirectors" Type="bit" Nullable="false" />
+          <Property Name="CentralCheckers" Type="bit" Nullable="false" />
+          <Property Name="CentralDiscipline" Type="bit" Nullable="false" />
+          <Property Name="Funders" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Principles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Principle" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Questions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Question" Type="nvarchar(max)" />
+          <Property Name="AnswerTextEditor" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="SubBranches">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubBranchName" Type="nvarchar(max)" />
+          <Property Name="Adress" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="BranchID" Type="int" />
+        </EntityType>
+        <EntityType Name="SystemInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SystemName" Type="nvarchar(max)" />
+          <Property Name="SystemEmail" Type="nvarchar(max)" />
+          <Property Name="SystemEmailPassword" Type="nvarchar(max)" />
+          <Property Name="SystemLogo" Type="nvarchar(max)" />
+          <Property Name="SystemIcon" Type="nvarchar(max)" />
+          <Property Name="FacebookLink" Type="nvarchar(max)" />
+          <Property Name="InstagramLink" Type="nvarchar(max)" />
+          <Property Name="TwitterLink" Type="nvarchar(max)" />
+          <Property Name="YoutubeLink" Type="nvarchar(max)" />
+          <Property Name="WhatsAppApi" Type="nvarchar(max)" />
+          <Property Name="SystemTelephone" Type="nvarchar(max)" />
+          <Property Name="SystemAdress" Type="nvarchar(max)" />
+          <Property Name="SystemMapsLink" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SystemMedia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MediaTypeID" Type="int" />
+          <Property Name="MediaTittle" Type="nvarchar(max)" />
+          <Property Name="MediaQuote" Type="nvarchar(max)" />
+          <Property Name="MediaTextEditor" Type="nvarchar(max)" />
+          <Property Name="MediaCoverPhoto" Type="nvarchar(max)" />
+          <Property Name="MediaDate" Type="datetime" />
+          <Property Name="MediaLastDate" Type="datetime" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="Unions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UnionName" Type="nvarchar(max)" />
+          <Property Name="UnionPrez" Type="nvarchar(max)" />
+          <Property Name="UnionPrezPhone" Type="nvarchar(max)" />
+          <Property Name="UnionPrezEmail" Type="nvarchar(max)" />
+          <Property Name="UnionPrezFacebook" Type="nvarchar(max)" />
+          <Property Name="UnionPrezInstagram" Type="nvarchar(max)" />
+          <Property Name="UnionPrezLinkedin" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserClasses">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserClassName" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="Permissions" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="UserPages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermissionID" Type="int" />
+          <Property Name="CotrollerName" Type="nvarchar(max)" />
+          <Property Name="ActionName" Type="nvarchar(max)" />
+          <Property Name="Icon" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="UrlParameter" Type="nvarchar(max)" />
+          <Property Name="PageName" Type="nvarchar(max)" />
+          <Property Name="Link" Type="bit" />
+        </EntityType>
+        <EntityType Name="UserPermissions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermissionName" Type="nvarchar(max)" />
+          <Property Name="Icon" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="DropdownID" Type="int" />
+          <Property Name="UrlParameter" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar(max)" />
+          <Property Name="UserSurname" Type="nvarchar(max)" />
+          <Property Name="UserPhoneNumber" Type="nvarchar(max)" />
+          <Property Name="UserEmail" Type="nvarchar(max)" />
+          <Property Name="UserPassword" Type="nvarchar(max)" />
+          <Property Name="UserProfilePic" Type="nvarchar(max)" />
+          <Property Name="UserClassID" Type="int" />
+          <Property Name="Theme" Type="bit" />
+          <Property Name="ResetCode" Type="int" />
+          <Property Name="RememberCookie" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="VisitLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ip" Type="nvarchar(max)" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
+        <Association Name="FileGallery_Files">
+          <End Role="Files" Type="Self.Files" Multiplicity="0..1" />
+          <End Role="FileGallery" Type="Self.FileGallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Files">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileGallery">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationBloodType">
+          <End Role="ApplicationBloodType" Type="Self.ApplicationBloodType" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationBloodType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationBloodTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationCase">
+          <End Role="ApplicationCase" Type="Self.ApplicationCase" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationCase">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationCaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationDistrict">
+          <End Role="ApplicationDistrict" Type="Self.ApplicationDistrict" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDistrict">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationDistrictID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationEducation">
+          <End Role="ApplicationEducation" Type="Self.ApplicationEducation" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationEducation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationEducationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationGender">
+          <End Role="ApplicationGender" Type="Self.ApplicationGender" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationGender">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationGenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationOrganisation">
+          <End Role="ApplicationOrganisation" Type="Self.ApplicationOrganisation" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationOrganisation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationOrganisationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationProvince">
+          <End Role="ApplicationProvince" Type="Self.ApplicationProvince" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationProvince">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationProvinceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationStaff">
+          <End Role="ApplicationStaff" Type="Self.ApplicationStaff" Multiplicity="0..1" />
+          <End Role="Application" Type="Self.Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationStaff">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationStaffID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BranchMembers_Branchs">
+          <End Role="Branchs" Type="Self.Branchs" Multiplicity="0..1" />
+          <End Role="BranchMembers" Type="Self.BranchMembers" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branchs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BranchMembers">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Broadcasts_BrodcastClasses">
+          <End Role="BrodcastClasses" Type="Self.BrodcastClasses" Multiplicity="0..1" />
+          <End Role="Broadcasts" Type="Self.Broadcasts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BrodcastClasses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Broadcasts">
+              <PropertyRef Name="BroadcastClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FileGallery_Broadcasts">
+          <End Role="Broadcasts" Type="Self.Broadcasts" Multiplicity="0..1" />
+          <End Role="FileGallery" Type="Self.FileGallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Broadcasts">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileGallery">
+              <PropertyRef Name="BrodcastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_GalleryType">
+          <End Role="GalleryType" Type="Self.GalleryType" Multiplicity="0..1" />
+          <End Role="Gallery" Type="Self.Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GalleryType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="GelleryTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_MediaUrl">
+          <End Role="MediaUrl" Type="Self.MediaUrl" Multiplicity="0..1" />
+          <End Role="Gallery" Type="Self.Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MediaUrl">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="UrlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_SystemMedia">
+          <End Role="SystemMedia" Type="Self.SystemMedia" Multiplicity="0..1" />
+          <End Role="Gallery" Type="Self.Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemMedia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubBranches_Branchs">
+          <End Role="Branchs" Type="Self.Branchs" Multiplicity="0..1" />
+          <End Role="SubBranches" Type="Self.SubBranches" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branchs">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubBranches">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemMedia_MediaTypes">
+          <End Role="MediaTypes" Type="Self.MediaTypes" Multiplicity="0..1" />
+          <End Role="SystemMedia" Type="Self.SystemMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MediaTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemMedia">
+              <PropertyRef Name="MediaTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPages_UserPermissions">
+          <End Role="UserPermissions" Type="Self.UserPermissions" Multiplicity="0..1" />
+          <End Role="UserPages" Type="Self.UserPages" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserPermissions">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPages">
+              <PropertyRef Name="PermissionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPermissions_Dropdowns">
+          <End Role="Dropdowns" Type="Self.Dropdowns" Multiplicity="0..1" />
+          <End Role="UserPermissions" Type="Self.UserPermissions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dropdowns">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPermissions">
+              <PropertyRef Name="DropdownID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserClasses">
+          <End Role="UserClasses" Type="Self.UserClasses" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserClasses">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="UserClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SystemModelStoreContainer">
+          <EntitySet Name="AboutUs" EntityType="Self.AboutUs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Application" EntityType="Self.Application" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationBloodType" EntityType="Self.ApplicationBloodType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationCase" EntityType="Self.ApplicationCase" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationDistrict" EntityType="Self.ApplicationDistrict" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationEducation" EntityType="Self.ApplicationEducation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationGender" EntityType="Self.ApplicationGender" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationOrganisation" EntityType="Self.ApplicationOrganisation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationProvince" EntityType="Self.ApplicationProvince" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ApplicationStaff" EntityType="Self.ApplicationStaff" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BranchMembers" EntityType="Self.BranchMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Branchs" EntityType="Self.Branchs" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Broadcasts" EntityType="Self.Broadcasts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BrodcastClasses" EntityType="Self.BrodcastClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dropdowns" EntityType="Self.Dropdowns" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FileGallery" EntityType="Self.FileGallery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gallery" EntityType="Self.Gallery" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GalleryType" EntityType="Self.GalleryType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaTypes" EntityType="Self.MediaTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MediaUrl" EntityType="Self.MediaUrl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Principles" EntityType="Self.Principles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubBranches" EntityType="Self.SubBranches" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemInformation" EntityType="Self.SystemInformation" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SystemMedia" EntityType="Self.SystemMedia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Unions" EntityType="Self.Unions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserClasses" EntityType="Self.UserClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserPages" EntityType="Self.UserPages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserPermissions" EntityType="Self.UserPermissions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisitLog" EntityType="Self.VisitLog" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FileGallery_Files" Association="Self.FileGallery_Files">
+            <End Role="Files" EntitySet="Files" />
+            <End Role="FileGallery" EntitySet="FileGallery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationBloodType" Association="Self.FK_Application_ApplicationBloodType">
+            <End Role="ApplicationBloodType" EntitySet="ApplicationBloodType" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationCase" Association="Self.FK_Application_ApplicationCase">
+            <End Role="ApplicationCase" EntitySet="ApplicationCase" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationDistrict" Association="Self.FK_Application_ApplicationDistrict">
+            <End Role="ApplicationDistrict" EntitySet="ApplicationDistrict" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationEducation" Association="Self.FK_Application_ApplicationEducation">
+            <End Role="ApplicationEducation" EntitySet="ApplicationEducation" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationGender" Association="Self.FK_Application_ApplicationGender">
+            <End Role="ApplicationGender" EntitySet="ApplicationGender" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationOrganisation" Association="Self.FK_Application_ApplicationOrganisation">
+            <End Role="ApplicationOrganisation" EntitySet="ApplicationOrganisation" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationProvince" Association="Self.FK_Application_ApplicationProvince">
+            <End Role="ApplicationProvince" EntitySet="ApplicationProvince" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationStaff" Association="Self.FK_Application_ApplicationStaff">
+            <End Role="ApplicationStaff" EntitySet="ApplicationStaff" />
+            <End Role="Application" EntitySet="Application" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BranchMembers_Branchs" Association="Self.FK_BranchMembers_Branchs">
+            <End Role="Branchs" EntitySet="Branchs" />
+            <End Role="BranchMembers" EntitySet="BranchMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Broadcasts_BrodcastClasses" Association="Self.FK_Broadcasts_BrodcastClasses">
+            <End Role="BrodcastClasses" EntitySet="BrodcastClasses" />
+            <End Role="Broadcasts" EntitySet="Broadcasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FileGallery_Broadcasts" Association="Self.FK_FileGallery_Broadcasts">
+            <End Role="Broadcasts" EntitySet="Broadcasts" />
+            <End Role="FileGallery" EntitySet="FileGallery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_GalleryType" Association="Self.FK_Gallery_GalleryType">
+            <End Role="GalleryType" EntitySet="GalleryType" />
+            <End Role="Gallery" EntitySet="Gallery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_MediaUrl" Association="Self.FK_Gallery_MediaUrl">
+            <End Role="MediaUrl" EntitySet="MediaUrl" />
+            <End Role="Gallery" EntitySet="Gallery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_SystemMedia" Association="Self.FK_Gallery_SystemMedia">
+            <End Role="SystemMedia" EntitySet="SystemMedia" />
+            <End Role="Gallery" EntitySet="Gallery" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubBranches_Branchs" Association="Self.FK_SubBranches_Branchs">
+            <End Role="Branchs" EntitySet="Branchs" />
+            <End Role="SubBranches" EntitySet="SubBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemMedia_MediaTypes" Association="Self.FK_SystemMedia_MediaTypes">
+            <End Role="MediaTypes" EntitySet="MediaTypes" />
+            <End Role="SystemMedia" EntitySet="SystemMedia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPages_UserPermissions" Association="Self.FK_UserPages_UserPermissions">
+            <End Role="UserPermissions" EntitySet="UserPermissions" />
+            <End Role="UserPages" EntitySet="UserPages" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPermissions_Dropdowns" Association="Self.FK_UserPermissions_Dropdowns">
+            <End Role="Dropdowns" EntitySet="Dropdowns" />
+            <End Role="UserPermissions" EntitySet="UserPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserClasses" Association="Self.FK_Users_UserClasses">
+            <End Role="UserClasses" EntitySet="UserClasses" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AboutUs" EntityType="SystemModel.AboutU" />
+          <EntitySet Name="Applications" EntityType="SystemModel.Application" />
+          <EntitySet Name="ApplicationBloodTypes" EntityType="SystemModel.ApplicationBloodType" />
+          <EntitySet Name="ApplicationCases" EntityType="SystemModel.ApplicationCase" />
+          <EntitySet Name="ApplicationDistricts" EntityType="SystemModel.ApplicationDistrict" />
+          <EntitySet Name="ApplicationEducations" EntityType="SystemModel.ApplicationEducation" />
+          <EntitySet Name="ApplicationGenders" EntityType="SystemModel.ApplicationGender" />
+          <EntitySet Name="ApplicationOrganisations" EntityType="SystemModel.ApplicationOrganisation" />
+          <EntitySet Name="ApplicationProvinces" EntityType="SystemModel.ApplicationProvince" />
+          <EntitySet Name="ApplicationStaffs" EntityType="SystemModel.ApplicationStaff" />
+          <EntitySet Name="BranchMembers" EntityType="SystemModel.BranchMember" />
+          <EntitySet Name="Branchs" EntityType="SystemModel.Branch" />
+          <EntitySet Name="Broadcasts" EntityType="SystemModel.Broadcast" />
+          <EntitySet Name="BrodcastClasses" EntityType="SystemModel.BrodcastClass" />
+          <EntitySet Name="Dropdowns" EntityType="SystemModel.Dropdown" />
+          <EntitySet Name="FileGalleries" EntityType="SystemModel.FileGallery" />
+          <EntitySet Name="Files" EntityType="SystemModel.File" />
+          <EntitySet Name="Galleries" EntityType="SystemModel.Gallery" />
+          <EntitySet Name="GalleryTypes" EntityType="SystemModel.GalleryType" />
+          <EntitySet Name="MediaTypes" EntityType="SystemModel.MediaType" />
+          <EntitySet Name="MediaUrls" EntityType="SystemModel.MediaUrl" />
+          <EntitySet Name="Members" EntityType="SystemModel.Member" />
+          <EntitySet Name="Principles" EntityType="SystemModel.Principle" />
+          <EntitySet Name="Questions" EntityType="SystemModel.Question" />
+          <EntitySet Name="SubBranches" EntityType="SystemModel.SubBranch" />
+          <EntitySet Name="SystemInformations" EntityType="SystemModel.SystemInformation" />
+          <EntitySet Name="SystemMedias" EntityType="SystemModel.SystemMedia" />
+          <EntitySet Name="Unions" EntityType="SystemModel.Union" />
+          <EntitySet Name="UserClasses" EntityType="SystemModel.UserClass" />
+          <EntitySet Name="UserPages" EntityType="SystemModel.UserPage" />
+          <EntitySet Name="UserPermissions" EntityType="SystemModel.UserPermission" />
+          <EntitySet Name="Users" EntityType="SystemModel.User" />
+          <EntitySet Name="VisitLogs" EntityType="SystemModel.VisitLog" />
+          <AssociationSet Name="FK_Application_ApplicationBloodType" Association="SystemModel.FK_Application_ApplicationBloodType">
+            <End Role="ApplicationBloodType" EntitySet="ApplicationBloodTypes" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationCase" Association="SystemModel.FK_Application_ApplicationCase">
+            <End Role="ApplicationCase" EntitySet="ApplicationCases" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationDistrict" Association="SystemModel.FK_Application_ApplicationDistrict">
+            <End Role="ApplicationDistrict" EntitySet="ApplicationDistricts" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationEducation" Association="SystemModel.FK_Application_ApplicationEducation">
+            <End Role="ApplicationEducation" EntitySet="ApplicationEducations" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationGender" Association="SystemModel.FK_Application_ApplicationGender">
+            <End Role="ApplicationGender" EntitySet="ApplicationGenders" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationOrganisation" Association="SystemModel.FK_Application_ApplicationOrganisation">
+            <End Role="ApplicationOrganisation" EntitySet="ApplicationOrganisations" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationProvince" Association="SystemModel.FK_Application_ApplicationProvince">
+            <End Role="ApplicationProvince" EntitySet="ApplicationProvinces" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Application_ApplicationStaff" Association="SystemModel.FK_Application_ApplicationStaff">
+            <End Role="ApplicationStaff" EntitySet="ApplicationStaffs" />
+            <End Role="Application" EntitySet="Applications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_BranchMembers_Branchs" Association="SystemModel.FK_BranchMembers_Branchs">
+            <End Role="Branch" EntitySet="Branchs" />
+            <End Role="BranchMember" EntitySet="BranchMembers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubBranches_Branchs" Association="SystemModel.FK_SubBranches_Branchs">
+            <End Role="Branch" EntitySet="Branchs" />
+            <End Role="SubBranch" EntitySet="SubBranches" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Broadcasts_BrodcastClasses" Association="SystemModel.FK_Broadcasts_BrodcastClasses">
+            <End Role="BrodcastClass" EntitySet="BrodcastClasses" />
+            <End Role="Broadcast" EntitySet="Broadcasts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_FileGallery_Broadcasts" Association="SystemModel.FK_FileGallery_Broadcasts">
+            <End Role="Broadcast" EntitySet="Broadcasts" />
+            <End Role="FileGallery" EntitySet="FileGalleries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPermissions_Dropdowns" Association="SystemModel.FK_UserPermissions_Dropdowns">
+            <End Role="Dropdown" EntitySet="Dropdowns" />
+            <End Role="UserPermission" EntitySet="UserPermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FileGallery_Files" Association="SystemModel.FileGallery_Files">
+            <End Role="File" EntitySet="Files" />
+            <End Role="FileGallery" EntitySet="FileGalleries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_GalleryType" Association="SystemModel.FK_Gallery_GalleryType">
+            <End Role="GalleryType" EntitySet="GalleryTypes" />
+            <End Role="Gallery" EntitySet="Galleries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_MediaUrl" Association="SystemModel.FK_Gallery_MediaUrl">
+            <End Role="MediaUrl" EntitySet="MediaUrls" />
+            <End Role="Gallery" EntitySet="Galleries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Gallery_SystemMedia" Association="SystemModel.FK_Gallery_SystemMedia">
+            <End Role="SystemMedia" EntitySet="SystemMedias" />
+            <End Role="Gallery" EntitySet="Galleries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SystemMedia_MediaTypes" Association="SystemModel.FK_SystemMedia_MediaTypes">
+            <End Role="MediaType" EntitySet="MediaTypes" />
+            <End Role="SystemMedia" EntitySet="SystemMedias" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_UserClasses" Association="SystemModel.FK_Users_UserClasses">
+            <End Role="UserClass" EntitySet="UserClasses" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserPages_UserPermissions" Association="SystemModel.FK_UserPages_UserPermissions">
+            <End Role="UserPermission" EntitySet="UserPermissions" />
+            <End Role="UserPage" EntitySet="UserPages" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AboutU">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboutUsTittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AboutUsTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Application">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationSurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationIdentityNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationFatherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationMotherName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationBornPlace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationBornDate" Type="DateTime" Precision="0" />
+          <Property Name="ApplicationGenderID" Type="Int32" />
+          <Property Name="ApplicationEducationID" Type="Int32" />
+          <Property Name="ApplicationOrganisationID" Type="Int32" />
+          <Property Name="ApplicationWorkPlaceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationProvinceID" Type="Int32" />
+          <Property Name="ApplicationDistrictID" Type="Int32" />
+          <Property Name="ApplicationStaffID" Type="Int32" />
+          <Property Name="ApplicationBloodTypeID" Type="Int32" />
+          <Property Name="ApplicationPhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApplicationEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="ApplicationCaseID" Type="Int32" />
+          <NavigationProperty Name="ApplicationBloodType" Relationship="SystemModel.FK_Application_ApplicationBloodType" FromRole="Application" ToRole="ApplicationBloodType" />
+          <NavigationProperty Name="ApplicationCase" Relationship="SystemModel.FK_Application_ApplicationCase" FromRole="Application" ToRole="ApplicationCase" />
+          <NavigationProperty Name="ApplicationDistrict" Relationship="SystemModel.FK_Application_ApplicationDistrict" FromRole="Application" ToRole="ApplicationDistrict" />
+          <NavigationProperty Name="ApplicationEducation" Relationship="SystemModel.FK_Application_ApplicationEducation" FromRole="Application" ToRole="ApplicationEducation" />
+          <NavigationProperty Name="ApplicationGender" Relationship="SystemModel.FK_Application_ApplicationGender" FromRole="Application" ToRole="ApplicationGender" />
+          <NavigationProperty Name="ApplicationOrganisation" Relationship="SystemModel.FK_Application_ApplicationOrganisation" FromRole="Application" ToRole="ApplicationOrganisation" />
+          <NavigationProperty Name="ApplicationProvince" Relationship="SystemModel.FK_Application_ApplicationProvince" FromRole="Application" ToRole="ApplicationProvince" />
+          <NavigationProperty Name="ApplicationStaff" Relationship="SystemModel.FK_Application_ApplicationStaff" FromRole="Application" ToRole="ApplicationStaff" />
+        </EntityType>
+        <EntityType Name="ApplicationBloodType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BloodType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationBloodType" FromRole="ApplicationBloodType" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationCase">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Situation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationCase" FromRole="ApplicationCase" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationDistrict">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProvinceId" Type="Int32" />
+          <Property Name="District" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationDistrict" FromRole="ApplicationDistrict" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationEducation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EducationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationEducation" FromRole="ApplicationEducation" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationGender">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationGender" FromRole="ApplicationGender" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationOrganisation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OrganisationName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationOrganisation" FromRole="ApplicationOrganisation" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationProvince">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Province" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationProvince" FromRole="ApplicationProvince" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="ApplicationStaff">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Staff" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Applications" Relationship="SystemModel.FK_Application_ApplicationStaff" FromRole="ApplicationStaff" ToRole="Application" />
+        </EntityType>
+        <EntityType Name="BranchMember">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EMailAdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="BranchID" Type="Int32" />
+          <NavigationProperty Name="Branch" Relationship="SystemModel.FK_BranchMembers_Branchs" FromRole="BranchMember" ToRole="Branch" />
+        </EntityType>
+        <EntityType Name="Branch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BranchName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BranchAdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BranchPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BranchEMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="BranchNumber" Type="Int32" />
+          <NavigationProperty Name="BranchMembers" Relationship="SystemModel.FK_BranchMembers_Branchs" FromRole="Branch" ToRole="BranchMember" />
+          <NavigationProperty Name="SubBranches" Relationship="SystemModel.FK_SubBranches_Branchs" FromRole="Branch" ToRole="SubBranch" />
+        </EntityType>
+        <EntityType Name="Broadcast">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BroadcastClassID" Type="Int32" />
+          <Property Name="BroadcastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BroadcastTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="BrodcastClass" Relationship="SystemModel.FK_Broadcasts_BrodcastClasses" FromRole="Broadcast" ToRole="BrodcastClass" />
+          <NavigationProperty Name="FileGalleries" Relationship="SystemModel.FK_FileGallery_Broadcasts" FromRole="Broadcast" ToRole="FileGallery" />
+        </EntityType>
+        <EntityType Name="BrodcastClass">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Broadcasts" Relationship="SystemModel.FK_Broadcasts_BrodcastClasses" FromRole="BrodcastClass" ToRole="Broadcast" />
+        </EntityType>
+        <EntityType Name="Dropdown">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DropdownName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DropdownIcon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="UserPermissions" Relationship="SystemModel.FK_UserPermissions_Dropdowns" FromRole="Dropdown" ToRole="UserPermission" />
+        </EntityType>
+        <EntityType Name="FileGallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BrodcastID" Type="Int32" />
+          <Property Name="FileID" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Broadcast" Relationship="SystemModel.FK_FileGallery_Broadcasts" FromRole="FileGallery" ToRole="Broadcast" />
+          <NavigationProperty Name="File" Relationship="SystemModel.FileGallery_Files" FromRole="FileGallery" ToRole="File" />
+        </EntityType>
+        <EntityType Name="File">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FilePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="FileGalleries" Relationship="SystemModel.FileGallery_Files" FromRole="File" ToRole="FileGallery" />
+        </EntityType>
+        <EntityType Name="Gallery">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaID" Type="Int32" />
+          <Property Name="UrlID" Type="Int32" />
+          <Property Name="GelleryTypeID" Type="Int32" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="GalleryType" Relationship="SystemModel.FK_Gallery_GalleryType" FromRole="Gallery" ToRole="GalleryType" />
+          <NavigationProperty Name="MediaUrl" Relationship="SystemModel.FK_Gallery_MediaUrl" FromRole="Gallery" ToRole="MediaUrl" />
+          <NavigationProperty Name="SystemMedia" Relationship="SystemModel.FK_Gallery_SystemMedia" FromRole="Gallery" ToRole="SystemMedia" />
+        </EntityType>
+        <EntityType Name="GalleryType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_GalleryType" FromRole="GalleryType" ToRole="Gallery" />
+        </EntityType>
+        <EntityType Name="MediaType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="SystemMedias" Relationship="SystemModel.FK_SystemMedia_MediaTypes" FromRole="MediaType" ToRole="SystemMedia" />
+        </EntityType>
+        <EntityType Name="MediaUrl">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_MediaUrl" FromRole="MediaUrl" ToRole="Gallery" />
+        </EntityType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MemberName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberSurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberPhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberInstagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberFacebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberTwitter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberYoutube" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberTCNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberPosition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MemberPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="CentralDirectors" Type="Boolean" Nullable="false" />
+          <Property Name="CentralCheckers" Type="Boolean" Nullable="false" />
+          <Property Name="CentralDiscipline" Type="Boolean" Nullable="false" />
+          <Property Name="Funders" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Principle">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Principle1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Question">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AnswerTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="SubBranch">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubBranchName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="BranchID" Type="Int32" />
+          <NavigationProperty Name="Branch" Relationship="SystemModel.FK_SubBranches_Branchs" FromRole="SubBranch" ToRole="Branch" />
+        </EntityType>
+        <EntityType Name="SystemInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SystemName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemEmailPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemLogo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemIcon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FacebookLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="InstagramLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TwitterLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="YoutubeLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="WhatsAppApi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemAdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SystemMapsLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SystemMedia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MediaTypeID" Type="Int32" />
+          <Property Name="MediaTittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaQuote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaCoverPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MediaDate" Type="DateTime" Precision="3" />
+          <Property Name="MediaLastDate" Type="DateTime" Precision="3" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_SystemMedia" FromRole="SystemMedia" ToRole="Gallery" />
+          <NavigationProperty Name="MediaType" Relationship="SystemModel.FK_SystemMedia_MediaTypes" FromRole="SystemMedia" ToRole="MediaType" />
+        </EntityType>
+        <EntityType Name="Union">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UnionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrez" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrezPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrezEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrezFacebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrezInstagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UnionPrezLinkedin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="UserClass">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="Permissions" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Users" Relationship="SystemModel.FK_Users_UserClasses" FromRole="UserClass" ToRole="User" />
+        </EntityType>
+        <EntityType Name="UserPage">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermissionID" Type="Int32" />
+          <Property Name="CotrollerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ActionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="UrlParameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Link" Type="Boolean" />
+          <NavigationProperty Name="UserPermission" Relationship="SystemModel.FK_UserPages_UserPermissions" FromRole="UserPage" ToRole="UserPermission" />
+        </EntityType>
+        <EntityType Name="UserPermission">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermissionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Icon" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DropdownID" Type="Int32" />
+          <Property Name="UrlParameter" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Dropdown" Relationship="SystemModel.FK_UserPermissions_Dropdowns" FromRole="UserPermission" ToRole="Dropdown" />
+          <NavigationProperty Name="UserPages" Relationship="SystemModel.FK_UserPages_UserPermissions" FromRole="UserPermission" ToRole="UserPage" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserSurname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserPhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserProfilePic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserClassID" Type="Int32" />
+          <Property Name="Theme" Type="Boolean" />
+          <Property Name="ResetCode" Type="Int32" />
+          <Property Name="RememberCookie" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+          <NavigationProperty Name="UserClass" Relationship="SystemModel.FK_Users_UserClasses" FromRole="User" ToRole="UserClass" />
+        </EntityType>
+        <EntityType Name="VisitLog">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ip" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
+        </EntityType>
+        <Association Name="FK_Application_ApplicationBloodType">
+          <End Type="SystemModel.ApplicationBloodType" Role="ApplicationBloodType" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationBloodType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationBloodTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationCase">
+          <End Type="SystemModel.ApplicationCase" Role="ApplicationCase" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationCase">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationCaseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationDistrict">
+          <End Type="SystemModel.ApplicationDistrict" Role="ApplicationDistrict" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationDistrict">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationDistrictID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationEducation">
+          <End Type="SystemModel.ApplicationEducation" Role="ApplicationEducation" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationEducation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationEducationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationGender">
+          <End Type="SystemModel.ApplicationGender" Role="ApplicationGender" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationGender">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationGenderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationOrganisation">
+          <End Type="SystemModel.ApplicationOrganisation" Role="ApplicationOrganisation" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationOrganisation">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationOrganisationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationProvince">
+          <End Type="SystemModel.ApplicationProvince" Role="ApplicationProvince" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationProvince">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationProvinceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Application_ApplicationStaff">
+          <End Type="SystemModel.ApplicationStaff" Role="ApplicationStaff" Multiplicity="0..1" />
+          <End Type="SystemModel.Application" Role="Application" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ApplicationStaff">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Application">
+              <PropertyRef Name="ApplicationStaffID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_BranchMembers_Branchs">
+          <End Type="SystemModel.Branch" Role="Branch" Multiplicity="0..1" />
+          <End Type="SystemModel.BranchMember" Role="BranchMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="BranchMember">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubBranches_Branchs">
+          <End Type="SystemModel.Branch" Role="Branch" Multiplicity="0..1" />
+          <End Type="SystemModel.SubBranch" Role="SubBranch" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Branch">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SubBranch">
+              <PropertyRef Name="BranchID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Broadcasts_BrodcastClasses">
+          <End Type="SystemModel.BrodcastClass" Role="BrodcastClass" Multiplicity="0..1" />
+          <End Type="SystemModel.Broadcast" Role="Broadcast" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BrodcastClass">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Broadcast">
+              <PropertyRef Name="BroadcastClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_FileGallery_Broadcasts">
+          <End Type="SystemModel.Broadcast" Role="Broadcast" Multiplicity="0..1" />
+          <End Type="SystemModel.FileGallery" Role="FileGallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Broadcast">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileGallery">
+              <PropertyRef Name="BrodcastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPermissions_Dropdowns">
+          <End Type="SystemModel.Dropdown" Role="Dropdown" Multiplicity="0..1" />
+          <End Type="SystemModel.UserPermission" Role="UserPermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Dropdown">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPermission">
+              <PropertyRef Name="DropdownID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FileGallery_Files">
+          <End Type="SystemModel.File" Role="File" Multiplicity="0..1" />
+          <End Type="SystemModel.FileGallery" Role="FileGallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="File">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="FileGallery">
+              <PropertyRef Name="FileID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_GalleryType">
+          <End Type="SystemModel.GalleryType" Role="GalleryType" Multiplicity="0..1" />
+          <End Type="SystemModel.Gallery" Role="Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GalleryType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="GelleryTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_MediaUrl">
+          <End Type="SystemModel.MediaUrl" Role="MediaUrl" Multiplicity="0..1" />
+          <End Type="SystemModel.Gallery" Role="Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MediaUrl">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="UrlID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Gallery_SystemMedia">
+          <End Type="SystemModel.SystemMedia" Role="SystemMedia" Multiplicity="0..1" />
+          <End Type="SystemModel.Gallery" Role="Gallery" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SystemMedia">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Gallery">
+              <PropertyRef Name="MediaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SystemMedia_MediaTypes">
+          <End Type="SystemModel.MediaType" Role="MediaType" Multiplicity="0..1" />
+          <End Type="SystemModel.SystemMedia" Role="SystemMedia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MediaType">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SystemMedia">
+              <PropertyRef Name="MediaTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_UserClasses">
+          <End Type="SystemModel.UserClass" Role="UserClass" Multiplicity="0..1" />
+          <End Type="SystemModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserClass">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserClassID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserPages_UserPermissions">
+          <End Type="SystemModel.UserPermission" Role="UserPermission" Multiplicity="0..1" />
+          <End Type="SystemModel.UserPage" Role="UserPage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserPermission">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserPage">
+              <PropertyRef Name="PermissionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SystemModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="AboutUs">
+            <EntityTypeMapping TypeName="SystemModel.AboutU">
+              <MappingFragment StoreEntitySet="AboutUs">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="AboutUsTextEditor" ColumnName="AboutUsTextEditor" />
+                <ScalarProperty Name="AboutUsTittle" ColumnName="AboutUsTittle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Applications">
+            <EntityTypeMapping TypeName="SystemModel.Application">
+              <MappingFragment StoreEntitySet="Application">
+                <ScalarProperty Name="ApplicationCaseID" ColumnName="ApplicationCaseID" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="ApplicationEmail" ColumnName="ApplicationEmail" />
+                <ScalarProperty Name="ApplicationPhoneNumber" ColumnName="ApplicationPhoneNumber" />
+                <ScalarProperty Name="ApplicationBloodTypeID" ColumnName="ApplicationBloodTypeID" />
+                <ScalarProperty Name="ApplicationStaffID" ColumnName="ApplicationStaffID" />
+                <ScalarProperty Name="ApplicationDistrictID" ColumnName="ApplicationDistrictID" />
+                <ScalarProperty Name="ApplicationProvinceID" ColumnName="ApplicationProvinceID" />
+                <ScalarProperty Name="ApplicationWorkPlaceName" ColumnName="ApplicationWorkPlaceName" />
+                <ScalarProperty Name="ApplicationOrganisationID" ColumnName="ApplicationOrganisationID" />
+                <ScalarProperty Name="ApplicationEducationID" ColumnName="ApplicationEducationID" />
+                <ScalarProperty Name="ApplicationGenderID" ColumnName="ApplicationGenderID" />
+                <ScalarProperty Name="ApplicationBornDate" ColumnName="ApplicationBornDate" />
+                <ScalarProperty Name="ApplicationBornPlace" ColumnName="ApplicationBornPlace" />
+                <ScalarProperty Name="ApplicationMotherName" ColumnName="ApplicationMotherName" />
+                <ScalarProperty Name="ApplicationFatherName" ColumnName="ApplicationFatherName" />
+                <ScalarProperty Name="ApplicationIdentityNumber" ColumnName="ApplicationIdentityNumber" />
+                <ScalarProperty Name="ApplicationSurname" ColumnName="ApplicationSurname" />
+                <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationBloodTypes">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationBloodType">
+              <MappingFragment StoreEntitySet="ApplicationBloodType">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="BloodType" ColumnName="BloodType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationCases">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationCase">
+              <MappingFragment StoreEntitySet="ApplicationCase">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Situation" ColumnName="Situation" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationDistricts">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationDistrict">
+              <MappingFragment StoreEntitySet="ApplicationDistrict">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationEducations">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationEducation">
+              <MappingFragment StoreEntitySet="ApplicationEducation">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="EducationName" ColumnName="EducationName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationGenders">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationGender">
+              <MappingFragment StoreEntitySet="ApplicationGender">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationOrganisations">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationOrganisation">
+              <MappingFragment StoreEntitySet="ApplicationOrganisation">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="OrganisationName" ColumnName="OrganisationName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationProvinces">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationProvince">
+              <MappingFragment StoreEntitySet="ApplicationProvince">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Province" ColumnName="Province" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ApplicationStaffs">
+            <EntityTypeMapping TypeName="SystemModel.ApplicationStaff">
+              <MappingFragment StoreEntitySet="ApplicationStaff">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Staff" ColumnName="Staff" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BranchMembers">
+            <EntityTypeMapping TypeName="SystemModel.BranchMember">
+              <MappingFragment StoreEntitySet="BranchMembers">
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="EMailAdress" ColumnName="EMailAdress" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Branchs">
+            <EntityTypeMapping TypeName="SystemModel.Branch">
+              <MappingFragment StoreEntitySet="Branchs">
+                <ScalarProperty Name="BranchNumber" ColumnName="BranchNumber" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="BranchEMail" ColumnName="BranchEMail" />
+                <ScalarProperty Name="BranchPhone" ColumnName="BranchPhone" />
+                <ScalarProperty Name="BranchAdress" ColumnName="BranchAdress" />
+                <ScalarProperty Name="BranchName" ColumnName="BranchName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Broadcasts">
+            <EntityTypeMapping TypeName="SystemModel.Broadcast">
+              <MappingFragment StoreEntitySet="Broadcasts">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="BroadcastTextEditor" ColumnName="BroadcastTextEditor" />
+                <ScalarProperty Name="BroadcastName" ColumnName="BroadcastName" />
+                <ScalarProperty Name="BroadcastClassID" ColumnName="BroadcastClassID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BrodcastClasses">
+            <EntityTypeMapping TypeName="SystemModel.BrodcastClass">
+              <MappingFragment StoreEntitySet="BrodcastClasses">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dropdowns">
+            <EntityTypeMapping TypeName="SystemModel.Dropdown">
+              <MappingFragment StoreEntitySet="Dropdowns">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="DropdownIcon" ColumnName="DropdownIcon" />
+                <ScalarProperty Name="DropdownName" ColumnName="DropdownName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FileGalleries">
+            <EntityTypeMapping TypeName="SystemModel.FileGallery">
+              <MappingFragment StoreEntitySet="FileGallery">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="FileID" ColumnName="FileID" />
+                <ScalarProperty Name="BrodcastID" ColumnName="BrodcastID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Files">
+            <EntityTypeMapping TypeName="SystemModel.File">
+              <MappingFragment StoreEntitySet="Files">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Galleries">
+            <EntityTypeMapping TypeName="SystemModel.Gallery">
+              <MappingFragment StoreEntitySet="Gallery">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="GelleryTypeID" ColumnName="GelleryTypeID" />
+                <ScalarProperty Name="UrlID" ColumnName="UrlID" />
+                <ScalarProperty Name="MediaID" ColumnName="MediaID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GalleryTypes">
+            <EntityTypeMapping TypeName="SystemModel.GalleryType">
+              <MappingFragment StoreEntitySet="GalleryType">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediaTypes">
+            <EntityTypeMapping TypeName="SystemModel.MediaType">
+              <MappingFragment StoreEntitySet="MediaTypes">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MediaUrls">
+            <EntityTypeMapping TypeName="SystemModel.MediaUrl">
+              <MappingFragment StoreEntitySet="MediaUrl">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Members">
+            <EntityTypeMapping TypeName="SystemModel.Member">
+              <MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="Funders" ColumnName="Funders" />
+                <ScalarProperty Name="CentralDiscipline" ColumnName="CentralDiscipline" />
+                <ScalarProperty Name="CentralCheckers" ColumnName="CentralCheckers" />
+                <ScalarProperty Name="CentralDirectors" ColumnName="CentralDirectors" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="MemberPhoto" ColumnName="MemberPhoto" />
+                <ScalarProperty Name="MemberPosition" ColumnName="MemberPosition" />
+                <ScalarProperty Name="MemberTCNo" ColumnName="MemberTCNo" />
+                <ScalarProperty Name="MemberEmail" ColumnName="MemberEmail" />
+                <ScalarProperty Name="MemberYoutube" ColumnName="MemberYoutube" />
+                <ScalarProperty Name="MemberTwitter" ColumnName="MemberTwitter" />
+                <ScalarProperty Name="MemberFacebook" ColumnName="MemberFacebook" />
+                <ScalarProperty Name="MemberInstagram" ColumnName="MemberInstagram" />
+                <ScalarProperty Name="MemberPhoneNumber" ColumnName="MemberPhoneNumber" />
+                <ScalarProperty Name="MemberSurname" ColumnName="MemberSurname" />
+                <ScalarProperty Name="MemberName" ColumnName="MemberName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Principles">
+            <EntityTypeMapping TypeName="SystemModel.Principle">
+              <MappingFragment StoreEntitySet="Principles">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Principle1" ColumnName="Principle" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Questions">
+            <EntityTypeMapping TypeName="SystemModel.Question">
+              <MappingFragment StoreEntitySet="Questions">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="AnswerTextEditor" ColumnName="AnswerTextEditor" />
+                <ScalarProperty Name="Question1" ColumnName="Question" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubBranches">
+            <EntityTypeMapping TypeName="SystemModel.SubBranch">
+              <MappingFragment StoreEntitySet="SubBranches">
+                <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="SubBranchName" ColumnName="SubBranchName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemInformations">
+            <EntityTypeMapping TypeName="SystemModel.SystemInformation">
+              <MappingFragment StoreEntitySet="SystemInformation">
+                <ScalarProperty Name="SystemMapsLink" ColumnName="SystemMapsLink" />
+                <ScalarProperty Name="SystemAdress" ColumnName="SystemAdress" />
+                <ScalarProperty Name="SystemTelephone" ColumnName="SystemTelephone" />
+                <ScalarProperty Name="WhatsAppApi" ColumnName="WhatsAppApi" />
+                <ScalarProperty Name="YoutubeLink" ColumnName="YoutubeLink" />
+                <ScalarProperty Name="TwitterLink" ColumnName="TwitterLink" />
+                <ScalarProperty Name="InstagramLink" ColumnName="InstagramLink" />
+                <ScalarProperty Name="FacebookLink" ColumnName="FacebookLink" />
+                <ScalarProperty Name="SystemIcon" ColumnName="SystemIcon" />
+                <ScalarProperty Name="SystemLogo" ColumnName="SystemLogo" />
+                <ScalarProperty Name="SystemEmailPassword" ColumnName="SystemEmailPassword" />
+                <ScalarProperty Name="SystemEmail" ColumnName="SystemEmail" />
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemMedias">
+            <EntityTypeMapping TypeName="SystemModel.SystemMedia">
+              <MappingFragment StoreEntitySet="SystemMedia">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="MediaLastDate" ColumnName="MediaLastDate" />
+                <ScalarProperty Name="MediaDate" ColumnName="MediaDate" />
+                <ScalarProperty Name="MediaCoverPhoto" ColumnName="MediaCoverPhoto" />
+                <ScalarProperty Name="MediaTextEditor" ColumnName="MediaTextEditor" />
+                <ScalarProperty Name="MediaQuote" ColumnName="MediaQuote" />
+                <ScalarProperty Name="MediaTittle" ColumnName="MediaTittle" />
+                <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Unions">
+            <EntityTypeMapping TypeName="SystemModel.Union">
+              <MappingFragment StoreEntitySet="Unions">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="UnionPrezLinkedin" ColumnName="UnionPrezLinkedin" />
+                <ScalarProperty Name="UnionPrezInstagram" ColumnName="UnionPrezInstagram" />
+                <ScalarProperty Name="UnionPrezFacebook" ColumnName="UnionPrezFacebook" />
+                <ScalarProperty Name="UnionPrezEmail" ColumnName="UnionPrezEmail" />
+                <ScalarProperty Name="UnionPrezPhone" ColumnName="UnionPrezPhone" />
+                <ScalarProperty Name="UnionPrez" ColumnName="UnionPrez" />
+                <ScalarProperty Name="UnionName" ColumnName="UnionName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserClasses">
+            <EntityTypeMapping TypeName="SystemModel.UserClass">
+              <MappingFragment StoreEntitySet="UserClasses">
+                <ScalarProperty Name="Permissions" ColumnName="Permissions" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="UserClassName" ColumnName="UserClassName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPages">
+            <EntityTypeMapping TypeName="SystemModel.UserPage">
+              <MappingFragment StoreEntitySet="UserPages">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="UrlParameter" ColumnName="UrlParameter" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+                <ScalarProperty Name="CotrollerName" ColumnName="CotrollerName" />
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserPermissions">
+            <EntityTypeMapping TypeName="SystemModel.UserPermission">
+              <MappingFragment StoreEntitySet="UserPermissions">
+                <ScalarProperty Name="UrlParameter" ColumnName="UrlParameter" />
+                <ScalarProperty Name="DropdownID" ColumnName="DropdownID" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="Icon" ColumnName="Icon" />
+                <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="SystemModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="RememberCookie" ColumnName="RememberCookie" />
+                <ScalarProperty Name="ResetCode" ColumnName="ResetCode" />
+                <ScalarProperty Name="Theme" ColumnName="Theme" />
+                <ScalarProperty Name="UserClassID" ColumnName="UserClassID" />
+                <ScalarProperty Name="UserProfilePic" ColumnName="UserProfilePic" />
+                <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="UserPhoneNumber" ColumnName="UserPhoneNumber" />
+                <ScalarProperty Name="UserSurname" ColumnName="UserSurname" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisitLogs">
+            <EntityTypeMapping TypeName="SystemModel.VisitLog">
+              <MappingFragment StoreEntitySet="VisitLog">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Ip" ColumnName="Ip" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

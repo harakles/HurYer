@@ -1,0 +1,186 @@
+﻿@using HurriyetciYerelSenAdmin.Models
+@model UserModel
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Kullanıcı Kayıt Formu</h5>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/User/Add" method="POST" enctype="multipart/form-data">
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.UserPhoto)
+                    <div class="row mb-4">
+                        <div class="col-sm-5">
+                            <div class="card mb-4">
+                                <h5 class="card-header">Üye Fotoğrafı</h5>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <img src="@Model.UserPhoto"
+                                             alt="user-avatar"
+                                             class="d-block w-px-100 h-px-100 rounded"
+                                             id="uploadedAvatar" />
+                                        <div class="button-wrapper">
+                                            <label for="upload" class="btn btn-primary me-2 mb-3" tabindex="0">
+                                                <span class="d-none d-sm-block">Yeni Fotoğraf Yükle</span>
+                                                <i class="ti ti-upload d-block d-sm-none"></i>
+                                                <input type="file"
+                                                       id="upload"
+                                                       name="UserProfilePic"
+                                                       value="@Model.UserPhoto"
+                                                       class="account-file-input"
+                                                       hidden
+                                                       accept="image/png, image/jpeg" />
+                                            </label>
+                                            <button type="button" class="btn btn-label-secondary account-image-reset mb-3">
+                                                <i class="ti ti-refresh-dot d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Sıfırla</span>
+                                            </button>
+
+                                            <div class="text-muted">JPG, GIF yada PNG Kabul Ediyor.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Ad</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control UserName"
+                                       id="UserName"
+                                       name="UserName"
+                                       value="@Model.UserName"
+                                       autocomplete="off"
+                                       placeholder="Ad"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Soyad</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="UserSurname"
+                                       name="UserSurname"
+                                       value="@Model.UserSurname"
+                                       autocomplete="off"
+                                       class="form-control"
+                                       placeholder="Soyad"
+                                       aria-label="Soyad"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-email">E-Posta</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span class="input-group-text"><i class="ti ti-mail"></i></span>
+                                <input type="text"
+                                       id="UserEmail"
+                                       name="UserEmail"
+                                       value="@Model.UserEmail"
+                                       autocomplete="off"
+                                       class="form-control"
+                                       placeholder="admin"
+                                       aria-label="admin"
+                                       aria-describedby="basic-icon-default-email2" />
+                                <span id="basic-icon-default-email2" class="input-group-text">@@support.com</span>
+                            </div>
+                        </div>
+                        <label class="col-sm-1 form-label" for="basic-icon-default-phone">Telefon</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-phone2" class="input-group-text">
+                                    <i class="ti ti-phone"></i>
+                                </span>
+                                <input type="text"
+                                       id="UserPhoneNumber"
+                                       name="UserPhoneNumber"
+                                       value="@Model.UserPhoneNumber"
+                                       autocomplete="off"
+                                       class="form-control phone-mask"
+                                       placeholder="555 555 5555"
+                                       aria-label="555 555 5555"
+                                       aria-describedby="basic-icon-default-phone2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 form-label" for="basic-default-password32">Şifre</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <input type="password"
+                                       class="form-control"
+                                       id="UserPassword"
+                                       name="UserPassword"
+                                       value="@Model.UserPassword"
+                                       autocomplete="off"
+                                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                       aria-describedby="basic-default-password" />
+                                <span class="input-group-text cursor-pointer" onclick="PBC1();" id="basic-default-password">
+                                    <i id="UserPasswordIcon1" class="ti ti-eye-off"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <label class="col-sm-1 form-label" for="basic-default-password22">Şifre Tekrar</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <input type="password"
+                                       class="form-control passwordShow2"
+                                       id="UserPasswordRep"
+                                       placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
+                                       aria-describedby="basic-default-password" />
+                                <span class="input-group-text cursor-pointer" onclick="PBC2();" id="basic-default-password">
+                                    <i id="UserPasswordIcon2" class="ti ti-eye-off"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="row mb-3">
+                        <label class="col-sm-1 col-form-label " for="alignment-country">Rol</label>
+                        <div class="col-sm-11">
+                            @Html.DropDownListFor(s => s.UserClassID, (SelectList)ViewBag.Permissions,"- Seçiniz -", new { @class = "select2 form-select" })
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="UserValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    <script>
+    let Perms = [@Html.Raw(Model.UserClassID)];
+
+    const FotoStr = "@Html.Raw(Model.UserPhoto)"
+
+    </script>
+}
+
+@section Scripts
+{
+    <script src="~/assets/PageScripts/UserAdd.js"></script>
+}
+

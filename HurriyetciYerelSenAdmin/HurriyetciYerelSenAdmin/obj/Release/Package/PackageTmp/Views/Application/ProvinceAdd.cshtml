@@ -1,0 +1,72 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model ApplicationProvince
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">İl Ekle</h5>
+                <small class="text-muted float-end"></small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Application/ProvinceAdd" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">İl Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="Province"
+                                       name="Province"
+                                       required="required"
+                                       value="@Model.Province"
+                                       autocomplete="off"
+                                       placeholder="İL"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    @if (Model.Id != 0)
+                    {
+                        <div class="container-xxl flex-grow-1 container-p-y">
+                            <div class="card">
+                                <div class="card-header d-flex align-items-center justify-content-between">
+                                    <h5 class="mb-0">İlçe Listesi</h5>
+                                    <small class="text-muted float-end"> <a href="/Application/DistrictAdd?Id=@Model.Id" class="btn btn-primary">İlçe Ekle</a></small>
+                                </div>
+                                <div class="card-datatable text-nowrap">
+                                    <table id="datatable" class="datatables-ajax table overflow-scroll"></table>
+                                </div>
+                            </div>
+                            <hr class="my-5" />
+                        </div>
+                        @section Scripts{
+                            <script>
+                                const provinceID = @Html.Raw(Model.Id);
+                            </script>
+                            <script src="~/assets/PageScripts/ApplicationDistrictList.js"></script>
+                        }
+                    }
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</button>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

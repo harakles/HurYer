@@ -1,0 +1,248 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model Application
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Kullanıcı Kayıt Formu</h5>
+                <small class="text-muted float-end"></small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Application/Add" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Ad</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="ApplicationName"
+                                       name="ApplicationName"
+                                       value="@Model.ApplicationName"
+                                       autocomplete="off"
+                                       placeholder="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label">Soyad</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="ApplicationSurname"
+                                       name="ApplicationSurname"
+                                       value="@Model.ApplicationSurname"
+                                       autocomplete="off"
+                                       class="form-control"
+                                       placeholder="Soyad"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Kimlik Numarası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="ApplicationIdentityNumber"
+                                       name="ApplicationIdentityNumber"
+                                       value="@Model.ApplicationIdentityNumber"
+                                       autocomplete="off"
+                                       placeholder="Kimlik Numarası"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label">Cinsiyet</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationGenderID, (SelectList)ViewBag.GenderSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Telefon Numarası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control phone-mask"
+                                       id="ApplicationPhoneNumber"
+                                       name="ApplicationPhoneNumber"
+                                       value="@Model.ApplicationPhoneNumber"
+                                       autocomplete="off"
+                                       placeholder="Telefon Numarası"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label">E-Posta</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="ApplicationEmail"
+                                       name="ApplicationEmail"
+                                       value="@Model.ApplicationEmail"
+                                       autocomplete="off"
+                                       class="form-control "
+                                       placeholder="E-Posta"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Anne Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="ApplicationMotherName"
+                                       name="ApplicationMotherName"
+                                       value="@Model.ApplicationMotherName"
+                                       autocomplete="off"
+                                       placeholder="Anne Adı"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label">Baba Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="ApplicationFatherName"
+                                       name="ApplicationFatherName"
+                                       value="@Model.ApplicationFatherName"
+                                       autocomplete="off"
+                                       class="form-control "
+                                       placeholder="Baba Adı"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Doğum Yeri</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="ApplicationBornPlace"
+                                       name="ApplicationBornPlace"
+                                       value="@Model.ApplicationBornPlace"
+                                       autocomplete="off"
+                                       placeholder="Doğum Yeri"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label">Doğum Tarihi</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="ApplicationBornDate"
+                                       name="ApplicationBornDate"
+                                       value="@Model.ApplicationBornDate "
+                                       autocomplete="off"
+                                       class="form-control datepicker"
+                                       placeholder="Doğum Tarihi"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Eğitim</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationEducationID, (SelectList)ViewBag.EducationSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                        <label class="col-sm-1 col-form-label">Kurum</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationOrganisationID, (SelectList)ViewBag.OrganisationSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">İl</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationProvinceID, (SelectList)ViewBag.ProvinceSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                        <label class="col-sm-1 col-form-label">İlçe</label>
+                        <div class="col-sm-5">
+                            <select id="ApplicationDistrictID" name="ApplicationDistrictID" class="select2 form-select">
+                                <option>- Seçiniz -</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Kan Gurubu</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationBloodTypeID, (SelectList)ViewBag.BloodType, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                        <label class="col-sm-1 col-form-label">İş Yeri</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-company2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       id="ApplicationWorkPlaceName"
+                                       name="ApplicationWorkPlaceName"
+                                       value="@Model.ApplicationWorkPlaceName"
+                                       autocomplete="off"
+                                       class="form-control"
+                                       placeholder="İşyeri Adı"
+                                       aria-describedby="basic-icon-default-company2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Ünvan</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationStaffID, (SelectList)ViewBag.StaffSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label">Durumu</label>
+                        <div class="col-sm-5">
+                            @Html.DropDownListFor(x => x.ApplicationCaseID, (SelectList)ViewBag.CaseSelect, " - Seçiniz- ", new { @class = "select2 form-select" })
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="UserValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/ApplicationAdd.js"></script>
+}
+

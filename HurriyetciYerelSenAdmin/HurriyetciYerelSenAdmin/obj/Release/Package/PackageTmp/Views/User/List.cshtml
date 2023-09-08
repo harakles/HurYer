@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="card">
+        <h5 class="card-header">Kullanıcı Listesi</h5>
+        <div class="card-datatable text-nowrap">
+            <table id="datatable" class="datatables-ajax table overflow-scroll"></table>
+        </div>
+    </div>
+    <hr class="my-5" />
+</div>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/UserList.js"></script>
+}

@@ -1,0 +1,355 @@
+﻿@using HurriyetciYerelSen.Controllers
+@using HurriyetciYerelSen.Managers
+@{ 
+    var inf = GeneralManager.GetInf();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>@inf.SystemName</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="icon" type="image/x-icon" href="@inf.SystemIcon" />
+
+    @Styles.Render("~/Content/css")
+    <link href="~/assets/css/color/theme-color.css"
+          id="jssDefault"
+          rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="boxed_wrapper">
+        <div class="preloader"></div>
+
+        <!-- Main header -->
+        <header class="main-header header-style-one">
+            <div class="border-top"
+                 data-aos="fade-down"
+                 data-aos-easing="linear"
+                 data-aos-duration="1000"></div>
+            <!--Start header-->
+            <div class="header" style="background-image:url(/assets/images/shape/shape-1.png);">
+                <div class="container">
+                    <div class="outer-box clearfix">
+                        <!--Start Header Left-->
+                        <div class="header-left clearfix pull-left pt-4">
+                            <div class="header-social-link">
+                                <ul>
+                                    <li>
+                                        <a href="@inf.FacebookLink">
+                                            <i class="fa fa-facebook" aria-hidden="true" style="color:#031f4b;"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@inf.TwitterLink">
+                                            <i class="fa fa-twitter" aria-hidden="true" style="color:#031f4b;"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@inf.InstagramLink">
+                                            <i class="fa fa-instagram" aria-hidden="true"style="color:#031f4b;"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@inf.YoutubeLink">
+                                            <i class="fa fa-youtube" aria-hidden="true"style="color:#031f4b;"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End Header Left-->
+                        <!--Start Header Right-->
+                        <div class="header-right pull-right clearfix">
+                            <div class="top">
+                                <div class="header-contact-info">
+                                    <ul class="header-Ata">
+                                        <li>
+                                            <div class="title">
+                                                <img src="~/assets/images/Ataturk-Bayrak.png"
+                                                     class=""
+                                                     style="width: 8rem" />
+                                            </div>
+                                            <div class="icon"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End Header Right-->
+                    </div>
+                </div>
+            </div>
+            <!--End header -->
+            <!--Start Header Bottom-->
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="outer-box clearfix">
+                        <div class="header-bottom-left  pull-left">
+                            <div class="footer-logo-new">
+                                <a href="/TR/AnaSayfa">
+                                    <div class="logo" style="display:block; position:absolute; margin-top:-1.5rem;">
+                                        <img src="@Sabit.Admin@inf.SystemLogo" alt="Logo" title="" style="width:7rem" />
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="nav-outer clearfix">
+
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler">
+                                    <div class="inner">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Main Menu -->
+                                <nav class="main-menu style1 navbar-expand-md navbar-light" style="margin-left:9rem">
+                                    <div class="collapse navbar-collapse show clearfix"
+                                         id="navbarSupportedContent">
+                                        <ul class="navigation clearfix">
+                                            <li class="dropdown current">
+                                                <a href="#">SENDİKAMIZ</a>
+                                                <ul>
+                                                    <li><a href="/TR/AnaSayfa">Ana Sayfa</a></li>
+                                                    <li><a href="/TR/Hakkimizda">Hakkımızda</a></li>
+                                                    <li><a href="/TR/Ilkelerimiz">İlkelerimiz</a></li>
+                                                    <li><a href="/TR/MerakEdilenler">Merak Edilenler</a></li>
+                                                    <li>
+                                                        <a href="/TR/Kurucular">Kurucular</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#">Güncel</a>
+                                                <ul>
+                                                    <li><a href="/TR/Haberler">Haberler</a></li>
+                                                    <li><a href="/TR/Duyurular">Duyurular</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown">
+                                                <a href="#">Özlük</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="/TR/EylemKararları">Eylem Kararları ve Dilekçe örnekleri</a>
+                                                    </li>
+                                                    <li><a href="/TR/Davalar">Açılan Davalar</a></li>
+                                                    <li><a href="/TR/Yonetmelikler">Yönetmelikler</a></li>
+                                                    <li>
+                                                        <a href="/TR/MahkemeKararlari">İdari Mahkeme Kararları</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/TR/HukukiDegerlendirmeler">Hukuki Değerlendirme , Bilgilendirmeler</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="/TR/Konfederasyon">Konfederasyon</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                                <!-- Main Menu End-->
+                            </div>
+                        </div>
+                        <div class="header-bottom-right clearfix pull-right">
+                            <div class="main-menu">
+                                <ul class="navigation clearfix">
+                                    <li class="">
+                                        <a href="/TR/Uyelik">Üyelik<i class="fa fa-user-plus" style="padding-left: 10px; font-size:1.4rem;"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <!--End Header Bottom-->
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="container">
+                    <div class="clearfix">
+                        <!--Logo-->
+                        <div class="logo float-left" style="width: 7%;">
+                            <a href="/TR/AnaSayfa" class="img-responsive">
+                                <img src="@Sabit.Admin@inf.SystemLogo" alt="Logo" title=""  />
+                            </a>
+                        </div>
+                        <!--Right Col-->
+                        <div class="right-col float-right">
+                            <!-- Main Menu -->
+                            <nav class="main-menu clearfix">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Sticky Header-->
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn">
+                    <span class="icon flaticon-multiply"></span>
+                </div>
+
+                <nav class="menu-box">
+                    <div class="nav-logo">
+                        <a href="/TR/AnaSayfa"><img src="@Sabit.Admin@inf.SystemLogo" alt="Logo" title="" /></a>
+                    </div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                    <!--Social Links-->
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li>
+                                <a href="@inf.FacebookLink">
+                                    <span class="fab fa fa-facebook-square"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@inf.TwitterLink"><span class="fab fa fa-twitter-square"></span></a>
+                            </li>
+                            <li>
+                                <a href="@inf.InstagramLink">
+                                    <span class="fab fa fa-instagram-square"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@inf.YoutubeLink"><span class="fab fa fa-youtube-square"></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+        </header>
+
+        @RenderBody()
+        <!--Start footer area-->
+        <footer class="footer-area">
+            <div class="layer-outer"
+                 style="background-image: url(assets/images/pattern/footer-bg.png)"></div>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <!--Start single footer widget-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp"
+                             data-wow-delay="0.1s">
+                            <div class="single-footer-widget marbtm">
+                                <div class="our-company-info">
+                                    <div class="footer-logo">
+                                        <a href="/TR/AnaSayfa">
+                                            <img src="@Sabit.Admin@inf.SystemLogo" alt="Logo" title="Logo" style="width:60%;" />
+                                        </a>
+                                    </div>
+                                    <div class="text">
+                                        <p>@inf.SystemName</p>
+                                    </div>
+                                    <div class="footer-social-links">
+                                        <ul>
+                                            <li>
+                                                <a href="@inf.FacebookLink">
+                                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@inf.TwitterLink">
+                                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@inf.InstagramLink">
+                                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="@inf.YoutubeLink">
+                                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp"
+                             data-wow-delay="0.5s">
+                            <div class="single-footer-widget martop10 marlef20">
+                                <div class="title">
+                                    <h3>Hızlı Erişim</h3>
+                                </div>
+                                <ul class="visa-type-links">
+                                    <li><a href="/TR/Haberler">Haberler</a></li>
+                                    <li><a href="/TR/Duyurular">Duyurular</a></li>
+                                    <li><a href="/TR/Uyelik">Üyelik</a></li>
+                                    <li><a href="/TR/Davalar">Davalar</a></li>
+                                    <li><a href="/TR/Dilekceler">Dilekçeler</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                        <!--Start single footer widget-->
+                        <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp"
+                             data-wow-delay="0.7s">
+                            <div class="single-footer-widget pdtop martop10">
+                                <div class="title">
+                                    <h3>iletişim</h3>
+                                </div>
+                                <div class="footer-contact-info">
+                                    <ul>
+                                        <li>
+                                            <div class="icon">
+                                                <span class="flaticon-mail-1 thm-clr"></span>
+                                            </div>
+                                            <div class="text">
+                                                <h4>İletişime Geç</h4>
+                                                <p>
+                                                    <a href="mailto:@inf.SystemEmail">@inf.SystemEmail</a>
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End single footer widget-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <button class="scroll-top style2 scroll-to-target" data-target="html">
+                    <span class="fa fa-angle-up"></span>
+                </button>
+                <div class="container">
+                    <div class="outer-box">
+                        <div class="copyright-text">
+                            <p>
+                                <a href="#">@inf.SystemName</a> &copy; 2023
+                                Tüm Hakları Saklıdır
+                            </p>
+                        </div>
+                        <div class="footer-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--End footer area-->
+    </div>
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

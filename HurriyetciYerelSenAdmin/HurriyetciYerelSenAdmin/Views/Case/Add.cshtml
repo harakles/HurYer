@@ -1,0 +1,114 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model Broadcast
+@{
+    ViewBag.Title = "Add";
+    var files = Model.FileGalleries.ToList();
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">@Model.BrodcastClass.ClassName Oluştur</h5>
+                
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Case/Add" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.BroadcastClassID)
+                    @Html.HiddenFor(x => x.BroadcastTextEditor)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="MediaTittle">Başlık</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-Text"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control BroadcastName"
+                                       id="BroadcastName"
+                                       name="BroadcastName"
+                                       value="@Model.BroadcastName"
+                                       autocomplete="off"
+                                       placeholder="Yayın Adı"
+                                       aria-label="BroadcastName"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <h5 class="card-header">Metin Editörü</h5>
+                            <div class="card-body">
+                                <div id="full-editor">
+                                    @Html.Raw(Model.BroadcastTextEditor)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button id="showFileInput" type="button" class="btn btn-primary me-sm-2 me-1 form-submit-a">Dosya Ekle</button>
+                                <div id="fileInputsContainer">
+                                    @foreach (var x in Model.FileGalleries)
+                                    {
+                                        <input hidden name="files" id="@Html.Raw(x.File.FileName+@x.File.Id)" value="@x.File.Id" type="text" />
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                Dosya Listesi
+                                <small class="text-muted float-end"> kabul edilen dosyalar .pdf , .docx , .pptx , .xlsx yada .txt</small>
+                            </div>
+                            <div class="card-body">
+                                <input type="file" id="fileInput" hidden />
+
+                                <table id="fileTable" class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Dosya Adı</th>
+                                            <th>Eylem</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var x in Model.FileGalleries)
+                                        {
+                                            <tr><td>@x.File.FileName</td><td><button type='button' class='deleteButton btn btn-primary' data-filename='@x.File.FileName' data-fileid='@x.File.Id'>Sil</button></td></tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="CaseValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@{
+    <script>
+        const GalleryStr = [
+            @foreach(var x in files) { @Html.Raw("\""+x.File.FilePath+"\"")  @Html.Raw(",")  } ];
+    </script>
+}
+
+@section Scripts
+{
+    <script src="~/assets/PageScripts/CaseAdd.js"></script>
+}
+

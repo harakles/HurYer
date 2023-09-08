@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "List";
+}
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="row">
+        <div class="col-4 col-sm-4 mb-1" style="margin-left: auto">
+            @Html.DropDownList("CaseID", (SelectList)ViewBag.Filter, new { @class = "select2 form-control", multiple = "multiple" })
+        </div>
+    </div>
+    <div class="card">
+        <h5 class="card-header">Başvuru Listesi</h5>
+        <div class="card-datatable text-nowrap">
+            <table id="datatable" class="datatables-ajax table overflow-scroll"></table>
+        </div>
+    </div>
+    <hr class="my-5" />
+</div>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/ApplicationList.js"></script>
+}

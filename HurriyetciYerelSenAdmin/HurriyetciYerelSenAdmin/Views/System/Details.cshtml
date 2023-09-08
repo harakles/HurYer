@@ -1,0 +1,149 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX;
+@model SystemInformation
+@{
+    ViewBag.Title = "Details";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Sistem Detayı</h5>
+            </div>
+            <div class="card-body">
+                <form action="#">
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem Logosu</label>
+                        <div class="col-sm-5">
+                            <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto col-sm-4">
+                                <img src="@Model.SystemLogo"
+                                     alt="System Logo"
+                                     class="d-block h-auto ms-0 ms-sm-4 rounded img-fluid img-thumbnail user-profile-img" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem İconu</label>
+                        <div class="col-sm-5">
+                            <div class="flex-shrink-0 mt-n2 mx-sm-0 mx-auto col-sm-4">
+                                <img src="@Model.SystemIcon"
+                                     alt="System Icon"
+                                     class="d-block h-auto ms-0 ms-sm-4 rounded img-thumbnail user-profile-img" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-clipboard"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.SystemName"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Telefon Numarası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-clipboard"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.SystemTelephone"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">FaceBook</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-brand-facebook"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.FacebookLink"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Instagram</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-brand-instagram"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.InstagramLink"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">WhatsApp Api</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-brand-whatsapp"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.WhatsAppApi"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Youtube Hesabı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-clipboard"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.YoutubeLink"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem E-Postası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-clipboard"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.SystemEmail"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem Harita Linki</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-clipboard"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       value="@Model.SystemMapsLink"
+                                       disabled
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

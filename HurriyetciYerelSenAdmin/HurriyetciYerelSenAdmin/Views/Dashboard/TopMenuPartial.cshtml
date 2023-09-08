@@ -1,0 +1,88 @@
+﻿@model List<HurriyetciYerelSenAdmin.EDMX.UserPermission>
+
+<aside id="layout-menu" class="layout-menu-horizontal menu-horizontal menu bg-menu-theme flex-grow-0">
+    <div class="container-xxl d-flex h-100">
+        <ul class="menu-inner">
+            @{
+                var dropdowns = Model.Where(x=>x.DropdownID != null && x.DropdownID != 0).GroupBy(x => x.DropdownID).Select(group => group.First()).ToList();
+                var dropact = Model.Where(x => x.Link.Contains(Request.Url.Segments[1])).FirstOrDefault();
+                foreach (var item in dropdowns)
+                {
+                    <!-- @item.Dropdown.DropdownName -->
+                    if (dropact.DropdownID == item.DropdownID)
+                    {
+                        <li class="menu-item active">
+                            <a href="javascript:void(0)" class="menu-link menu-toggle">
+                                <i class="menu-icon tf-icons ti @Html.Raw(item.Dropdown.DropdownIcon)"></i>
+                                <div data-i18n="@item.Dropdown.DropdownName">@item.Dropdown.DropdownName</div>
+                            </a>
+                            <ul class="menu-sub">
+                                @foreach (var x in Model)
+                                {
+                                    if (x.DropdownID != item.DropdownID)
+                                    {
+                                        continue;
+                                    }
+                                    if (x.Link+x.UrlParameter == Request.RawUrl)
+                                    {
+                                        <li class="menu-item active">
+                                            <a href="@x.Link@x.UrlParameter" class="menu-link">
+                                                <i class="menu-icon tf-icons ti @Html.Raw(x.Icon)"></i>
+                                                <div data-i18n="@x.PermissionName">@x.PermissionName</div>
+                                            </a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="menu-item">
+                                            <a href="@x.Link@x.UrlParameter" class="menu-link">
+                                                <i class="menu-icon tf-icons ti @Html.Raw(x.Icon)"></i>
+                                                <div data-i18n="@x.PermissionName">@x.PermissionName</div>
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="menu-item">
+                            <a href="javascript:void(0)" class="menu-link menu-toggle">
+                                <i class="menu-icon tf-icons ti @Html.Raw(item.Dropdown.DropdownIcon)"></i>
+                                <div data-i18n="@item.Dropdown.DropdownName">@item.Dropdown.DropdownName</div>
+                            </a>
+                            <ul class="menu-sub">
+                                @foreach (var x in Model)
+                                {
+                                    if (x.DropdownID != item.DropdownID)
+                                    {
+                                        continue;
+                                    }
+                                    if (x.Link + x.UrlParameter == Request.RawUrl)
+                                    {
+                                        <li class="menu-item active">
+                                            <a href="@x.Link@x.UrlParameter" class="menu-link">
+                                                <i class="menu-icon tf-icons ti @Html.Raw(x.Icon)"></i>
+                                                <div data-i18n="@x.PermissionName">@x.PermissionName</div>
+                                            </a>
+                                        </li>
+                                    }
+                                    else
+                                    {
+                                        <li class="menu-item">
+                                            <a href="@x.Link@x.UrlParameter" class="menu-link">
+                                                <i class="menu-icon tf-icons ti @Html.Raw(x.Icon)"></i>
+                                                <div data-i18n="@x.PermissionName">@x.PermissionName</div>
+                                            </a>
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </li>
+                    }
+                }
+            }
+        </ul>
+    </div>
+</aside>

@@ -1,0 +1,93 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model SubBranch
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">İlçe Ekle</h5>
+                <small class="text-muted float-end"></small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Branch/SubBranchAdd" method="POST">
+                    <input hidden value="@Model.Id" name="Id" id="Id" />
+                    <input hidden value="@Model.BranchID" name="BranchID" id="BranchID" />
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Şube Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="SubBranchName"
+                                       name="SubBranchName"
+                                       required="required"
+                                       value="@Model.SubBranchName"
+                                       autocomplete="off"
+                                       placeholder="Şube Adı"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Telefon Numarası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control phone-mask"
+                                       id="PhoneNumber "
+                                       name="PhoneNumber"
+                                       required="required"
+                                       value="@Model.PhoneNumber"
+                                       autocomplete="off"
+                                       placeholder="Telefon Numarası"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Eposta Adresi</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="Email"
+                                       name="Email"
+                                       required="required"
+                                       value="@Model.Email"
+                                       autocomplete="off"
+                                       placeholder="Mail"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</button>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/SubBranchAdd.js"></script>
+}
+

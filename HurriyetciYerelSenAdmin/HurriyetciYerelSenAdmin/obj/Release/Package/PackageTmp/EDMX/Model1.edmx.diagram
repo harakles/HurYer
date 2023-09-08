@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a34aaa056b614926a67292750cd84474" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="SystemModel.AboutU" Width="1.5" PointX="7.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SystemModel.Application" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationBloodType" Width="1.5" PointX="0.75" PointY="17" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationCase" Width="1.5" PointX="0.75" PointY="9.375" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationDistrict" Width="1.5" PointX="0.75" PointY="3.375" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationEducation" Width="1.5" PointX="0.75" PointY="19.625" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationGender" Width="1.5" PointX="0.75" PointY="12" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationOrganisation" Width="1.5" PointX="0.75" PointY="6.875" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationProvince" Width="1.5" PointX="0.75" PointY="14.5" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationStaff" Width="1.5" PointX="0.75" PointY="22.125" />
+        <EntityTypeShape EntityType="SystemModel.BranchMember" Width="1.5" PointX="13" PointY="12.375" />
+        <EntityTypeShape EntityType="SystemModel.Branch" Width="1.5" PointX="10.75" PointY="10.625" />
+        <EntityTypeShape EntityType="SystemModel.Broadcast" Width="1.5" PointX="13" PointY="5" />
+        <EntityTypeShape EntityType="SystemModel.BrodcastClass" Width="1.5" PointX="10.75" PointY="5.25" />
+        <EntityTypeShape EntityType="SystemModel.Dropdown" Width="1.5" PointX="2.75" PointY="11.5" />
+        <EntityTypeShape EntityType="SystemModel.FileGallery" Width="1.5" PointX="15.25" PointY="5" />
+        <EntityTypeShape EntityType="SystemModel.File" Width="1.5" PointX="13" PointY="2.125" />
+        <EntityTypeShape EntityType="SystemModel.Gallery" Width="1.5" PointX="10.25" PointY="1.25" />
+        <EntityTypeShape EntityType="SystemModel.GalleryType" Width="1.5" PointX="8" PointY="5.125" />
+        <EntityTypeShape EntityType="SystemModel.MediaType" Width="1.5" PointX="5.75" PointY="1.625" />
+        <EntityTypeShape EntityType="SystemModel.MediaUrl" Width="1.5" PointX="8" PointY="7.625" />
+        <EntityTypeShape EntityType="SystemModel.Member" Width="1.5" PointX="9.75" PointY="14.75" />
+        <EntityTypeShape EntityType="SystemModel.Principle" Width="1.5" PointX="15.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SystemModel.Question" Width="1.5" PointX="15.75" PointY="8.75" />
+        <EntityTypeShape EntityType="SystemModel.SubBranch" Width="1.5" PointX="13" PointY="9.125" />
+        <EntityTypeShape EntityType="SystemModel.SystemInformation" Width="1.5" PointX="15.75" PointY="11.75" />
+        <EntityTypeShape EntityType="SystemModel.SystemMedia" Width="1.5" PointX="8" PointY="1" />
+        <EntityTypeShape EntityType="SystemModel.Union" Width="1.5" PointX="11.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SystemModel.UserClass" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="SystemModel.UserPage" Width="1.5" PointX="7.25" PointY="11" />
+        <EntityTypeShape EntityType="SystemModel.UserPermission" Width="1.5" PointX="5" PointY="11.125" />
+        <EntityTypeShape EntityType="SystemModel.User" Width="1.5" PointX="5" PointY="15" />
+        <EntityTypeShape EntityType="SystemModel.VisitLog" Width="1.5" PointX="13.75" PointY="16.75" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationBloodType" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationCase" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationDistrict" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationEducation" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationGender" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationOrganisation" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationProvince" />
+        <AssociationConnector Association="SystemModel.FK_Application_ApplicationStaff" />
+        <AssociationConnector Association="SystemModel.FK_BranchMembers_Branchs" />
+        <AssociationConnector Association="SystemModel.FK_SubBranches_Branchs" />
+        <AssociationConnector Association="SystemModel.FK_Broadcasts_BrodcastClasses" />
+        <AssociationConnector Association="SystemModel.FK_FileGallery_Broadcasts" />
+        <AssociationConnector Association="SystemModel.FK_UserPermissions_Dropdowns" />
+        <AssociationConnector Association="SystemModel.FileGallery_Files" />
+        <AssociationConnector Association="SystemModel.FK_Gallery_GalleryType" />
+        <AssociationConnector Association="SystemModel.FK_Gallery_MediaUrl" />
+        <AssociationConnector Association="SystemModel.FK_Gallery_SystemMedia" />
+        <AssociationConnector Association="SystemModel.FK_SystemMedia_MediaTypes" />
+        <AssociationConnector Association="SystemModel.FK_Users_UserClasses" />
+        <AssociationConnector Association="SystemModel.FK_UserPages_UserPermissions" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

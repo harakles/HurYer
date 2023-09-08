@@ -1,0 +1,62 @@
+﻿@using HurriyetciYerelSenAdmin.Models
+@model RoleModel
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Kullanıcı Kayıt Formu</h5>
+                <small class="text-muted float-end">Kullanıcı Rolünü Seçmeyi Unutmayınız!</small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Role/Add" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Rol Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control UserName"
+                                       id="UserClassName"
+                                       name="UserClassName"
+                                       value="@Model.UserClassName"
+                                       autocomplete="off"
+                                       placeholder="Ad"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="row mb-3">
+                        <label class="col-sm-1 col-form-label " for="alignment-country">Rol</label>
+                        <div class="col-sm-11">
+                            @Html.DropDownListFor(s => s.Permissions, (SelectList)ViewBag.Permissions, new { @class = "select2 form-select" , @multiple="multiple" })
+                        </div>
+                    </div>
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="UserValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    let Perms = [@Html.Raw(Model.selected)];
+</script>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/RoleAdd.js"></script>
+}
+

@@ -1,0 +1,1948 @@
+
+@media only screen and (max-width: 5000px){
+.boxed_wrapper_box_page{
+    overflow-x: hidden;
+}
+
+    
+    
+    
+    
+
+}
+
+
+/* Large Layout: 1200px. */
+@media only screen and (min-width: 1200px){
+
+
+    
+    
+
+    
+  
+    
+    
+    
+    
+    
+    
+ 
+    
+}
+
+
+
+/* Medium screen  */ 
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+
+/*** Header Style One Css ***/     
+.header-left .logo {
+    padding: 39px 0 15px;
+}      
+.header-bottom-right .outer-search-box-style1 {
+    padding: 30px 30px 30px;
+    padding-left: 0;
+}
+.header-bottom-right .cart-box {
+    padding: 30px 3px;
+}
+ 
+/*** Coaching Area Css ***/    
+.coaching-content-box {
+    padding-bottom: 24px;
+}
+ 
+/*** Visa Assessment Area Css ***/   
+.visa-assessment-box {
+    display: block;
+}  
+.visa-assessment-box .img-holder {
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+.visa-assessment-box .img-holder img {
+    border-radius: 30px;
+}    
+.visa-assessment-box .text-holder {
+    padding: 60px 70px 60px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+   
+/*** Choose Area Css ***/   
+.choose-area {
+    padding: 100px 0 100px;
+}    
+.choose-content-box {
+    padding-left: 0px;
+    padding-top: 110px;
+}
+   
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 50px 20px 50px;
+} 
+.slogan-content .left {
+    text-align: center;
+} 
+.slogan-content .left .icon, 
+.slogan-content .left .title {
+    display: block;
+} 
+.slogan-content .left .icon {
+    width: auto;
+    margin: 0 0 12px;
+}   
+.slogan-content .right {
+    padding-top: 31px;
+}    
+    
+/*** Footer Area Css ***/       
+.subscribe-content-box {
+    padding: 42px 70px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+.subscribe-title {
+    margin: 0 0 17px;
+}
+   
+.single-footer-widget .our-company-info {
+    padding-right: 50px;
+}
+.single-footer-widget.marleftminus40 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marlef20 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marbtm{
+    margin-bottom: 50px;
+}    
+   
+    
+ 
+    
+    
+/*** Header Style Two Css ***/       
+.header-top-left {
+    float: none;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    padding: 14px 0;
+}  
+.header-top-left ul li {
+    display: inline-block;
+    float: none;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    line-height: 32px;
+    margin: 0 9px;
+}   
+.header-top-left ul li:last-child {
+    margin: 0 9px;
+}    
+.header-top-right {
+    float: none;
+}    
+   
+.header-left-style2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 210px;
+    width: 100%;
+    z-index: 10;
+}
+.header-left-style2 .logo {
+    padding: 18px 0 17px;
+}    
+.header-right-style2 .any-questions-box {
+    display: none;
+}    
+.header-right-style2 .nav-outer {
+    float: right;
+}    
+    
+/*** Whowe Are Area Css ***/       
+.single-featured-box h3 {
+    font-size: 22px;
+}    
+ 
+/*** About Style1 Area Css ***/        
+.about-style1-image-box {
+    float: none;
+    margin-top: 60px;
+}   
+    
+/*** Select Country Style2 Area Css ***/       
+.select-country-style2-carousel .single-items {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+}
+   
+/*** Fact Counter Area Css ***/       
+.single-fact-counter {
+    max-width: 280px;
+    margin: 0 auto 50px;
+}    
+    
+/*** Select Country Style3 Area Css ***/        
+.select-country-style3-area .top {
+    padding-bottom: 34px;
+}    
+    
+/*** Choose Style2 Area Css ***/ 
+.choose-content-box-style2 .inner-content {
+    padding: 90px 70px 85px;
+    margin-bottom: 30px;
+}    
+.choose-content-box-style2 .inner-content:before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}    
+    
+/*** Faq Area Css ***/ 
+.faq-area {
+    padding: 0 0 185px;
+}    
+.faq-image-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box {
+    padding-top: 59px;
+    padding-left: 0;
+}  
+    
+/*** About Style1 area homepfour Css ***/     
+.about-style1-area.homepfour .about-style1-image-box {
+    float: none;
+    margin-top: 0;
+}    
+.about-style1-text-box {
+    padding-top: 60px;
+}
+.about-style1-text-box.pdtop0-r {
+    padding-top: 0px;
+}    
+    
+    
+    
+/*** Consultant Area Css ***/      
+.consultant-map-box .inner-map {
+    padding-top: 40px;
+    padding-bottom: 2px;
+}    
+
+/*** Faq Area Css ***/
+.faq-area.home4 {
+    padding: 0 0 0px;
+} 
+.faq-area .faq-bg {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    background-size: auto;
+}    
+.faq-image-box.style2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box.style2 {
+    padding-top: 70px;
+    padding-left: 0px;
+}    
+    
+/*** Getin Touch Area Css ***/
+.getin-touch-area {
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 100px;
+} 
+.getin-touch-area .map-outer .map-canvas {
+    height: 700px;
+    margin-left: -200px;
+}       
+.getin-touch-content {
+    padding-top: 60px;
+    padding-bottom: 50px;
+} 
+    
+/*** Visa Detail Area Css ***/       
+.visa-benefits-content ul {
+    margin-top: -15px;
+    padding-bottom: 23px;
+}    
+    
+/*** Blog Single Area Css ***/       
+.blog-details-text-box-two .text-box {
+    padding-top: 33px;
+}    
+ 
+    
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+}
+
+
+
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    
+
+/*** Header Style One Css ***/     
+.header-left .logo {
+    padding: 39px 0 15px;
+}      
+.header-bottom-right .outer-search-box-style1 {
+    padding: 30px 30px 30px;
+    padding-left: 0;
+}
+.header-bottom-right .cart-box {
+    padding: 30px 3px;
+}
+.header-contact-info ul li {
+    margin-right: 15px;
+    padding-left: 65px;
+}   
+.header-menu li {
+    margin-right: 15px;
+}    
+ 
+/*** Coaching Area Css ***/    
+.coaching-content-box {
+    padding-bottom: 24px;
+}
+  
+/*** Visa Assessment Area Css ***/   
+.visa-assessment-box {
+    display: block;
+}  
+.visa-assessment-box .img-holder {
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+.visa-assessment-box .img-holder img {
+    border-radius: 30px;
+}    
+.visa-assessment-box .text-holder {
+    padding: 60px 70px 60px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*** Choose Area Css ***/   
+.choose-area {
+    padding: 100px 0 100px;
+}    
+.choose-content-box {
+    padding-left: 0px;
+    padding-top: 110px;
+}
+    
+/*** Team Area Css ***/ 
+.team-area {
+    padding: 100px 0 45px;
+}    
+.single-team-member.marbtm20 {
+    margin: 0 auto 20px;
+}    
+  
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 50px 20px 50px;
+} 
+.slogan-content .left {
+    text-align: center;
+} 
+.slogan-content .left .icon, 
+.slogan-content .left .title {
+    display: block;
+} 
+.slogan-content .left .icon {
+    width: auto;
+    margin: 0 0 12px;
+}   
+.slogan-content .right {
+    padding-top: 31px;
+}    
+    
+/*** Partner Area Css ***/      
+.partner-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 170px 0 55px;
+}    
+.single-partner-logo-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+}   
+  
+/*** Footer Area Css ***/       
+.subscribe-content-box {
+    padding: 42px 70px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+.subscribe-title {
+    margin: 0 0 17px;
+}
+        
+.single-footer-widget .our-company-info {
+    padding-right: 50px;
+}
+.single-footer-widget.marleftminus40 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marlef20 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marbtm{
+    margin-bottom: 50px;
+}    
+ 
+    
+    
+    
+    
+/*** Header Style Two Css ***/       
+.header-top-left {
+    float: none;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    padding: 14px 0;
+}  
+.header-top-left ul li {
+    display: inline-block;
+    float: none;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    line-height: 32px;
+    margin: 0 9px;
+}   
+.header-top-left ul li:last-child {
+    margin: 0 9px;
+}    
+.header-top-right {
+    float: none;
+}    
+   
+.header-left-style2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 210px;
+    width: 100%;
+    z-index: 10;
+}
+.header-left-style2 .logo {
+    padding: 18px 0 17px;
+}    
+.header-right-style2 .any-questions-box {
+    display: none;
+}    
+.header-right-style2 .nav-outer {
+    float: right;
+}    
+  
+/*** About Style1 Area Css ***/        
+.about-style1-image-box {
+    float: none;
+    margin-top: 50px;
+}   
+ 
+/*** Select Country Style2 Area Css ***/       
+.select-country-style2-carousel .single-items {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+}
+    
+/*** Fact Counter Area Css ***/       
+.single-fact-counter {
+    max-width: 280px;
+    margin: 0 auto 50px;
+}    
+ 
+/*** Testimonial Style1 Area Css ***/       
+.testimonial-image-box {
+    margin-top: 70px;
+    margin-left: 0;
+}    
+    
+/*** Select Country Style3 Area Css ***/        
+.select-country-style3-area .top {
+    padding-bottom: 34px;
+}        
+ 
+/*** Partner Style2 Area Css ***/       
+.single-partner-logo-box-style2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    width: 100%;
+}    
+    
+/*** Choose Style2 Area Css ***/ 
+.choose-content-box-style2 .inner-content {
+    padding: 90px 70px 85px;
+    margin-bottom: 30px;
+}    
+.choose-content-box-style2 .inner-content:before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}    
+    
+/*** Faq Area Css ***/ 
+.faq-area {
+    padding: 0 0 185px;
+}    
+.faq-image-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box {
+    padding-top: 59px;
+    padding-left: 0;
+}          
+    
+/*** Header Style Four Css ***/ 
+.header-left-style4 {
+    max-width: 260px;
+}    
+.header-right-style4 {
+    padding: 0 0px;
+    border-top-left-radius: 40px;
+    width: 100px;
+}
+.header-right-style4 .nav-outer {
+    float: none;
+}    
+.header-right-style4 .outer-search-box-style1 {
+    display: none;
+}    
+.header-right-style4 .cart-box {
+    display: none;
+}    
+    
+/*** Contact Area Css ***/ 
+.contact-info-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+} 
+.contact-info-box .inner {
+    padding-left: 0px;
+    padding-bottom: 25px;
+}  
+.contact-info-box .inner:before {
+    display: none;
+}    
+.contact-info-box .inner .icon, 
+.contact-info-box .inner .title {
+    display: block;
+}    
+.contact-info-box .inner .icon {
+    margin: 0 auto 23px;
+}    
+    
+/*** About Style1 area homepfour Css ***/     
+.about-style1-area.homepfour .about-style1-image-box {
+    float: none;
+    margin-top: 0;
+}    
+.about-style1-text-box {
+    padding-top: 60px;
+}
+.about-style1-text-box.pdtop0-r {
+    padding-top: 0px;
+}      
+ 
+/*** Consultant Area Css ***/      
+.consultant-map-box .inner-map {
+    padding-top: 40px;
+    padding-bottom: 2px;
+}       
+    
+/*** Faq Area Css ***/
+.faq-area.home4 {
+    padding: 0 0 0px;
+} 
+.faq-area .faq-bg {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    background-size: auto;
+}    
+.faq-image-box.style2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box.style2 {
+    padding-top: 70px;
+    padding-left: 0px;
+}    
+    
+/*** Blog Style2 Area Css ***/    
+.single-blog-style1.style1instyle2 .text-holder {
+    padding-top: 20px;
+}    
+    
+/*** Getin Touch Area Css ***/
+.getin-touch-area {
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 100px;
+}    
+.getin-touch-content {
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.getin-touch-area .map-outer .map-canvas {
+    height: 500px;
+    margin-top: -70px;
+    margin-left: 0px;
+}    
+    
+/*** RTL Page Css ***/    
+.rtl .header-right-style4 .nav-outer .mobile-nav-toggler {
+    padding: 40px 20px;
+}
+    
+/*** Coaching Detail Area Css ***/       
+.coaching-detail-area {
+    padding: 100px 0 125px;
+}    
+.sidebar-style1.style1instyle2 {
+    padding: 54px 0 0;
+}    
+    
+/*** Visa Detail Area Css ***/       
+.visa-benefits-content ul {
+    margin-top: -15px;
+    padding-bottom: 23px;
+}    
+    
+/*** Visa Detail Area Css ***/ 
+.visa-detail-area {
+    padding: 100px 0 185px;
+}    
+.visa-benefits-content ul {
+    margin-top: -15px;
+    padding-bottom: 23px;
+}    
+.sidebar-style1 {
+    padding-left: 0;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 70px;
+}        
+    
+/*** Team Area Team Page Css ***/        
+.team-area.team-page {
+    padding-bottom: 130px;
+}    
+    
+/*** Blog Area Css ***/     
+.sidebar-wrapper {
+    padding-top: 80px;
+}
+    
+/*** Blog Single Area Css ***/       
+.blog-details-text-box-two .text-box {
+    padding-top: 33px;
+}    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+}
+
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+    
+.sec-title h2 br{
+    display: none;
+}    
+
+   
+/*** Header Style One Css ***/ 
+.header-left .logo {
+    padding: 35px 0 35px;
+}    
+.header-right {
+    display: none;
+}
+.header-bottom-right .outer-search-box-style1 {
+    padding: 30px 30px 30px;
+    padding-left: 0;
+}
+.header-bottom-right .cart-box {
+    padding: 30px 3px;
+}    
+    
+/*** Coaching Area Css ***/    
+.coaching-content-box {
+    padding-bottom: 24px;
+}
+   
+/*** Visa Assessment Area Css ***/   
+.visa-assessment-box {
+    display: block;
+}  
+.visa-assessment-box .img-holder {
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+.visa-assessment-box .img-holder img {
+    border-radius: 20px;
+}    
+.visa-assessment-box .text-holder {
+    padding: 60px 30px 60px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    max-width: 585px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*** Select Country Area Css ***/   
+.single-select-country {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}    
+.single-select-country .img-holder {
+    max-width: 300px;
+    width: 100%;
+    border-radius: 0;
+}    
+.single-select-country .img-holder img {
+    border-radius: 0;
+}    
+.single-select-country .text-holder {
+    max-width: 300px;
+    width: 100%;
+    padding: 23px 30px 16px;
+    padding-right: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}    
+.view-all-country-button p {
+    padding: 15px 30px;
+    line-height: 28px;
+}    
+    
+/*** Choose Area Css ***/   
+.choose-area {
+    padding: 100px 0 100px;
+}    
+.choose-content-box {
+    padding-left: 0px;
+    padding-top: 110px;
+}
+.choose-left-box .border-box2 {
+    left: 0px;
+    bottom: -50px;
+    width: 270px;
+    height: 300px;
+}    
+    
+/*** Team Area Css ***/ 
+.team-area {
+    padding: 100px 0 45px;
+}    
+.single-team-member.marbtm20 {
+    margin: 0 auto 20px;
+}    
+  
+/*** Slogan Area Css ***/       
+.slogan-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 50px 20px 50px;
+} 
+.slogan-content .left {
+    text-align: center;
+} 
+.slogan-content .left .icon, 
+.slogan-content .left .title {
+    display: block;
+} 
+.slogan-content .left .icon {
+    width: auto;
+    margin: 0 0 12px;
+}   
+.slogan-content .right {
+    padding-top: 31px;
+}    
+        
+/*** Partner Area Css ***/      
+.partner-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 170px 0 55px;
+}    
+.single-partner-logo-box {
+    flex: 0 0 100%;
+    max-width: 100%;
+}       
+    
+/*** Footer Area Css ***/       
+.subscribe-content-box {
+    padding: 42px 30px 45px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+} 
+.subscribe-title {
+    margin: 0 0 17px;
+}
+
+.single-footer-widget .our-company-info {
+    padding-right: 50px;
+}
+.single-footer-widget.marleftminus40 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marlef20 {
+    margin-left: 0px;
+}    
+.single-footer-widget.marbtm{
+    margin-bottom: 50px;
+}    
+.single-footer-widget.pdtop{
+    padding-top: 50px;
+}       
+    
+.footer-bottom .outer-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px 0;
+}    
+.copyright-text {
+    padding-bottom: 7px;
+}
+    
+.footer-menu ul {
+    text-align: center;
+}    
+.footer-menu ul li {
+    display: inline-block;
+    float: none;
+    padding-right: 16px;
+    margin-right: 15px;
+}    
+    
+    
+
+
+    
+/*** Header Style Two Css ***/       
+.header-top-left {
+    float: none;
+    text-align: center;
+    border-bottom: 0px solid #dddddd;
+    padding: 14px 0;
+}  
+.header-top-left ul li {
+    display: inline-block;
+    float: none;
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+    line-height: 32px;
+    margin: 0 9px;
+}   
+.header-top-left ul li:last-child {
+    margin: 0 9px;
+}    
+.header-top-right {
+    display: none;
+}    
+   
+.header-left-style2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 210px;
+    width: 100%;
+    z-index: 10;
+}
+.header-left-style2 .logo {
+    padding: 18px 0 17px;
+}    
+.header-right-style2 .any-questions-box {
+    display: none;
+}    
+.header-right-style2 .nav-outer {
+    float: right;
+}    
+    
+/*** About Style1 Area Css ***/        
+.about-style1-image-box {
+    float: none;
+    margin-top: 50px;
+}   
+.about-style1-image-box .image-box .inner .icon {
+    top: 50px;
+    left: 0px;
+}  
+.about-style1-text-box .inner-contant .bottom-box {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.about-style1-text-box .inner-contant .bottom-box .right {
+    padding-left: 0px;
+    margin-bottom: 20px;
+}
+    
+/*** Select Country Style2 Area Css ***/
+.select-country-style2-area .sec-title {
+    padding-bottom: 128px;
+}    
+.single-select-country-style2 {
+    padding-left: 0px;
+}    
+.select-country-style2-carousel .single-items {
+    width: 320px;
+    margin: 0 auto;
+}
+.single-select-country-style2 .img-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    margin-bottom: -5px;
+}        
+.single-select-country-style2 .img-holder img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+}    
+.single-select-country-style2 .text-holder {
+    background: #ffffff;
+    border: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    border-top: none;
+    width: 320px;
+    padding: 40px 30px 20px;
+    padding-right: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    min-height: 220px;
+}     
+.select-country-style2-carousel.owl-nav-style-one.owl-theme .owl-nav {
+    top: -80px;
+    right: auto;
+    left: 0;
+}    
+    
+.view-all-country-button-style2 p {
+    padding: 13px 30px;
+    line-height: 26px;
+}
+    
+/*** Fact Counter Area Css ***/       
+.single-fact-counter {
+    max-width: 280px;
+    margin: 0 auto 50px;
+}    
+ 
+/*** Testimonial Style1 Area Css ***/       
+.testimonial-image-box {
+    margin-top: 70px;
+    margin-left: 0;
+}    
+.single-testimonial-style1 .text-box {
+    padding: 94px 20px 90px;
+}        
+.single-testimonial-style1 .rating-box {
+    right: 20px;
+}    
+ 
+/*** Banner Area Css ***/      
+.visa-form-box .title h2 br{
+    display: none;
+}    
+    
+/*** Select Country Style3 Area Css ***/        
+.select-country-style3-area .top {
+    padding-bottom: 34px;
+}      
+    
+/*** Partner Style2 Area Css ***/       
+.single-partner-logo-box-style2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    width: 100%;
+}    
+
+/*** Choose Style2 Area Css ***/ 
+.choose-content-box-style2 .inner-content {
+    padding: 60px 30px 55px;
+    margin-bottom: 30px;
+}    
+.choose-content-box-style2 .inner-content:before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+} 
+.choose-content-box-style2 .inner-content ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 0px;
+}  
+.choose-content-box-style2 .inner-content ul li .icon {
+    position: relative;
+    margin-bottom: 24px;
+}    
+.choose-content-box-style2 .inner-content ul li .text {
+    padding-left: 0px;
+}    
+    
+    
+    
+/*** Testimonial Style2 Area Css ***/         
+.single-testimonial-style2 .text-box {
+    padding: 119px 30px 42px;
+}    
+    
+/*** Faq Area Css ***/ 
+.faq-area {
+    padding: 0 0 185px;
+}    
+.faq-image-box {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box {
+    padding-top: 59px;
+    padding-left: 0;
+}          
+.faq-image-box .top-image {
+    margin-left: 10px;
+}    
+    
+    
+    
+    
+    
+/*** Header Style Four Css ***/ 
+.header-top-style3 {
+    display: none;
+}    
+.header-left-style4 {
+    max-width: 260px;
+    border-radius: 0;
+}    
+.header-right-style4 {
+    padding: 0 0px;
+    border-top-left-radius: 0px;
+    width: 60px;
+}
+.header-right-style4 .nav-outer {
+    float: none;
+}    
+.header-right-style4 .outer-search-box-style1 {
+    display: none;
+}    
+.header-right-style4 .cart-box {
+    display: none;
+}    
+    
+/*** Contact Area Css ***/ 
+.contact-info-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+} 
+.contact-info-box .inner {
+    padding-left: 0px;
+    padding-bottom: 25px;
+}  
+.contact-info-box .inner:before {
+    display: none;
+}    
+.contact-info-box .inner .icon, 
+.contact-info-box .inner .title {
+    display: block;
+}    
+.contact-info-box .inner .icon {
+    margin: 0 auto 23px;
+}    
+.contact-info-box .inner .title {
+    padding-left: 0px;
+}        
+    
+/*** About Style1 area homepfour Css ***/     
+.about-style1-area.homepfour .about-style1-image-box {
+    float: none;
+    margin-top: 0;
+}    
+.about-style1-text-box {
+    padding-top: 60px;
+} 
+.about-style1-text-box.pdtop0-r {
+    padding-top: 0px;
+}      
+    
+   
+/*** Consultant Area Css ***/ 
+.consultant-box {
+    padding: 80px 30px 70px;
+}    
+.consultant-content .inner-contnt .single-box {
+    margin-bottom: 15px;
+}    
+.consultant-map-box .inner-map {
+    padding-top: 25px;
+    padding-bottom: 2px;
+}       
+    
+/*** Faq Area Css ***/
+.faq-area.home4 {
+    padding: 0 0 0px;
+} 
+.faq-area .faq-bg {
+    position: absolute;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 90%;
+    background-size: auto;
+}    
+.faq-image-box.style2 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}    
+.faq-content-box.style2 {
+    padding-top: 70px;
+    padding-left: 0px;
+}    
+    
+/*** Blog Style2 Area Css ***/    
+.single-blog-style1.style1instyle2 .text-holder {
+    padding-top: 20px;
+}    
+  
+/*** Getin Touch Area Css ***/
+.getin-touch-area {
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    padding-bottom: 100px;
+}   
+.getin-touch-area .map-outer .map-canvas {
+    height: 500px;
+    margin-top: -70px;
+    margin-left: 0px;
+}    
+.getin-touch-content {
+    padding-top: 60px;
+    padding-bottom: 50px;
+} 
+ 
+    
+
+    
+    
+/*** Header Style Five Css ***/  
+.header-top-style4 {
+    padding: 13px 0;
+}    
+.header-top-left-style4 {
+    float: none;
+    text-align: center;
+}    
+.header-top-left-style4 ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    float: none;
+    margin-right: 0;
+    margin: 0 10px;
+}    
+.header-top-left-style4 ul li:last-child {
+    margin-right: 10px;
+}    
+.header-top-right-style4 {
+    padding-right: 0px;
+    float: none;
+    text-align: center;
+}    
+    
+.header-right-style5 .btns-box {
+    display: none;
+}    
+.header-right-style5 .outer-search-box-style1 {
+    display: none;
+}    
+    
+/*** RTL Page Css ***/    
+.rtl .header-right-style4 .nav-outer .mobile-nav-toggler {
+    padding: 40px 5px;
+}
+.rtl .single-footer-widget .our-company-info {
+    padding-right: 0px;
+}    
+.rtl .about-style1-text-box {
+    padding-top: 0px;
+}    
+    
+/*** Coaching Detail Area Css ***/       
+.coaching-detail-area {
+    padding: 100px 0 125px;
+}    
+.sidebar-style1.style1instyle2 {
+    padding: 54px 0 0;
+}    
+        
+/*** Visa Detail Area Css ***/ 
+.visa-detail-area {
+    padding: 100px 0 185px;
+}    
+.visa-benefits-content ul {
+    margin-top: -15px;
+    padding-bottom: 23px;
+}    
+.sidebar-style1 {
+    padding-left: 0;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 70px;
+}        
+
+/*** Select Country Style3 Area Css ***/     
+.single-select-country-style3 .text-holder {
+    padding: 44px 20px 40px;
+}    
+ 
+/*** Team Area Team Page Css ***/        
+.team-area.team-page {
+    padding-bottom: 130px;
+}    
+    
+/*** Blog Area Css ***/     
+.sidebar-wrapper {
+    padding-top: 80px;
+}
+    
+/*** Blog Single Area Css ***/       
+.blog-details-text-box-two .text-box {
+    padding-top: 33px;
+}    
+.blog-detail-author-box {
+    padding: 44px 30px 38px;
+}
+.blog-single-area .tag-box {
+    padding: 15px 19px 15px;
+}    
+.blog-single-area .tag-box .tag {
+    float: none;
+}    
+.blog-single-area .tag-box .right {
+    float: none;
+    margin-top: 5px;
+} 
+.comment-box .single-comment-box {
+    padding-left: 0px;
+}    
+.comment-box .single-comment-box .img-holder {
+    position: static;
+}    
+    
+.comment-box .single-comment-box .text-holder {
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    margin-top: 20px;
+    min-height: 120px;
+}    
+.comment-box .single-comment-box .text-holder:before {
+    display: none;
+}    
+.comment-box .single-comment.marleft {
+    margin-left: 0px;
+}    
+    
+    
+    
+
+
+
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+   
+    
+}
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 768px){
+    
+.main-menu .navigation > li > ul,
+.main-menu .navigation > li > ul > li > ul{
+    display:block !important;
+    visibility:hidden;
+    opacity:0;
+}
+    
+    
+
+   
+    
+    
+    
+}
+
+
+
+
+
+@media only screen and (max-width: 1199px) {
+
+/*** Header Style One Css ***/         
+.header-left {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+}  
+.header-right {
+    max-width: 100%;
+    width: 100%;
+}    
+
+    
+    
+/*** Header Style Three Css ***/     
+.header-style3-right-box {
+    display: none;
+}    
+.header-bottom-right-style2 {
+    display: none;
+}    
+.header-top-style2 {
+    display: none;
+}    
+ 
+.header-bottom-style2 {
+    padding-left: 0;
+}     
+.header-bottom-left-style2 {
+    float: none;
+}    
+.header-bottom-left-style2 .nav-outer {
+    float: right;
+    padding-right: 20px;
+}
+.header-bottom-left-style2 .nav-outer .mobile-nav-toggler {
+    padding: 50px 0;
+} 
+.header-style3-logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 330px;
+    width: 100%;
+    display: block;
+    z-index: 10;
+}    
+     
+/*** Header Style Four Css ***/       
+.header-right-style4 .nav-outer .mobile-nav-toggler {
+    padding: 40px 0;
+} 
+    
+/*** Header Style Five Css ***/      
+.any-questions-box.style3 {
+    display: none;
+}  
+.header-left-style5 .logo {
+    padding: 23px 0;
+}    
+.header-right-style5 .outer-search-box-style1 .seach-toggle {
+    width: 25px;
+    text-align: right;
+}    
+.header-top-right-style4 {
+    padding-right: 0px;
+}    
+.header-right-style5 .btns-box {
+    float: left;
+    padding: 30px 0;
+    margin: 0 20px;
+}    
+.header-right-style5 .outer-search-box-style1 {
+    float: right;
+    padding: 30px 0;
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+
+.nav-outer .mobile-nav-toggler .inner {
+    background: #0098ff;
+}     
+.main-header .main-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: none;
+}      
+.main-header .nav-outer .main-menu,
+.mainmenu-area .nav-outer .main-menu,
+.sticky-header{
+    display: none !important;
+}
+.nav-outer .mobile-nav-toggler{
+    display: block;
+}
+.mobile-nav-toggler .icon-bar {
+    position: relative;
+    display: block;
+    background: #031f4b;
+    height: 2px;
+    width: 30px;
+    margin: 7px 5px;
+} 
+    
+
+    
+/*** RTL Page Css ***/       
+
+    
+    
+    
+    
+    
+
+    
+    
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1390px) { 
+ 
+/*** Main Slider Css ***/     
+.main-slider .auto-container {
+    padding: 0px 120px;
+} 
+    
+    
+ 
+    
+    
+    
+    
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) { 
+
+/*** Main Slider Css ***/     
+.main-slider .auto-container {
+    padding: 0px 120px;
+}
+.main-slider.style1 {
+    margin-top: 0;
+}       
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+    
+/*** Main Slider Css ***/   
+.main-slider .auto-container {
+    padding: 0px 120px;
+}
+.main-slider.style1 {
+    margin-top: 0;
+}  
+   
+.main-slider.style3 .content h2 {
+    font-size: 42px;
+    line-height: 1.3em;
+    margin-top: 22px;
+    margin-bottom: 38px;
+}    
+ 
+    
+    
+    
+    
+    
+
+    
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 767px) { 
+    
+/*** Main Slider Css ***/ 
+.main-slider .auto-container {
+    padding: 0px 70px;
+    padding-right: 30px;
+}
+.main-slider .owl-theme .owl-nav .owl-prev {
+    left: 0px;
+}    
+.main-slider .owl-theme .owl-nav .owl-next {
+    right: 0px;
+}  
+.main-slider.style1 {
+    margin-top: 0;
+}  
+
+.main-slider.style1 .slide {
+    padding: 201px 0px 210px;
+}    
+.main-slider .content h2 {
+    font-size: 38px;
+    margin-top: 23px;
+    margin-bottom: 38px;
+}
+ 
+    
+.main-slider.style3 .slide {
+    padding: 282px 0px 260px;
+}    
+.main-slider.style3 .content h3 {
+    font-size: 18px;
+    line-height: 30px;
+}    
+.main-slider.style3 .content h2 {
+    font-size: 32px;
+    line-height: 1.3em;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}    
+.main-slider.style3 .owl-theme .owl-nav{
+    display: none;
+}    
+.slider-social-links{
+    display: none;
+}      
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+@media only screen and (max-width: 499px) {
+    
+/*** Main Slider Css ***/ 
+.main-slider .auto-container {
+    padding: 0px 30px;
+}   
+.main-slider .owl-theme .owl-nav .owl-prev {
+    display: none;
+}    
+.main-slider .owl-theme .owl-nav .owl-next {
+    display: none;
+}   
+.main-slider.style1 {
+    margin-top: 0;
+}  
+.main-slider.style1 .slide {
+    padding: 201px 0px 210px;
+}    
+.main-slider .content h2 {
+    font-size: 30px;
+    margin-top: 23px;
+    margin-bottom: 40px;
+}
+.main-slider .content h2 br{
+    display: none;
+}
+    
+    
+.main-slider.style3 .slide {
+    padding: 262px 0px 240px;
+}    
+.main-slider.style3 .content h3 {
+    font-size: 18px;
+    line-height: 30px;
+}    
+.main-slider.style3 .content h2 {
+    font-size: 32px;
+    line-height: 1.3em;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}    
+.main-slider.style3 .owl-theme .owl-nav{
+    display: none;
+}    
+.slider-social-links{
+    display: none;
+}    
+
+
+    
+   
+    
+    
+    
+}
+
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1800px) { 
+ 
+/*** Header Style Five Css ***/     
+.header-right-style5 .outer-search-box-style1 .seach-toggle {
+    width: 35px;
+}    
+.any-questions-box.style3 {
+    display: none;
+}    
+ 
+    
+    
+    
+    
+}
+
+
+
+
+
+@media only screen and (min-width: 1600px) and (max-width: 1920px) { 
+ 
+/*** Header Style Three Css ***/ 
+.header-style-three .container-box {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}    
+.header-style3-content-box {
+    max-width: 930px;
+}    
+.main-menu.style3 .navigation>li {
+    margin-right: 30px;
+}    
+.header-bottom-right-style2 .button-box a {
+    padding: 0 20px;
+}
+    
+.header-style3-right-box {
+    max-width: 290px;
+}    
+.any-questions-box.style2 {
+    padding: 41px 20px 41px;
+}    
+.any-questions-box.style2 .title a {
+    font-size: 22px;
+}
+    
+/*** Header Style Four Css ***/     
+.main-menu.style4 .navigation>li {
+    margin-right: 20px;
+}    
+.main-menu.style4 .navigation>li>a:before {
+    display: none;
+}    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
+ 
+    
+    
+}
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1599px) { 
+  
+/*** Header Style Three Css ***/ 
+.header-style-three .container-box {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}   
+.header-style3-content-box {
+    max-width: 820px;
+}   
+.main-menu.style3 .navigation>li {
+    margin-right: 20px;
+}    
+.header-bottom-right-style2 .button-box a {
+    padding: 0 20px;
+    line-height: 90px;
+}
+.header-bottom-right-style2 .button-box a span:before {
+    display: none;
+}    
+.header-bottom-right-style2 .outer-search-box-style1 {
+    padding: 25px 15px 25px;
+    padding-left: 0;
+}    
+    
+.header-style3-right-box {
+    display: none;
+}       
+  
+    
+/*** Header Style Four Css ***/      
+.main-menu.style4 .navigation>li {
+    margin-right: 20px;
+}
+.main-menu.style4 .navigation>li>a {
+    padding-right: 0px;
+}    
+.main-menu.style4 .navigation>li>a:before {
+    display: none;
+}    
+
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) { 
+
+    
+/*** Header Style One Css ***/     
+.header-left {
+    max-width: 300px;
+}    
+/*** Header Style Two Css ***/     
+.header-left-style2 {
+    max-width: 220px;
+} 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+.order-box-2 {
+    -ms-flex-order: 2;
+    order: 2;
+}
+.order-box-1 {
+    -ms-flex-order: 1;
+    order: 1;
+}
+    
+    
+    
+
+}
+
+
+@media only screen and (min-width: 300px) and (max-width: 767px) { 
+.order-box-2 {
+    -ms-flex-order: 2;
+    order: 2;
+}
+.order-box-1 {
+    -ms-flex-order: 1;
+    order: 1;
+}
+    
+    
+/*** Header Style Three Css ***/         
+.header-style3-logo-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 238px;
+    width: 100%;
+    display: block;
+    z-index: 10;
+}    
+.header-bottom-left-style2 .nav-outer .mobile-nav-toggler {
+    padding: 30px 0 31px;
+}
+    
+    
+    
+    
+    
+    
+ 
+
+}

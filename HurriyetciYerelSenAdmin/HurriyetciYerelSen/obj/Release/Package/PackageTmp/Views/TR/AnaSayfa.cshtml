@@ -1,0 +1,173 @@
+﻿@using HurriyetciYerelSen.Models
+@using HurriyetciYerelSen.Controllers
+@model HomePageModel
+@{
+    ViewBag.Title = "AnaSayfa";
+}
+<section class="main-slider style1">
+    <div class="slider-box">
+        <div class="banner-carousel owl-theme owl-carousel">
+            @foreach (var x in Model.News)
+            {
+                <div class="slide">
+                    <div class="image-layer"
+                         style="
+                  background-image: url(@Sabit.Admin@x.MediaCoverPhoto);
+                "></div>
+                    <div class="auto-container">
+                        <div class="content right">
+                            <h3>Güncel Haber</h3>
+                            <h2>
+                                son dakika<br />
+                                @x.MediaTittle
+                            </h2>
+                            <div class="btns-box">
+                                <a class="btn-one" href="/TR/HaberDetay?Id=@x.Id"><span class="txt">Devamını Oku</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!-- End Main Slider -->
+<!--Start Blog Style1 Area-->
+<section class="blog-style1-area">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h3>Son Duyurular</h3>
+            <h2>
+                Yayınlanan Güncel<br />
+                <span>ve Son Duyurular.</span>
+            </h2>
+        </div>
+        <div class="row">
+            @foreach (var x in Model.Announcment)
+            {
+                <div class="col-xl-4 col-lg-4">
+                    <div class="single-blog-style1 wow fadeInLeft"
+                         data-wow-delay="100ms"
+                         data-wow-duration="1500ms">
+                        <div class="img-holder">
+                            <div class="inner">
+                                <img src="@Sabit.Admin@x.MediaCoverPhoto"
+                                     alt="Awesome Image" />
+                            </div>
+                            <div class="date-box">
+                                <h3>@x.MediaDate.Value.ToString("dd")<br /><span>@x.MediaDate.Value.ToString("MMM")</span></h3>
+                            </div>
+                        </div>
+                        <div class="text-holder">
+                            <ul class="meta-info">
+                                <li>
+                                    <span class="flaticon-user thm-clr"></span><a href="/TR/DuyuruDetay?Id=@x.Id">Yönetici</a>
+                                </li>
+                                <li>
+                                    <span class="flaticon-open-archive thm-clr"></span><a href="/TR/DuyuruDetay?Id=@x.Id">Son Duyurular</a>
+                                </li>
+                            </ul>
+                            <h3><a href="/TR/DuyuruDetay?Id=@x.Id">@x.MediaTittle</a></h3>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</section>
+<!--End Blog Style1 Area-->
+<!--Start Coaching Area-->
+<section class="coaching-area">
+    <div class="layer-outer"
+         style="background-image: url(assets/images/shape/shape-1.png)"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="coaching-content-box">
+                    <div class="sec-title">
+                        <h2>
+                            <span>
+                                @Model.info.SystemName
+                            </span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="coaching-items-box">
+                    <div class="row">
+                        <!--Start Single Coaching Item-->
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp"
+                             data-wow-delay="0ms">
+                            <a href="/TR/Subeler">
+                                <div class="single-coaching-item text-center">
+                                    <div class="icon">
+                                        <span class="flaticon-pin"></span>
+                                    </div>
+                                    <h3>Şubelerimiz</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!--End Single Coaching Item-->
+                        <!--Start Single Coaching Item-->
+                        <div class="col-xl-6 col-lg-6 wow fadeInUp"
+                             data-wow-delay="300ms">
+                            <a href="/TR/Uyelik">
+                                <div class="single-coaching-item text-center">
+                                    <div class="icon">
+                                        <span class="flaticon-certification"></span>
+                                    </div>
+                                    <h3>Üyelik</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!--End Single Coaching Item-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!--Start Single Coaching Item-->
+            <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="0ms">
+                <a href="/TR/MerakEdilenler">
+                    <div class="single-coaching-item text-center">
+                        <div class="icon"><span class="flaticon-question"></span></div>
+                        <h3>Merak Edilenler</h3>
+                    </div>
+                </a>
+            </div>
+            <!--End Single Coaching Item-->
+            <!--Start Single Coaching Item-->
+            <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                <a href="/TR/Ilkelerimiz">
+                    <div class="single-coaching-item text-center">
+                        <div class="icon"><span class="flaticon-pdf-file"></span></div>
+                        <h3>İlkelerimiz</h3>
+                    </div>
+                </a>
+            </div>
+            <!--End Single Coaching Item-->
+            <!--Start Single Coaching Item-->
+            <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="400ms">
+                <div class="single-coaching-item text-center">
+                    <!-- <div class="icon"><span class="flaticon-education"></span></div> -->
+                    <h3>Yakında...</h3>
+                </div>
+            </div>
+            <!--End Single Coaching Item-->
+            <!--Start Single Coaching Item-->
+            <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="600ms">
+                <div class="single-coaching-item text-center">
+                    <!-- <div class="icon">
+                      <span class="flaticon-education-1"></span>
+                    </div>-->
+                    <h3>Yakında...</h3>
+                </div>
+            </div>
+            <!--End Single Coaching Item-->
+        </div>
+    </div>
+</section>
+<!--End Coaching Area-->
