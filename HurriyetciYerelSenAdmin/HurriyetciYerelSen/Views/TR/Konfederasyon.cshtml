@@ -1,9 +1,11 @@
-﻿
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@model List<Confederation>
 @{
     ViewBag.Title = "Konfederasyon";
 }
 <!--Start breadcrumb area-->
-<section class="breadcrumb-area" style="background-image: url(~/assets/images/breadcrumb/breadcrumb-1.jpg);">
+<section class="breadcrumb-area" style="background-image: url( );">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
@@ -13,7 +15,7 @@
                     </div>
                     <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
                         <ul class="clearfix">
-                            <li><a href="index.html">AnaSayfa</a></li>
+                            <li><a href="/TR/AnaSayfa">AnaSayfa</a></li>
                             <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
                             <li class="active">Konfederasyon</li>
                         </ul>
@@ -29,203 +31,31 @@
     <div class="container">
         <div class="row">
             <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05387414225"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
+            @foreach (var x in Model)
+            {
+                <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                    <div class="single-team-member marbtm20">
+                        <div class="img-holder">
+                            <div class="inner">
+                                <img src="@Sabit.Admin@x.Logo" alt="Awesome Image">
+                                <div class="overlay-style-one bg2"></div>
+                                <div class="team-social-links">
+                                    <ul>
+                                        <li>
+                                            <a href="tel:@x.PhoneNumber"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="title-holder text-center">
-                        <h3>Gökhan Yıldırım</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Yerel Sen.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Team Member-->
-            <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05327307055"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="title-holder text-center">
+                            <h3>@x.PrezName</h3>
+                            <p>Genel Başkan</p>
+                            <p>@x.Name</p>
                         </div>
                     </div>
-                    <div class="title-holder text-center">
-                        <h3>Levent Kuruoğlu</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Eğitim Sen.</p>
-                    </div>
                 </div>
-            </div>
-            <!--End Single Team Member-->
-            <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.5s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05300698931"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-holder text-center">
-                        <h3>Erdoğan Çakmak</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Sağlık Sen.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Team Member-->
-            <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.7s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05326238145"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-holder text-center">
-                        <h3>Harun Gül</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Büro Sen.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Team Member-->
-            <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05363629494"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-holder text-center">
-                        <h3>Muzaffer Genç</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Tarım Orman Sen.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Team Member-->
-            <!--Start Single Team Member-->
-            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.3s">
-                <div class="single-team-member marbtm20">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="~/assets/images/team/team-v1-1.jpg" alt="Awesome Image">
-                            <div class="overlay-style-one bg2"></div>
-                            <div class="team-social-links">
-                                <ul>
-                                    <li>
-                                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:05323867960"><i class="fa fa-phone" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="title-holder text-center">
-                        <h3>Dr. Mustafa Morkoyun</h3>
-                        <p>Genel Başkan</p>
-                        <p>Hürriyetçi Ulaşım Sen.</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Team Member-->
+            }
         </div>
     </div>
 </section>

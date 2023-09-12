@@ -10,8 +10,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AboutUsTittle" Type="nvarchar(max)" />
-          <Property Name="AboutUsTextEditor" Type="nvarchar(max)" />
+          <Property Name="Tittle" Type="nvarchar(max)" />
+          <Property Name="TextEditor" Type="nvarchar(max)" />
+          <Property Name="Quote" Type="nvarchar(max)" />
           <Property Name="Deleted" Type="bit" />
         </EntityType>
         <EntityType Name="Application">
@@ -146,6 +147,17 @@
           <Property Name="ClassName" Type="nvarchar(max)" />
           <Property Name="Deleted" Type="bit" />
         </EntityType>
+        <EntityType Name="Confederation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Logo" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="PrezName" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="Deleted" Type="bit" />
+        </EntityType>
         <EntityType Name="Dropdowns">
           <Key>
             <PropertyRef Name="Id" />
@@ -229,23 +241,7 @@
           <Property Name="CentralCheckers" Type="bit" Nullable="false" />
           <Property Name="CentralDiscipline" Type="bit" Nullable="false" />
           <Property Name="Funders" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Principles">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Principle" Type="nvarchar(max)" />
-          <Property Name="Deleted" Type="bit" />
-        </EntityType>
-        <EntityType Name="Questions">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Question" Type="nvarchar(max)" />
-          <Property Name="AnswerTextEditor" Type="nvarchar(max)" />
-          <Property Name="Deleted" Type="bit" />
+          <Property Name="TextEditor" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="SubBranches">
           <Key>
@@ -290,20 +286,6 @@
           <Property Name="MediaCoverPhoto" Type="nvarchar(max)" />
           <Property Name="MediaDate" Type="datetime" />
           <Property Name="MediaLastDate" Type="datetime" />
-          <Property Name="Deleted" Type="bit" />
-        </EntityType>
-        <EntityType Name="Unions">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UnionName" Type="nvarchar(max)" />
-          <Property Name="UnionPrez" Type="nvarchar(max)" />
-          <Property Name="UnionPrezPhone" Type="nvarchar(max)" />
-          <Property Name="UnionPrezEmail" Type="nvarchar(max)" />
-          <Property Name="UnionPrezFacebook" Type="nvarchar(max)" />
-          <Property Name="UnionPrezInstagram" Type="nvarchar(max)" />
-          <Property Name="UnionPrezLinkedin" Type="nvarchar(max)" />
           <Property Name="Deleted" Type="bit" />
         </EntityType>
         <EntityType Name="UserClasses">
@@ -621,6 +603,7 @@
           <EntitySet Name="Branchs" EntityType="Self.Branchs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Broadcasts" EntityType="Self.Broadcasts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BrodcastClasses" EntityType="Self.BrodcastClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Confederation" EntityType="Self.Confederation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dropdowns" EntityType="Self.Dropdowns" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="FileGallery" EntityType="Self.FileGallery" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
@@ -629,12 +612,9 @@
           <EntitySet Name="MediaTypes" EntityType="Self.MediaTypes" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="MediaUrl" EntityType="Self.MediaUrl" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Principles" EntityType="Self.Principles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubBranches" EntityType="Self.SubBranches" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemInformation" EntityType="Self.SystemInformation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SystemMedia" EntityType="Self.SystemMedia" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Unions" EntityType="Self.Unions" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserClasses" EntityType="Self.UserClasses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserPages" EntityType="Self.UserPages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserPermissions" EntityType="Self.UserPermissions" Schema="dbo" store:Type="Tables" />
@@ -740,6 +720,7 @@
           <EntitySet Name="Branchs" EntityType="SystemModel.Branch" />
           <EntitySet Name="Broadcasts" EntityType="SystemModel.Broadcast" />
           <EntitySet Name="BrodcastClasses" EntityType="SystemModel.BrodcastClass" />
+          <EntitySet Name="Confederations" EntityType="SystemModel.Confederation" />
           <EntitySet Name="Dropdowns" EntityType="SystemModel.Dropdown" />
           <EntitySet Name="FileGalleries" EntityType="SystemModel.FileGallery" />
           <EntitySet Name="Files" EntityType="SystemModel.File" />
@@ -748,12 +729,9 @@
           <EntitySet Name="MediaTypes" EntityType="SystemModel.MediaType" />
           <EntitySet Name="MediaUrls" EntityType="SystemModel.MediaUrl" />
           <EntitySet Name="Members" EntityType="SystemModel.Member" />
-          <EntitySet Name="Principles" EntityType="SystemModel.Principle" />
-          <EntitySet Name="Questions" EntityType="SystemModel.Question" />
           <EntitySet Name="SubBranches" EntityType="SystemModel.SubBranch" />
           <EntitySet Name="SystemInformations" EntityType="SystemModel.SystemInformation" />
           <EntitySet Name="SystemMedias" EntityType="SystemModel.SystemMedia" />
-          <EntitySet Name="Unions" EntityType="SystemModel.Union" />
           <EntitySet Name="UserClasses" EntityType="SystemModel.UserClass" />
           <EntitySet Name="UserPages" EntityType="SystemModel.UserPage" />
           <EntitySet Name="UserPermissions" EntityType="SystemModel.UserPermission" />
@@ -845,8 +823,9 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="AboutUsTittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="AboutUsTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Deleted" Type="Boolean" />
         </EntityType>
         <EntityType Name="Application">
@@ -1003,6 +982,17 @@
           <Property Name="Deleted" Type="Boolean" />
           <NavigationProperty Name="Broadcasts" Relationship="SystemModel.FK_Broadcasts_BrodcastClasses" FromRole="BrodcastClass" ToRole="Broadcast" />
         </EntityType>
+        <EntityType Name="Confederation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PrezName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Deleted" Type="Boolean" />
+        </EntityType>
         <EntityType Name="Dropdown">
           <Key>
             <PropertyRef Name="Id" />
@@ -1096,23 +1086,7 @@
           <Property Name="CentralCheckers" Type="Boolean" Nullable="false" />
           <Property Name="CentralDiscipline" Type="Boolean" Nullable="false" />
           <Property Name="Funders" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Principle">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Principle1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Deleted" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="Question">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="AnswerTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Deleted" Type="Boolean" />
+          <Property Name="TextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SubBranch">
           <Key>
@@ -1161,20 +1135,6 @@
           <Property Name="Deleted" Type="Boolean" />
           <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_SystemMedia" FromRole="SystemMedia" ToRole="Gallery" />
           <NavigationProperty Name="MediaType" Relationship="SystemModel.FK_SystemMedia_MediaTypes" FromRole="SystemMedia" ToRole="MediaType" />
-        </EntityType>
-        <EntityType Name="Union">
-          <Key>
-            <PropertyRef Name="Id" />
-          </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UnionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrez" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrezPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrezEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrezFacebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrezInstagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="UnionPrezLinkedin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Deleted" Type="Boolean" />
         </EntityType>
         <EntityType Name="UserClass">
           <Key>
@@ -1491,8 +1451,9 @@
             <EntityTypeMapping TypeName="SystemModel.AboutU">
               <MappingFragment StoreEntitySet="AboutUs">
                 <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="AboutUsTextEditor" ColumnName="AboutUsTextEditor" />
-                <ScalarProperty Name="AboutUsTittle" ColumnName="AboutUsTittle" />
+                <ScalarProperty Name="Quote" ColumnName="Quote" />
+                <ScalarProperty Name="TextEditor" ColumnName="TextEditor" />
+                <ScalarProperty Name="Tittle" ColumnName="Tittle" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1642,6 +1603,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Confederations">
+            <EntityTypeMapping TypeName="SystemModel.Confederation">
+              <MappingFragment StoreEntitySet="Confederation">
+                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="PrezName" ColumnName="PrezName" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Logo" ColumnName="Logo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Dropdowns">
             <EntityTypeMapping TypeName="SystemModel.Dropdown">
               <MappingFragment StoreEntitySet="Dropdowns">
@@ -1714,6 +1687,7 @@
           <EntitySetMapping Name="Members">
             <EntityTypeMapping TypeName="SystemModel.Member">
               <MappingFragment StoreEntitySet="Members">
+                <ScalarProperty Name="TextEditor" ColumnName="TextEditor" />
                 <ScalarProperty Name="Funders" ColumnName="Funders" />
                 <ScalarProperty Name="CentralDiscipline" ColumnName="CentralDiscipline" />
                 <ScalarProperty Name="CentralCheckers" ColumnName="CentralCheckers" />
@@ -1730,25 +1704,6 @@
                 <ScalarProperty Name="MemberPhoneNumber" ColumnName="MemberPhoneNumber" />
                 <ScalarProperty Name="MemberSurname" ColumnName="MemberSurname" />
                 <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Principles">
-            <EntityTypeMapping TypeName="SystemModel.Principle">
-              <MappingFragment StoreEntitySet="Principles">
-                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="Principle1" ColumnName="Principle" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Questions">
-            <EntityTypeMapping TypeName="SystemModel.Question">
-              <MappingFragment StoreEntitySet="Questions">
-                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="AnswerTextEditor" ColumnName="AnswerTextEditor" />
-                <ScalarProperty Name="Question1" ColumnName="Question" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1797,21 +1752,6 @@
                 <ScalarProperty Name="MediaQuote" ColumnName="MediaQuote" />
                 <ScalarProperty Name="MediaTittle" ColumnName="MediaTittle" />
                 <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
-                <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Unions">
-            <EntityTypeMapping TypeName="SystemModel.Union">
-              <MappingFragment StoreEntitySet="Unions">
-                <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="UnionPrezLinkedin" ColumnName="UnionPrezLinkedin" />
-                <ScalarProperty Name="UnionPrezInstagram" ColumnName="UnionPrezInstagram" />
-                <ScalarProperty Name="UnionPrezFacebook" ColumnName="UnionPrezFacebook" />
-                <ScalarProperty Name="UnionPrezEmail" ColumnName="UnionPrezEmail" />
-                <ScalarProperty Name="UnionPrezPhone" ColumnName="UnionPrezPhone" />
-                <ScalarProperty Name="UnionPrez" ColumnName="UnionPrez" />
-                <ScalarProperty Name="UnionName" ColumnName="UnionName" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

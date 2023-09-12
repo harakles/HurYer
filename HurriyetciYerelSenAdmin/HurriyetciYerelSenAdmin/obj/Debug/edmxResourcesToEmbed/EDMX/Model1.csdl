@@ -15,6 +15,7 @@
     <EntitySet Name="Branchs" EntityType="SystemModel.Branch" />
     <EntitySet Name="Broadcasts" EntityType="SystemModel.Broadcast" />
     <EntitySet Name="BrodcastClasses" EntityType="SystemModel.BrodcastClass" />
+    <EntitySet Name="Confederations" EntityType="SystemModel.Confederation" />
     <EntitySet Name="Dropdowns" EntityType="SystemModel.Dropdown" />
     <EntitySet Name="FileGalleries" EntityType="SystemModel.FileGallery" />
     <EntitySet Name="Files" EntityType="SystemModel.File" />
@@ -23,12 +24,9 @@
     <EntitySet Name="MediaTypes" EntityType="SystemModel.MediaType" />
     <EntitySet Name="MediaUrls" EntityType="SystemModel.MediaUrl" />
     <EntitySet Name="Members" EntityType="SystemModel.Member" />
-    <EntitySet Name="Principles" EntityType="SystemModel.Principle" />
-    <EntitySet Name="Questions" EntityType="SystemModel.Question" />
     <EntitySet Name="SubBranches" EntityType="SystemModel.SubBranch" />
     <EntitySet Name="SystemInformations" EntityType="SystemModel.SystemInformation" />
     <EntitySet Name="SystemMedias" EntityType="SystemModel.SystemMedia" />
-    <EntitySet Name="Unions" EntityType="SystemModel.Union" />
     <EntitySet Name="UserClasses" EntityType="SystemModel.UserClass" />
     <EntitySet Name="UserPages" EntityType="SystemModel.UserPage" />
     <EntitySet Name="UserPermissions" EntityType="SystemModel.UserPermission" />
@@ -120,8 +118,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="AboutUsTittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="AboutUsTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Tittle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quote" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="Deleted" Type="Boolean" />
   </EntityType>
   <EntityType Name="Application">
@@ -278,6 +277,17 @@
     <Property Name="Deleted" Type="Boolean" />
     <NavigationProperty Name="Broadcasts" Relationship="SystemModel.FK_Broadcasts_BrodcastClasses" FromRole="BrodcastClass" ToRole="Broadcast" />
   </EntityType>
+  <EntityType Name="Confederation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Logo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PrezName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Deleted" Type="Boolean" />
+  </EntityType>
   <EntityType Name="Dropdown">
     <Key>
       <PropertyRef Name="Id" />
@@ -371,23 +381,7 @@
     <Property Name="CentralCheckers" Type="Boolean" Nullable="false" />
     <Property Name="CentralDiscipline" Type="Boolean" Nullable="false" />
     <Property Name="Funders" Type="Boolean" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Principle">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Principle1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Deleted" Type="Boolean" />
-  </EntityType>
-  <EntityType Name="Question">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="AnswerTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Deleted" Type="Boolean" />
+    <Property Name="TextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SubBranch">
     <Key>
@@ -436,20 +430,6 @@
     <Property Name="Deleted" Type="Boolean" />
     <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_SystemMedia" FromRole="SystemMedia" ToRole="Gallery" />
     <NavigationProperty Name="MediaType" Relationship="SystemModel.FK_SystemMedia_MediaTypes" FromRole="SystemMedia" ToRole="MediaType" />
-  </EntityType>
-  <EntityType Name="Union">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UnionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrez" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrezPhone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrezEmail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrezFacebook" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrezInstagram" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="UnionPrezLinkedin" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="Deleted" Type="Boolean" />
   </EntityType>
   <EntityType Name="UserClass">
     <Key>

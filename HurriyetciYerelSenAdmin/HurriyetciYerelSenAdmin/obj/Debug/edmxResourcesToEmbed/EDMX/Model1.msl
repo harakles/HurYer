@@ -5,8 +5,9 @@
       <EntityTypeMapping TypeName="SystemModel.AboutU">
         <MappingFragment StoreEntitySet="AboutUs">
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="AboutUsTextEditor" ColumnName="AboutUsTextEditor" />
-          <ScalarProperty Name="AboutUsTittle" ColumnName="AboutUsTittle" />
+          <ScalarProperty Name="Quote" ColumnName="Quote" />
+          <ScalarProperty Name="TextEditor" ColumnName="TextEditor" />
+          <ScalarProperty Name="Tittle" ColumnName="Tittle" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -156,6 +157,18 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Confederations">
+      <EntityTypeMapping TypeName="SystemModel.Confederation">
+        <MappingFragment StoreEntitySet="Confederation">
+          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="PrezName" ColumnName="PrezName" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Dropdowns">
       <EntityTypeMapping TypeName="SystemModel.Dropdown">
         <MappingFragment StoreEntitySet="Dropdowns">
@@ -228,6 +241,7 @@
     <EntitySetMapping Name="Members">
       <EntityTypeMapping TypeName="SystemModel.Member">
         <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="TextEditor" ColumnName="TextEditor" />
           <ScalarProperty Name="Funders" ColumnName="Funders" />
           <ScalarProperty Name="CentralDiscipline" ColumnName="CentralDiscipline" />
           <ScalarProperty Name="CentralCheckers" ColumnName="CentralCheckers" />
@@ -244,25 +258,6 @@
           <ScalarProperty Name="MemberPhoneNumber" ColumnName="MemberPhoneNumber" />
           <ScalarProperty Name="MemberSurname" ColumnName="MemberSurname" />
           <ScalarProperty Name="MemberName" ColumnName="MemberName" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Principles">
-      <EntityTypeMapping TypeName="SystemModel.Principle">
-        <MappingFragment StoreEntitySet="Principles">
-          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="Principle1" ColumnName="Principle" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Questions">
-      <EntityTypeMapping TypeName="SystemModel.Question">
-        <MappingFragment StoreEntitySet="Questions">
-          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="AnswerTextEditor" ColumnName="AnswerTextEditor" />
-          <ScalarProperty Name="Question1" ColumnName="Question" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -311,21 +306,6 @@
           <ScalarProperty Name="MediaQuote" ColumnName="MediaQuote" />
           <ScalarProperty Name="MediaTittle" ColumnName="MediaTittle" />
           <ScalarProperty Name="MediaTypeID" ColumnName="MediaTypeID" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Unions">
-      <EntityTypeMapping TypeName="SystemModel.Union">
-        <MappingFragment StoreEntitySet="Unions">
-          <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="UnionPrezLinkedin" ColumnName="UnionPrezLinkedin" />
-          <ScalarProperty Name="UnionPrezInstagram" ColumnName="UnionPrezInstagram" />
-          <ScalarProperty Name="UnionPrezFacebook" ColumnName="UnionPrezFacebook" />
-          <ScalarProperty Name="UnionPrezEmail" ColumnName="UnionPrezEmail" />
-          <ScalarProperty Name="UnionPrezPhone" ColumnName="UnionPrezPhone" />
-          <ScalarProperty Name="UnionPrez" ColumnName="UnionPrez" />
-          <ScalarProperty Name="UnionName" ColumnName="UnionName" />
           <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -31,5 +31,6 @@ namespace HurriyetciYerelSen.EDMX
         public bool CentralCheckers { get; set; }
         public bool CentralDiscipline { get; set; }
         public bool Funders { get; set; }
+        public string TextEditor { get; set; }
     }
 }

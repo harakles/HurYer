@@ -13,7 +13,7 @@ namespace HurriyetciYerelSen.Controllers
 {
     public class Sabit
     {
-        public static readonly string Admin = "http://localhost:9091";
+        public static readonly string Admin = "https://localhost:44305";
     }
     public class TRController : Controller
     {
@@ -160,21 +160,27 @@ namespace HurriyetciYerelSen.Controllers
         public ActionResult Hakkimizda()
         {
             var db = new Entities();
-            var detail = db.AboutUs.Find(1);
-            return View(detail);
+            var ınfo = db.SystemInformations.Find(1);
+            var aboutus = db.AboutUs.Find(1);
+            var data = new AboutUsModel()
+            {
+                SystemInfo = ınfo,
+                AboutUs = aboutus,
+            };
+            return View(data);
         }
 
         public ActionResult MerakEdilenler(int page = 1)
         {
             var db = new Entities();
-            var detail = db.Questions.Where(x => x.Deleted != true).ToList().ToPagedList(page, 24);
+            var detail = db.Broadcasts.Where(x => x.Deleted != true && x.BroadcastClassID == 2003).ToList().ToPagedList(page, 24);
             return View(detail);
         }
 
         public ActionResult Ilkelerimiz(int page = 1)
         {
             var db = new Entities();
-            var detail = db.Principles.Where(x => x.Deleted != true).ToList().ToPagedList(page, 36);
+            var detail = db.Broadcasts.Where(x => x.Deleted != true && x.BroadcastClassID ==2004).ToList().ToPagedList(page, 36);
             return View(detail);
         }
 
@@ -208,7 +214,7 @@ namespace HurriyetciYerelSen.Controllers
         public ActionResult Konfederasyon()
         {
             var db = new Entities();
-            var data = db.Unions.Where(x => x.Deleted != true).ToList();
+            var data = db.Confederations.Where(x => x.Deleted != true).ToList();
             return View(data);
         }
 
@@ -216,6 +222,27 @@ namespace HurriyetciYerelSen.Controllers
         {
             var db = new Entities();
             var data = db.Members.Where(x => x.Deleted != true && x.Funders == true).ToList();
+            return View(data);
+        }
+
+        public ActionResult YonetimKurulu()
+        {
+            var db = new Entities();
+            var data = db.Members.Where(x => x.Deleted != true && x.CentralDirectors == true).ToList();
+            return View(data);
+        }
+
+        public ActionResult DenetlemeKurulu()
+        {
+            var db = new Entities();
+            var data = db.Members.Where(x => x.Deleted != true && x.CentralCheckers == true).ToList();
+            return View(data);
+        }
+
+        public ActionResult DisiplinKurulu()
+        {
+            var db = new Entities();
+            var data = db.Members.Where(x => x.Deleted != true && x.CentralDiscipline == true).ToList();
             return View(data);
         }
 
@@ -237,15 +264,16 @@ namespace HurriyetciYerelSen.Controllers
             ViewBag.StaffSelect = new SelectList(db.ApplicationStaffs.Where(x => x.Deleted != true).ToList(), "Id", "Staff");
             ViewBag.CaseSelect = new SelectList(db.ApplicationCases.Where(x => x.Deleted != true).ToList(), "Id", "Situation");
             ViewBag.BloodType = new SelectList(db.ApplicationBloodTypes.Where(x => x.Deleted != true).ToList(), "Id", "BloodType");
-            return PartialView(data);
+            return View(data);
         }
 
         [HttpPost]
-        public ActionResult Uyelik(Application data)
+        public ActionResult OnlineBasvuru(Application data)
         {
             var db = new Entities();
             if(data != null)
             {
+                data.ApplicationCaseID = 2;
                 db.Entry(data).State = data.Id > 0 ? EntityState.Unchanged : EntityState.Added;
                 db.SaveChanges();
             }
@@ -256,6 +284,13 @@ namespace HurriyetciYerelSen.Controllers
         public ActionResult OnlineUyelik()
         {
             return View();
+        }
+
+        public ActionResult GetDistrictSelectList(int Id)
+        {
+            var db = new Entities();
+            var data = new SelectList(db.ApplicationDistricts.Where(x => x.ProvinceId == Id && x.Deleted != true).ToList(), "Id", "District");
+            return Json(data, JsonRequestBehavior.AllowGet);
         }
 
     }

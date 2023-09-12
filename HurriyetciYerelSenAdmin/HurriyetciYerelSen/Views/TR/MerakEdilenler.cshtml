@@ -1,7 +1,58 @@
-﻿
-@{
-    ViewBag.Title = "MerakEdilenler";
-}
-
-<h2>MerakEdilenler</h2>
-
+﻿@using HurriyetciYerelSen.EDMX
+@using PagedList
+@using PagedList.Mvc
+@model PagedList<Broadcast>
+<section class="breadcrumb-area" style="background-image: url(assets/images/breadcrumb/breadcrumb-1.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Merak Edilenler</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">AnaSayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Merak Edilenler</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+<!--Start Faq content Area-->
+<section class="faq-content-area">
+    <div class="layer-outer float-bob-y" style="background-image: url()"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="faq-content-box-style2">
+                    <div class="sec-title text-center">
+                    </div>
+                    <div class="accordion-box">
+                        @foreach (var x in Model)
+                        {
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>@x.BroadcastName</h4></div>
+                                <div class="accord-content">
+                                    <div class="text">
+                                        @Html.Raw(x.BroadcastTextEditor)
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                @Html.PagedListPager(Model, page => Url.Action("Haberler", new { page }))
+            </div>
+        </div>
+    </div>
+</section>

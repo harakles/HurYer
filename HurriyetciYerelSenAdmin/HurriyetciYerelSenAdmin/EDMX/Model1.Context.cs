@@ -39,6 +39,7 @@ namespace HurriyetciYerelSenAdmin.EDMX
         public virtual DbSet<Branch> Branchs { get; set; }
         public virtual DbSet<Broadcast> Broadcasts { get; set; }
         public virtual DbSet<BrodcastClass> BrodcastClasses { get; set; }
+        public virtual DbSet<Confederation> Confederations { get; set; }
         public virtual DbSet<Dropdown> Dropdowns { get; set; }
         public virtual DbSet<FileGallery> FileGalleries { get; set; }
         public virtual DbSet<File> Files { get; set; }
@@ -47,12 +48,9 @@ namespace HurriyetciYerelSenAdmin.EDMX
         public virtual DbSet<MediaType> MediaTypes { get; set; }
         public virtual DbSet<MediaUrl> MediaUrls { get; set; }
         public virtual DbSet<Member> Members { get; set; }
-        public virtual DbSet<Principle> Principles { get; set; }
-        public virtual DbSet<Question> Questions { get; set; }
         public virtual DbSet<SubBranch> SubBranches { get; set; }
         public virtual DbSet<SystemInformation> SystemInformations { get; set; }
         public virtual DbSet<SystemMedia> SystemMedias { get; set; }
-        public virtual DbSet<Union> Unions { get; set; }
         public virtual DbSet<UserClass> UserClasses { get; set; }
         public virtual DbSet<UserPage> UserPages { get; set; }
         public virtual DbSet<UserPermission> UserPermissions { get; set; }

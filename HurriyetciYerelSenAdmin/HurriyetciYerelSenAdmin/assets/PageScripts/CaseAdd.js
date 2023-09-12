@@ -61,7 +61,7 @@
     ];
     const fullEditor = new Quill('#full-editor', {
         bounds: '#full-editor',
-        placeholder: 'Medya detay metni giriniz',
+        placeholder: 'metni giriniz',
         modules: {
             formula: true,
             toolbar: fullToolbar

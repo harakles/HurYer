@@ -56,6 +56,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
             return View("Add", model);
         }
 
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult Add(Member data , HttpPostedFileBase MemberPhoto)
         {

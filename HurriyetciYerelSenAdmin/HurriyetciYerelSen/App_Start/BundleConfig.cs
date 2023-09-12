@@ -38,6 +38,10 @@ namespace HurriyetciYerelSen
                         "~/assets/js/jquery.bxslider.min.js",
                         "~/assets/js/jquery-ui.js",
                         "~/assets/js/jQuery.style.switcher.min.js",
+                        "~/assets/js/flatpickr/flatpickr.js",
+                        "~/assets/js/Clave/cleave.min.js",
+                        "~/assets/js/Clave/cleave-phone.i18n.js",
+                        "~/assets/js/SweetAlert/sweetalert2.all.min.js",
                         "~/assets/js/custom.js"));
 
 
@@ -52,6 +56,8 @@ namespace HurriyetciYerelSen
                       "~/assets/css/magnific-popup.css",
                       "~/assets/css/scrollbar.css",
                       "~/assets/css/hiddenbar.css",
+                      "~/assets/js/flatpickr/flatpickr.css",
+                      "~/assets/js/SweetAlert/sweetalert2.min.css",
                       "~/assets/css/color.css",
                       "~/assets/css/style.css",
                       "~/assets/css/responsive.css"));

@@ -1,7 +1,48 @@
-﻿
-@{
-    ViewBag.Title = "TuzukDetay";
-}
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@model Broadcast
+<section class="coaching-detail-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 order-box-2">
+                <div class="sidebar-style1 style1instyle2">
+                    <div class="single-sidebar-style1">
+                        <div class="sidebar-download-box">
+                            <ul>
+                                @foreach (var x in Model.FileGalleries)
+                                {
+                                    <li>
+                                        <a target="_blank" href="@Sabit.Admin@x.File.FilePath">
+                                            <div class="left">
+                                                <div class="icon">
+                                                    <span class="flaticon-file"></span>
+                                                </div>
+                                                <div class="text">
+                                                    <h4>@x.File.FileName</h4>
+                                                </div>
+                                            </div>
+                                            <div class="right">
+                                                <span class="flaticon-check-mark"></span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<h2>TuzukDetay</h2>
-
+            <div class="col-xl-8 col-lg-8 col-md-12 order-box-1">
+                <div class="coaching-detail-content">
+                    <div class="text-box">
+                        <div class="inner-content">
+                            <h2>@Model.BroadcastName</h2>
+                            @Html.Raw(Model.BroadcastTextEditor)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

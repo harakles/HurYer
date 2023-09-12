@@ -15,8 +15,9 @@ namespace HurriyetciYerelSenAdmin.EDMX
     public partial class AboutU
     {
         public int Id { get; set; }
-        public string AboutUsTittle { get; set; }
-        public string AboutUsTextEditor { get; set; }
+        public string Tittle { get; set; }
+        public string TextEditor { get; set; }
+        public string Quote { get; set; }
         public Nullable<bool> Deleted { get; set; }
     }
 }

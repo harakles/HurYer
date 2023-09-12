@@ -1,0 +1,76 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model AboutU
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Hakkımızda</h5>
+
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/AboutUs/AboutUs" method="POST">
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.TextEditor)
+                    @Html.HiddenFor(x => x.Quote)
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="MediaTittle">Başlık</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-Text"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control BroadcastName"
+                                       id="Tittle"
+                                       name="Tittle"
+                                       value="@Model.Tittle"
+                                       autocomplete="off"
+                                       placeholder="Başlık"
+                                       aria-label="AboutUsTittle"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <h5 class="card-header">Özet</h5>
+                            <div class="card-body">
+                                <div id="half-editor">
+                                    @Html.Raw(Model.Quote)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <h5 class="card-header">Metin Editörü</h5>
+                            <div class="card-body">
+                                <div id="full-editor">
+                                    @Html.Raw(Model.TextEditor)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <a onclick="CaseValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="~/assets/PageScripts/AboutUs.js"></script>
+}
+

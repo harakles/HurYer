@@ -135,9 +135,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutUsController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
     <Compile Include="Controllers\BranchController.cs" />
     <Compile Include="Controllers\CaseController.cs" />
+    <Compile Include="Controllers\ConfederationController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
@@ -188,6 +190,9 @@
     <Compile Include="EDMX\BrodcastClass.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EDMX\Confederation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="EDMX\Dropdown.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -227,12 +232,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EDMX\Principle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EDMX\Question.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="EDMX\SubBranch.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -240,9 +239,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="EDMX\SystemMedia.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EDMX\Union.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="EDMX\User.cs">
@@ -266,6 +262,7 @@
     <Compile Include="Managers\ApplicationManager.cs" />
     <Compile Include="Managers\BranchManager.cs" />
     <Compile Include="Managers\CaseManager.cs" />
+    <Compile Include="Managers\ConfederationManager.cs" />
     <Compile Include="Managers\Cryption.cs" />
     <Compile Include="Managers\FilterAttribute.cs" />
     <Compile Include="Managers\LoginManager.cs" />
@@ -720,6 +717,7 @@
     <Content Include="assets\Datatable\Select-1.4.0\js\select.jqueryui.min.js" />
     <Content Include="assets\Datatable\Select-1.4.0\js\select.semanticui.js" />
     <Content Include="assets\Datatable\Select-1.4.0\js\select.semanticui.min.js" />
+    <Content Include="assets\PageScripts\AboutUs.js" />
     <Content Include="assets\PageScripts\ApplicationAdd.js" />
     <Content Include="assets\PageScripts\ApplicationBloodTypeList.js" />
     <Content Include="assets\PageScripts\ApplicationCaseList.js" />
@@ -735,6 +733,8 @@
     <Content Include="assets\PageScripts\BranchUpdateList.js" />
     <Content Include="assets\PageScripts\CaseAdd.js" />
     <Content Include="assets\PageScripts\CaseList.js" />
+    <Content Include="assets\PageScripts\ConfederationAdd.js" />
+    <Content Include="assets\PageScripts\ConfederationList.js" />
     <Content Include="assets\PageScripts\Dashboard.js" />
     <Content Include="assets\PageScripts\MediaAdd.js" />
     <Content Include="assets\PageScripts\MediaList.js" />
@@ -2490,6 +2490,9 @@
     <Content Include="Views\Branch\BranchMemberAdd.cshtml" />
     <Content Include="Upload\Case\Files\ad9fe242-9e90-465e-ad89-8a5f66a35f81.pdf" />
     <Content Include="Upload\Media\Gallery\cb7733ba-2d30-48f6-9c10-f13908434e98.webp" />
+    <Content Include="Views\AboutUs\AboutUs.cshtml" />
+    <Content Include="Views\Confederation\List.cshtml" />
+    <Content Include="Views\Confederation\Add.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2522,6 +2525,7 @@
     <Content Include="Scripts\jquery-3.7.0.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>

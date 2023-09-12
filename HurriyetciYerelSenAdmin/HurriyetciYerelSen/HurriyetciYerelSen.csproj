@@ -177,6 +177,9 @@
     <Compile Include="EDMX\BrodcastClass.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="EDMX\Confederation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="EDMX\Dropdown.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -216,12 +219,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EDMX\Principle.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EDMX\Question.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="EDMX\SubBranch.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -253,6 +250,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Managers\GeneralManager.cs" />
+    <Compile Include="Models\AboutUsModel.cs" />
     <Compile Include="Models\HomePageModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -533,9 +531,19 @@
     <Content Include="assets\inc\sendmail.php" />
     <Content Include="assets\js\aos.js" />
     <Content Include="assets\js\appear.js" />
+    <Content Include="assets\js\bootstrap-datepicker\bootstrap-datepicker.css" />
+    <Content Include="assets\js\bootstrap-datepicker\bootstrap-datepicker.js" />
+    <Content Include="assets\js\bootstrap-datepicker\bootstrap-datepicker.js.LICENSE.txt" />
     <Content Include="assets\js\bootstrap-select.min.js" />
     <Content Include="assets\js\bootstrap.bundle.min.js" />
+    <Content Include="assets\js\Clave\cleave-phone.i18n.js" />
+    <Content Include="assets\js\Clave\cleave.min.js" />
+    <Content Include="assets\js\cleavejs\cleave-phone.js" />
+    <Content Include="assets\js\cleavejs\cleave.js" />
     <Content Include="assets\js\custom.js" />
+    <Content Include="assets\js\flatpickr\flatpickr.css" />
+    <Content Include="assets\js\flatpickr\flatpickr.js" />
+    <Content Include="assets\js\flatpickr\flatpickr.js.LICENSE.txt" />
     <Content Include="assets\js\html5shiv.js" />
     <Content Include="assets\js\isotope.js" />
     <Content Include="assets\js\jquery-ui.js" />
@@ -561,12 +569,76 @@
     <Content Include="assets\js\parallax.min.js" />
     <Content Include="assets\js\scrollbar.js" />
     <Content Include="assets\js\slick.js" />
+    <Content Include="assets\js\SweetAlert\buttons-handlers.js" />
+    <Content Include="assets\js\SweetAlert\constants.js" />
+    <Content Include="assets\js\SweetAlert\globalState.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\close.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\enable-disable-elements.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\getInput.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\hideLoading.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\update.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\validation-message.js" />
+    <Content Include="assets\js\SweetAlert\instanceMethods\_destroy.js" />
+    <Content Include="assets\js\SweetAlert\keydown-handler.js" />
+    <Content Include="assets\js\SweetAlert\popup-click-handler.js" />
+    <Content Include="assets\js\SweetAlert\privateMethods.js" />
+    <Content Include="assets\js\SweetAlert\privateProps.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\argsToParams.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\bindClickHandler.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\dom.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\fire.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\mixin.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\showLoading.js" />
+    <Content Include="assets\js\SweetAlert\staticMethods\timer.js" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.all.js" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.all.min.js" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.css" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.js" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.min.css" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.min.js" />
+    <Content Include="assets\js\SweetAlert\types.js" />
+    <Content Include="assets\js\SweetAlert\utils\aria.js" />
+    <Content Include="assets\js\SweetAlert\utils\classes.js" />
+    <Content Include="assets\js\SweetAlert\utils\defaultInputValidators.js" />
+    <Content Include="assets\js\SweetAlert\utils\DismissReason.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\animationEndEvent.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\domUtils.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\getters.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\index.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\init.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\inputUtils.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\measureScrollbar.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\parseHtmlToContainer.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\render.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderActions.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderCloseButton.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderContainer.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderContent.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderFooter.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderIcon.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderImage.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderInput.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderPopup.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderProgressSteps.js" />
+    <Content Include="assets\js\SweetAlert\utils\dom\renderers\renderTitle.js" />
+    <Content Include="assets\js\SweetAlert\utils\getTemplateParams.js" />
+    <Content Include="assets\js\SweetAlert\utils\iosFix.js" />
+    <Content Include="assets\js\SweetAlert\utils\isNodeEnv.js" />
+    <Content Include="assets\js\SweetAlert\utils\openPopup.js" />
+    <Content Include="assets\js\SweetAlert\utils\params.js" />
+    <Content Include="assets\js\SweetAlert\utils\scrollbarFix.js" />
+    <Content Include="assets\js\SweetAlert\utils\setParameters.js" />
+    <Content Include="assets\js\SweetAlert\utils\Timer.js" />
+    <Content Include="assets\js\SweetAlert\utils\utils.js" />
     <Content Include="assets\js\swiper.min.js" />
     <Content Include="assets\js\tilt.jquery.js" />
     <Content Include="assets\js\timePicker.js" />
     <Content Include="assets\js\TweenMax.min.js" />
     <Content Include="assets\js\validation.js" />
     <Content Include="assets\js\wow.js" />
+    <Content Include="assets\pageScripts\Uyelik.js" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -627,6 +699,17 @@
     <Content Include="EDMX\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="assets\js\SweetAlert\scss\_animations.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_body.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_core.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_icons.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_mixins.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_theming.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_toasts-animations.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_toasts-body.scss" />
+    <Content Include="assets\js\SweetAlert\scss\_toasts.scss" />
+    <Content Include="assets\js\SweetAlert\sweetalert2.scss" />
+    <Content Include="assets\js\SweetAlert\variables.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -679,6 +762,9 @@
     <Content Include="Views\TR\OnlineUyelik.cshtml" />
     <Content Include="Views\TR\SonMedyalar.cshtml" />
     <Content Include="Views\TR\OnlineBasvuru.cshtml" />
+    <Content Include="Views\TR\YonetimKurulu.cshtml" />
+    <Content Include="Views\TR\DenetlemeKurulu.cshtml" />
+    <Content Include="Views\TR\DisiplinKurulu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

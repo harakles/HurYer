@@ -45,47 +45,50 @@
                             </div>
                         </div>
                     </div>
-                    <hr class="my-4 mx-n4" />
-                    <div class="pt-4">
-                        <div class="row">
-                            <div class="col-sm-12 d-flex justify-content-end">
-                                <button id="showFileInput" type="button" class="btn btn-primary me-sm-2 me-1 form-submit-a">Dosya Ekle</button>
-                                <div id="fileInputsContainer">
-                                    @foreach (var x in Model.FileGalleries)
-                                    {
-                                        <input hidden name="files" id="@Html.Raw(x.File.FileName+@x.File.Id)" value="@x.File.Id" type="text" />
-                                    }
+                    @if (Model.BroadcastClassID != 2004 && Model.BroadcastClassID != 2003)
+                    {
+                        <hr class="my-4 mx-n4" />
+                        <div class="pt-4">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex justify-content-end">
+                                    <button id="showFileInput" type="button" class="btn btn-primary me-sm-2 me-1 form-submit-a">Dosya Ekle</button>
+                                    <div id="fileInputsContainer">
+                                        @foreach (var x in Model.FileGalleries)
+                                        {
+                                            <input hidden name="files" id="@Html.Raw(x.File.FileName+@x.File.Id)" value="@x.File.Id" type="text" />
+                                        }
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <hr class="my-4 mx-n4" />
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-header">
-                                Dosya Listesi
-                                <small class="text-muted float-end"> kabul edilen dosyalar .pdf , .docx , .pptx , .xlsx yada .txt</small>
-                            </div>
-                            <div class="card-body">
-                                <input type="file" id="fileInput" hidden />
+                        <hr class="my-4 mx-n4" />
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Dosya Listesi
+                                    <small class="text-muted float-end"> kabul edilen dosyalar .pdf , .docx , .pptx , .xlsx yada .txt</small>
+                                </div>
+                                <div class="card-body">
+                                    <input type="file" id="fileInput" hidden />
 
-                                <table id="fileTable" class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Dosya Adı</th>
-                                            <th>Eylem</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach (var x in Model.FileGalleries)
-                                        {
-                                            <tr><td>@x.File.FileName</td><td><button type='button' class='deleteButton btn btn-primary' data-filename='@x.File.FileName' data-fileid='@x.File.Id'>Sil</button></td></tr>
-                                        }
-                                    </tbody>
-                                </table>
+                                    <table id="fileTable" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Dosya Adı</th>
+                                                <th>Eylem</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var x in Model.FileGalleries)
+                                            {
+                                                <tr><td>@x.File.FileName</td><td><button type='button' class='deleteButton btn btn-primary' data-filename='@x.File.FileName' data-fileid='@x.File.Id'>Sil</button></td></tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
                     <hr class="my-4 mx-n4" />
                     <div class="pt-4">
                         <div class="row">
