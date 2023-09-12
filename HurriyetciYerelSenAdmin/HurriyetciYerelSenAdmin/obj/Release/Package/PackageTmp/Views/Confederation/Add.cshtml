@@ -1,0 +1,124 @@
+﻿@using HurriyetciYerelSenAdmin.EDMX
+@model Confederation
+@{
+    ViewBag.Title = "Add";
+}
+<div class="row">
+    <div class="col-xxl">
+        <div class="card mb-4">
+            <div class="card-header d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Konfederasyon Kayıt Formu</h5>
+                <small class="text-muted float-end">Kullanıcı Rolünü Seçmeyi Unutmayınız!</small>
+            </div>
+            <div class="card-body">
+                <form id="FormAuth" action="/Confederation/Add" method="POST" enctype="multipart/form-data">
+                    @Html.HiddenFor(x => x.Id)
+                    <div class="row mb-4">
+                        <div class="col-sm-5">
+                            <div class="card mb-4">
+                                <h5 class="card-header">Logo</h5>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start align-items-sm-center gap-4">
+                                        <img src="@Model.Logo"
+                                             alt="Logo"
+                                             class="d-block w-px-100 h-px-100 rounded"
+                                             id="uploadedAvatar" />
+                                        <div class="button-wrapper">
+                                            <label for="upload" class="btn btn-primary me-2 mb-3" tabindex="0">
+                                                <span class="d-none d-sm-block">Yeni Logo Yükle</span>
+                                                <i class="ti ti-upload d-block d-sm-none"></i>
+                                                <input type="file"
+                                                       id="upload"
+                                                       name="Logo"
+                                                       value="@Model.Logo"
+                                                       class="account-file-input"
+                                                       hidden
+                                                       accept="image/png, image/jpeg" />
+                                            </label>
+                                            <button type="button" class="btn btn-label-secondary account-image-reset mb-3">
+                                                <i class="ti ti-refresh-dot d-block d-sm-none"></i>
+                                                <span class="d-none d-sm-block">Sıfırla</span>
+                                            </button>
+
+                                            <div class="text-muted">JPG, GIF yada PNG Kabul Ediyor.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="my-0" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sendika Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control"
+                                       id="Name"
+                                       name="Name"
+                                       value="@Model.Name"
+                                       autocomplete="off"
+                                       placeholder="Ad"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Başkan Adı</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control UserName"
+                                       id="PrezName"
+                                       name="PrezName"
+                                       value="@Model.PrezName"
+                                       autocomplete="off"
+                                       placeholder="Başkan Adı"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Telefon Numarası</label>
+                        <div class="col-sm-5">
+                            <div class="input-group input-group-merge">
+                                <span id="basic-icon-default-fullname2" class="input-group-text">
+                                    <i class="ti ti-user"></i>
+                                </span>
+                                <input type="text"
+                                       class="form-control phone-mask"
+                                       id="PhoneNumber"
+                                       name="PhoneNumber"
+                                       value="@Model.PhoneNumber"
+                                       autocomplete="off"
+                                       placeholder="Telefon Numarası"
+                                       aria-label="Ad"
+                                       aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <hr class="my-4 mx-n4" />
+                    <div class="pt-4">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</button>
+                                <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <script src="~/assets/PageScripts/ConfederationAdd.js"></script>
+}

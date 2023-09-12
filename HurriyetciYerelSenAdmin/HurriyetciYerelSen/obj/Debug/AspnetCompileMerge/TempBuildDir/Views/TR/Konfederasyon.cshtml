@@ -1,0 +1,62 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@model List<Confederation>
+@{
+    ViewBag.Title = "Konfederasyon";
+}
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area" style="background-image: url( );">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Konfederasyon</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">AnaSayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Konfederasyon</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+<!--Start Team Area-->
+<section class="team-area team-page">
+    <div class="container">
+        <div class="row">
+            <!--Start Single Team Member-->
+            @foreach (var x in Model)
+            {
+                <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                    <div class="single-team-member marbtm20">
+                        <div class="img-holder">
+                            <div class="inner">
+                                <img src="@Sabit.Admin@x.Logo" alt="Awesome Image">
+                                <div class="overlay-style-one bg2"></div>
+                                <div class="team-social-links">
+                                    <ul>
+                                        <li>
+                                            <a href="tel:@x.PhoneNumber"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-holder text-center">
+                            <h3>@x.PrezName</h3>
+                            <p>Genel Başkan</p>
+                            <p>@x.Name</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+<!--End Team Area--> 

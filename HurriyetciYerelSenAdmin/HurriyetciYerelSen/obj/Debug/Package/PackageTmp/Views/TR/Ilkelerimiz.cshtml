@@ -1,0 +1,50 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using PagedList
+@using PagedList.Mvc
+@model PagedList<Broadcast>
+@{
+    ViewBag.Title = "Ilkelerimiz";
+}
+
+<section class="breadcrumb-area" style="background-image: url( );">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>İlkelerimiz</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">Ana Sayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">İlkelerimiz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog-area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10">
+                <div class="text-center">
+                    @foreach (var x in Model)
+                    {
+                        <div class="single-box">
+                            <h3>@x.BroadcastName</h3>
+                            @Html.Raw(x.BroadcastTextEditor)
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                @Html.PagedListPager(Model, page => Url.Action("Haberler", new { page }))
+            </div>
+        </div>
+    </div>
+</section>

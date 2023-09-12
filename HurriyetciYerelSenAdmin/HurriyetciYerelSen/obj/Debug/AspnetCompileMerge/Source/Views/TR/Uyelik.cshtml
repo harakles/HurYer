@@ -1,0 +1,41 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@model List<Broadcast>
+@{
+    ViewBag.Title = "Uyelik";
+}
+<!--Start Faq content Area-->
+<section class="faq-content-area">
+    <div class="layer-outer float-bob-y" style="background-image: url()"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="faq-content-box-style2">
+                    <div class="sec-title text-center">
+                        <h3>Belgeler</h3>
+                    </div>
+                    <div class="accordion-box">
+                        @foreach (var x in Model)
+                        {
+                            <div class="accordion accordion-block">
+                                <div class="accord-btn"><h4>@x.BroadcastName</h4></div>
+                                <div class="accord-content">
+                                    <div class="text">
+                                        @Html.Raw(x.BroadcastTextEditor)
+                                    </div>
+                                    @foreach (var z in x.FileGalleries)
+                                    {
+                                        <hr />
+                                        <div class="reply-button">
+                                            <a class="btn btn-outline-primary" target="_blank" href="@Sabit.Admin@z.File.FilePath">Dosyayı Görüntüle</a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

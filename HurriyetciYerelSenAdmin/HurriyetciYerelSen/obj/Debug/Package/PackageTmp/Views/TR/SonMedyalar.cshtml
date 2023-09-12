@@ -1,0 +1,27 @@
+﻿@using HurriyetciYerelSen.Controllers
+@using HurriyetciYerelSen.EDMX
+@model List<SystemMedia>
+<div class="single-sidebar wow fadeInUp animated" data-wow-delay="0.5s" data-wow-duration="1200ms">
+    <div class="title">
+        <h3>Son Yüklenenler</h3>
+    </div>
+    <ul class="recent-posts">
+        @foreach (var x in Model)
+        {
+            <li>
+                <div class="img-box">
+                    <img src="@Sabit.Admin@x.MediaCoverPhoto" alt="Awesome Image">
+                    <div class="overlay-content">
+                        <a href="/TR/HaberDetay?Id=@x.Id"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="title-box">
+                    <h4><a href="@Sabit.Admin@x.MediaCoverPhoto">@x.MediaTittle</a></h4>
+                    <div class="date">@x.MediaDate.Value.ToString("dd MMMM yyyy")</div>
+                </div>
+            </li>
+        }
+
+
+    </ul>
+</div>

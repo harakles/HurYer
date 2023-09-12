@@ -5,8 +5,9 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="AboutUsTittle" Type="nvarchar(max)" />
-    <Property Name="AboutUsTextEditor" Type="nvarchar(max)" />
+    <Property Name="Tittle" Type="nvarchar(max)" />
+    <Property Name="TextEditor" Type="nvarchar(max)" />
+    <Property Name="Quote" Type="nvarchar(max)" />
     <Property Name="Deleted" Type="bit" />
   </EntityType>
   <EntityType Name="Application">
@@ -141,6 +142,17 @@
     <Property Name="ClassName" Type="nvarchar(max)" />
     <Property Name="Deleted" Type="bit" />
   </EntityType>
+  <EntityType Name="Confederation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Logo" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="PrezName" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="Deleted" Type="bit" />
+  </EntityType>
   <EntityType Name="Dropdowns">
     <Key>
       <PropertyRef Name="Id" />
@@ -224,23 +236,7 @@
     <Property Name="CentralCheckers" Type="bit" Nullable="false" />
     <Property Name="CentralDiscipline" Type="bit" Nullable="false" />
     <Property Name="Funders" Type="bit" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Principles">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Principle" Type="nvarchar(max)" />
-    <Property Name="Deleted" Type="bit" />
-  </EntityType>
-  <EntityType Name="Questions">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Question" Type="nvarchar(max)" />
-    <Property Name="AnswerTextEditor" Type="nvarchar(max)" />
-    <Property Name="Deleted" Type="bit" />
+    <Property Name="TextEditor" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="SubBranches">
     <Key>
@@ -285,20 +281,6 @@
     <Property Name="MediaCoverPhoto" Type="nvarchar(max)" />
     <Property Name="MediaDate" Type="datetime" />
     <Property Name="MediaLastDate" Type="datetime" />
-    <Property Name="Deleted" Type="bit" />
-  </EntityType>
-  <EntityType Name="Unions">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UnionName" Type="nvarchar(max)" />
-    <Property Name="UnionPrez" Type="nvarchar(max)" />
-    <Property Name="UnionPrezPhone" Type="nvarchar(max)" />
-    <Property Name="UnionPrezEmail" Type="nvarchar(max)" />
-    <Property Name="UnionPrezFacebook" Type="nvarchar(max)" />
-    <Property Name="UnionPrezInstagram" Type="nvarchar(max)" />
-    <Property Name="UnionPrezLinkedin" Type="nvarchar(max)" />
     <Property Name="Deleted" Type="bit" />
   </EntityType>
   <EntityType Name="UserClasses">
@@ -616,6 +598,7 @@
     <EntitySet Name="Branchs" EntityType="Self.Branchs" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Broadcasts" EntityType="Self.Broadcasts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BrodcastClasses" EntityType="Self.BrodcastClasses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Confederation" EntityType="Self.Confederation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Dropdowns" EntityType="Self.Dropdowns" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FileGallery" EntityType="Self.FileGallery" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Files" EntityType="Self.Files" Schema="dbo" store:Type="Tables" />
@@ -624,12 +607,9 @@
     <EntitySet Name="MediaTypes" EntityType="Self.MediaTypes" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MediaUrl" EntityType="Self.MediaUrl" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Members" EntityType="Self.Members" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Principles" EntityType="Self.Principles" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Questions" EntityType="Self.Questions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SubBranches" EntityType="Self.SubBranches" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SystemInformation" EntityType="Self.SystemInformation" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SystemMedia" EntityType="Self.SystemMedia" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Unions" EntityType="Self.Unions" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserClasses" EntityType="Self.UserClasses" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserPages" EntityType="Self.UserPages" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="UserPermissions" EntityType="Self.UserPermissions" Schema="dbo" store:Type="Tables" />

@@ -1,0 +1,92 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@model List<Member>
+@{
+    ViewBag.Title = "Kurucular";
+}
+<section class="breadcrumb-area" style="background-image: url( );">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Kurucular Kurulu</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">Ana Sayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Kurucular Kurulu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="coaching-detail-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-12 order-box-2">
+                <div class="sidebar-style1 style1instyle2">
+                    <div class="single-sidebar-style1">
+                        <ul class="page-links">
+                            <li class="active"><a href="/TR/Kurucular">Kurucular<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/Hakkimizda">Hakımızda<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/Ilkelerimiz">İlkelerimiz<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/MerakEdilenler">Merak Edilenler<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/DisiplinKurulu">Disiplin Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/DenetlemeKurulu">Denetleme Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/YonetimKurulu">Yonetim Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/AnaSayfa">Ana Sayfa<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-8 col-lg-8 col-md-12 order-box-1">
+                <div class="container">
+                    <div class="row">
+                        @foreach (var x in Model)
+                        {
+                            <div class="col-xl-3 col-lg-3 col-md-6 wow animated fadeInUp" data-wow-delay="0.1s">
+                                <div class="single-team-member marbtm20">
+                                    <div class="img-holder">
+                                        <div class="inner">
+                                            <img src="@Sabit.Admin@x.MemberPhoto" alt="Awesome Image">
+                                            <div class="overlay-style-one bg2"></div>
+                                            <div class="team-social-links">
+                                                <ul>
+                                                    <li>
+                                                        <a href="@x.MemberFacebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@x.MemberTwitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@x.MemberInstagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tel:@x.MemberPhoneNumber"><i class="fa fa-phone" aria-hidden="true"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="title-holder text-center">
+                                        <h3>@x.MemberName @x.MemberSurname</h3>
+                                        <p>@x.MemberPosition</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Coaching Detail Area-->
+    

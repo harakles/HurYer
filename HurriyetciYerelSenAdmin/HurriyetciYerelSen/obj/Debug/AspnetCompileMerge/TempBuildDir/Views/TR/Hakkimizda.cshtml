@@ -1,0 +1,90 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Models
+@using HurriyetciYerelSen.Controllers
+@model AboutUsModel
+<section class="breadcrumb-area" style="background-image: url( );">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Hakkımızda</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">AnaSayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Hakkımızda</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+<!--Start About Style1 Area-->
+<section class="about-style1-area pdtop100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="about-style1-text-box pdtop0-r">
+                    <div class="sec-title">
+                        <h3>@Model.SystemInfo.SystemName Hakkında</h3>
+                    </div>
+                    <div class="inner-contant">
+                        <div class="text">
+                            <p>@Html.Raw(Model.AboutUs.Quote)</p>
+                        </div>
+                        <div class="bottom-box">
+                            <div class="right">
+                                <div class="icon">
+                                    <span class="flaticon-24-hours thm-clr"></span>
+                                </div>
+                                <div class="phone"> 
+                                    <a href="tel:@Model.SystemInfo.SystemTelephone">@Model.SystemInfo.SystemTelephone</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6">
+                <div class="about-style1-image-box clearfix">
+                    <div class="image-box clearfix">
+                        <div class="main-image"><img src="@Sabit.Admin@Model.SystemInfo.SystemLogo" alt=""></div>
+                        <div class="inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="choose-style2-area about-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-11">
+                <div class="choose-content-box-style2">
+                    <div class="inner-content clearfix">
+                        <ul>
+                            <li>
+                                <div class="icon">
+                                    <span class="flaticon-check-mark"></span>
+                                </div>
+                                <div class="text">
+                                    @Html.Raw(Model.AboutUs.TextEditor)
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 

@@ -13,7 +13,7 @@ namespace HurriyetciYerelSen.Controllers
 {
     public class Sabit
     {
-        public static readonly string Admin = "https://localhost:44305";
+        public static readonly string Admin = "http://harakles.eastasia.cloudapp.azure.com:81";
     }
     public class TRController : Controller
     {

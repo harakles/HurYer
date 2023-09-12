@@ -1,0 +1,48 @@
+﻿@using HurriyetciYerelSen.EDMX
+@using HurriyetciYerelSen.Controllers
+@using PagedList
+@using PagedList.Mvc
+@model PagedList<Broadcast>
+<section class="breadcrumb-area" style="background-image: url( );">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Dilekçe Örnekleri</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/AnaSayfa">Ana Sayfa</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Dilekçe Örnekleri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pt-5 pb-5">
+    <div class="container">
+        <div class="row">
+            @foreach (var x in Model)
+            {
+                <div class="col-xl-6">
+                    <div class="inner-content-2">
+                        <div class="text-holder">
+                            <h3>@x.BroadcastName</h3>
+                            <hr />
+                            <a href="/TR/Dilekce?Id=@x.Id">Daha Fazla<span class="flaticon-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row">
+            <div class="col-xl-12  pt-4 pb-4">
+                @Html.PagedListPager(Model, page => Url.Action("Yonetmelikler", new { page }))
+            </div>
+        </div>
+    </div>
+</section>
