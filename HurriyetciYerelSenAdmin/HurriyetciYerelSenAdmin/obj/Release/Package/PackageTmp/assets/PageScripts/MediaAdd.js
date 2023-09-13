@@ -183,5 +183,27 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 function MediaValidate() {
     const Form = document.getElementById("FormAuth");
+    const Tittle = document.getElementById("MediaTittle");
+    const DateInput = document.getElementById("MediaDate");
+    if (Tittle.value == null) {
+        window.Swal.fire({
+            title: 'Media Başlığını Boş Geçemezsiniz',
+            icon: 'error',
+            showCancelButton: true,
+            showConfirmButton: false,
+            cancelButtonText: 'Tamam',
+        });
+        return;
+    }
+    if (DateInput.value == null) {
+        window.Swal.fire({
+            title: 'Tarihi Boş Geçemezsiniz',
+            icon: 'error',
+            showCancelButton: true,
+            showConfirmButton: false,
+            cancelButtonText: 'Tamam',
+        });
+        return;
+    }
     Form.submit();
 }

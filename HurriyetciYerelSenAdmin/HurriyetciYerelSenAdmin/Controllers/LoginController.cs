@@ -16,24 +16,24 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult Index(string e)
         {
             var db = new Entities();
-            if (Session.Keys.Count != 0)
+            var user = Session[UserSession.SessionKeyName] as User;
+            if (user != null)
             {
                 return RedirectToAction("SessionCheck", "Redirect");
             }
-            if (HttpContext.Request.Cookies.Count != 0)
+            if (HttpContext.Request.Cookies["RememberMeCookie"].Value != null && HttpContext.Request.Cookies["RememberMeCookie"].Value != "")
             {
-                if (HttpContext.Request.Cookies["RememberMeCookie"].Value != null && HttpContext.Request.Cookies["RememberMeCookie"].Value != "")
+                var cookiecode = HttpContext.Request.Cookies["RememberMeCookie"].Value;
+                var query = db.Users.Where(x => x.RememberCookie == cookiecode).FirstOrDefault();
+                if (query != null)
                 {
-                    var cookiecode = HttpContext.Request.Cookies["RememberMeCookie"].Value;
-                    var query = db.Users.Where(x => x.RememberCookie == cookiecode).FirstOrDefault();
-                    if (query != null)
-                    {
-                        Session.Add(UserSession.SessionKeyName, query);
-                        return RedirectToAction("SessionCheck","Redirect");
-                    }
-                    ViewBag.System = db.SystemInformations.FirstOrDefault();
-                    ViewBag.Error = e;
-                    return View();
+                    Session.Add(UserSession.SessionKeyName, query);
+                    return RedirectToAction("SessionCheck", "Redirect");
+                }
+                else
+                {
+                    Response.Cookies.Remove("RememberMeCookie");
+                    Session.Remove(UserSession.SessionKeyName);
                 }
             }
             ViewBag.System = db.SystemInformations.FirstOrDefault();
