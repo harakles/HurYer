@@ -15,10 +15,6 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult SessionCheck()
         {
             var db = new Entities();
-            if (Session.Keys.Count == 0)
-            {
-                return RedirectToAction("Index", "Login");
-            }
             var current = Session[UserSession.SessionKeyName] as User;
             string[] perms = current.UserClass.Permissions.Split(',');
             var permid = Convert.ToInt32(perms[0]);

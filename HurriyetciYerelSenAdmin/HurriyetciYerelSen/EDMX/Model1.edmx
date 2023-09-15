@@ -273,6 +273,7 @@
           <Property Name="SystemTelephone" Type="nvarchar(max)" />
           <Property Name="SystemAdress" Type="nvarchar(max)" />
           <Property Name="SystemMapsLink" Type="nvarchar(max)" />
+          <Property Name="Meta" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="SystemMedia">
           <Key>
@@ -1119,6 +1120,7 @@
           <Property Name="SystemTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SystemAdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SystemMapsLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Meta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="SystemMedia">
           <Key>
@@ -1724,6 +1726,7 @@
           <EntitySetMapping Name="SystemInformations">
             <EntityTypeMapping TypeName="SystemModel.SystemInformation">
               <MappingFragment StoreEntitySet="SystemInformation">
+                <ScalarProperty Name="Meta" ColumnName="Meta" />
                 <ScalarProperty Name="SystemMapsLink" ColumnName="SystemMapsLink" />
                 <ScalarProperty Name="SystemAdress" ColumnName="SystemAdress" />
                 <ScalarProperty Name="SystemTelephone" ColumnName="SystemTelephone" />

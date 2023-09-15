@@ -228,9 +228,6 @@
     <Compile Include="EDMX\SystemMedia.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="EDMX\Union.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="EDMX\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

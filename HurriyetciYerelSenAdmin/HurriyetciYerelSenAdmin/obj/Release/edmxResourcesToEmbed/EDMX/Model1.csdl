@@ -414,6 +414,7 @@
     <Property Name="SystemTelephone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SystemAdress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="SystemMapsLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Meta" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="SystemMedia">
     <Key>

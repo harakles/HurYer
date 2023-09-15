@@ -43,7 +43,7 @@
                                                 <span class="d-none d-sm-block">Sıfırla</span>
                                             </button>
 
-                                            <div class="text-muted">JPG , jpeg yada PNG Kabul Ediyor.</div>
+                                            <div class="text-muted">JPG , JPEG yada PNG Kabul Ediyor.</div>
                                         </div>
                                     </div>
                                 </div>
@@ -88,21 +88,6 @@
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <label class="col-sm-1 col-form-label" for="MediaLastDate">Son Tarih(varsa)</label>
-                        <div class="col-sm-5">
-                            <div class="input-group input-group-merge">
-                                <span class="input-group-text"><i class="ti ti-calendar-plus"></i></span>
-                                <input type="text"
-                                       id="MediaLastDate"
-                                       name="MediaLastDate"
-                                       value="@Model.MediaLastDate"
-                                       autocomplete="off"
-                                       class="form-control datepicker"
-                                       placeholder="Son Tarih(varsa)"
-                                       aria-label="MediaLastDate"
-                                       aria-describedby="basic-icon-default-email2" />
-                            </div>
-                        </div>
                         <label class="col-sm-1 col-form-label" for="MediaQuote">Medya Özeti</label>
                         <div class="col-sm-5">
                             <div class="input-group input-group-merge">
@@ -166,7 +151,7 @@
                     <div class="pt-4">
                         <div class="row">
                             <div class="col-sm-12 d-flex justify-content-end">
-                                <a onclick="MediaValidate();" class="btn btn-primary me-sm-2 me-1 form-submit-a">Kaydet</a>
+                                <button type="button" onclick="MediaValidate();" class="btn btn-primary me-sm-2 me-1">Kaydet</button>
                                 <button type="reset" class="btn btn-label-secondary">Sıfırla</button>
                             </div>
                         </div>

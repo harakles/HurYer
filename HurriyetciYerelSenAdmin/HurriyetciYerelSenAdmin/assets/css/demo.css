@@ -129,9 +129,10 @@
     height:100%;
 }
 
-.Setting-user-profile-img{
-    width:100% !important;
-    height:100% !important;
+.Setting-user-profile-img {
+    width: 100% !important;
+    height: 100% !important;
+    box-shadow: 0 10px 10px 0 rgba(0,0,0,0.40);
 }
 
 .img-rew {

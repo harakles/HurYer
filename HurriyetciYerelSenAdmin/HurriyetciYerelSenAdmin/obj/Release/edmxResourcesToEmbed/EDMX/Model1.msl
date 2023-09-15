@@ -278,6 +278,7 @@
     <EntitySetMapping Name="SystemInformations">
       <EntityTypeMapping TypeName="SystemModel.SystemInformation">
         <MappingFragment StoreEntitySet="SystemInformation">
+          <ScalarProperty Name="Meta" ColumnName="Meta" />
           <ScalarProperty Name="SystemMapsLink" ColumnName="SystemMapsLink" />
           <ScalarProperty Name="SystemAdress" ColumnName="SystemAdress" />
           <ScalarProperty Name="SystemTelephone" ColumnName="SystemTelephone" />

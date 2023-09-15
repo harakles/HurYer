@@ -65,6 +65,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
                     data.Logo = inf.SystemLogo;
                 }
             }
+            var number = data.PhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    data.PhoneNumber = "+9" + data.PhoneNumber;
+                    break;
+                case '5':
+                    data.PhoneNumber = "+90" + data.PhoneNumber;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return RedirectToAction("List");

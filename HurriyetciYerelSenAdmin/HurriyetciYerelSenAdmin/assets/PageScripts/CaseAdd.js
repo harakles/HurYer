@@ -1,5 +1,16 @@
 ﻿function CaseValidate() {
     const Form = document.getElementById("FormAuth");
+    const Tittle = document.getElementById("BroadcastName");
+    if (Tittle.value == null || Tittle.value == "") {
+        window.Swal.fire({
+            title: 'Başlığı Boş Geçemezsiniz',
+            icon: 'error',
+            showCancelButton: true,
+            showConfirmButton: false,
+            cancelButtonText: 'Tamam',
+        });
+        return;
+    }
     Form.submit();
 }
 (function () {

@@ -10,7 +10,7 @@ $(function () {
         "proccessing": true,
         "serverSide": true,
         "responsive": true,
-        "order": [0, "desc"],
+        "order": [0, "asc"],
         "language": {
             "url": "../../assets/Datatable/Turkish.json"
         },

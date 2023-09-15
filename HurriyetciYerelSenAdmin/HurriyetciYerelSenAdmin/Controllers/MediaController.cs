@@ -33,10 +33,11 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult Add(int TurID)
         {
             var db = new Entities();
+            var inf = db.SystemInformations.FirstOrDefault();
             var MediaTypes = db.MediaTypes.ToList();
             ViewBag.MediaDropdowns = new SelectList(MediaTypes, "Id", "TypeName");
             var x = db.MediaTypes.Find(TurID);
-            var Media = new SystemMedia() { MediaTypeID = TurID , MediaType = x };
+            var Media = new SystemMedia() { MediaTypeID = TurID , MediaType = x , MediaCoverPhoto = inf.SystemLogo };
             return View(Media);
         }
         public ActionResult Update(int Id)
@@ -53,6 +54,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
         {
             var db = new Entities();
             var files = db.Galleries.Where(x => x.MediaID == Media.Id).ToList();
+            var inf = db.SystemInformations.FirstOrDefault();
             if (MediaCoverPhoto != null)
             {
                 var fotoformat = Path.GetExtension(MediaCoverPhoto.FileName);
@@ -60,6 +62,10 @@ namespace HurriyetciYerelSenAdmin.Controllers
                 var fotoyol = Path.Combine(Server.MapPath("/Upload/Media/Cover/" + fotoad));
                 MediaCoverPhoto.SaveAs(fotoyol);
                 Media.MediaCoverPhoto = "/Upload/Media/Cover/" + fotoad;
+            }
+            else if(Media.MediaCoverPhoto == null)
+            {
+                Media.MediaCoverPhoto = inf.SystemLogo;
             }
             db.Entry(Media).State = Media.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();

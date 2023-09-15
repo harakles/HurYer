@@ -564,7 +564,9 @@ progress {
 }
 
 .list-inline-item {
-  display: inline-block;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
 }
 .list-inline-item:not(:last-child) {
   margin-right: 0.5rem;

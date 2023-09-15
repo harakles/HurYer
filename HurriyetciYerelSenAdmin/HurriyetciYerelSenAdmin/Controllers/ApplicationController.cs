@@ -90,6 +90,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult Add(Application data)
         {
             var db = new Entities();
+            var number = data.ApplicationPhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    data.ApplicationPhoneNumber = "+9" + data.ApplicationPhoneNumber;
+                    break;
+                case '5':
+                    data.ApplicationPhoneNumber = "+90" + data.ApplicationPhoneNumber;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return RedirectToAction("List");

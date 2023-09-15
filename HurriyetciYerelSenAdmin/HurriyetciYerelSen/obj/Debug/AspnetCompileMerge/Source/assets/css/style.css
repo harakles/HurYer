@@ -1363,7 +1363,7 @@ select:focus {
 
     .mobile-menu .nav-logo a {
         position: relative;
-        width:120px;
+        width: 120px;
         display: inline-block;
     }
 
@@ -1970,7 +1970,7 @@ select:focus {
             .main-menu .navigation > li > ul {
                 position: absolute;
                 top: 100%;
-                left: 0;
+                left: -55%;
                 width: 270px;
                 padding: 0px 0;
                 opacity: 0;
@@ -1985,120 +1985,16 @@ select:focus {
                 z-index: 100;
             }
 
-                .main-menu .navigation > li > ul:before {
+            @media screen and (max-width: 1400px) {
+                .main-menu .navigation > li > ul {
                     position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    width: 100%;
-                    height: 100%;
-                    content: '';
-                    background: #ffffff;
-                    border-radius: 0;
-                    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    z-index: -1;
-                }
-
-            .main-menu .navigation > li.dropdown:hover > ul {
-                opacity: 1;
-                visibility: visible;
-                -moz-transform: translateY(0);
-                -webkit-transform: translateY(0);
-                -ms-transform: translateY(0);
-                -o-transform: translateY(0);
-                transform: translateY(0);
-                transition: all 300ms ease;
-                -moz-transition: all 300ms ease;
-                -webkit-transition: all 500ms ease;
-                -ms-transition: all 300ms ease;
-                -o-transition: all 300ms ease;
-            }
-
-            .main-menu .navigation > li > ul > li {
-                position: relative;
-                display: block;
-                padding: 0 20px;
-                width: 100%;
-            }
-
-                .main-menu .navigation > li > ul > li > a {
-                    position: relative;
-                    display: block;
-                    border-bottom: 1px solid #e9e9e9;
-                    padding: 13px 0px 13px;
-                    color: #031f4b;
-                    font-size: 15px;
-                    line-height: 24px;
-                    font-weight: 600;
-                    text-align: left;
-                    text-transform: capitalize;
-                    transition: all 500ms ease;
-                    font-family: 'Archivo', sans-serif;
-                }
-
-                .main-menu .navigation > li > ul > li:last-child > a {
-                    border: none;
-                }
-
-                .main-menu .navigation > li > ul > li > a:hover {
-                    padding-left: 15px;
-                }
-
-                .main-menu .navigation > li > ul > li > a:before {
-                    position: absolute;
-                    top: 0;
-                    left: 0px;
-                    bottom: 0;
-                    font-family: FontAwesome;
-                    content: "\f105";
-                    font-size: 14px;
-                    font-weight: 700;
-                    margin: 12px 0;
+                    top: 100%;
+                    left: -175% !important;
+                    width: 270px;
+                    padding: 0px 0;
                     opacity: 0;
-                    transition: all 500ms ease;
-                    -webkit-transition: all 300ms ease;
-                    -moz-transition: all 300ms ease;
-                    -ms-transition: all 300ms ease;
-                    -o-transition: all 300ms ease;
-                    transition: all 300ms ease;
-                }
-
-                .main-menu .navigation > li > ul > li.dropdown > a:after {
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    bottom: 0;
-                    font-family: FontAwesome;
-                    content: "\f105";
-                    color: #031f4b;
-                    font-size: 14px;
-                    font-weight: 700;
-                    margin: 12px 0;
-                    text-align: right;
-                    z-index: 5;
-                }
-
-                .main-menu .navigation > li > ul > li:hover > a:before {
-                    opacity: 1;
-                }
-
-                .main-menu .navigation > li > ul > li > ul {
-                    position: absolute;
-                    top: 0%;
-                    left: 100%;
-                    width: 250px;
-                    padding: 0;
-                    display: none;
-                    background: #ffffff;
+                    visibility: hidden;
                     border-radius: 0;
-                    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
-                    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
                     -moz-transform: translateY(30px);
                     -webkit-transform: translateY(30px);
                     -ms-transform: translateY(30px);
@@ -2107,79 +2003,203 @@ select:focus {
                     transition: all 100ms ease;
                     z-index: 100;
                 }
-
-        .main-menu .navigation li > ul > li.dropdown:hover ul {
-            opacity: 1;
-            visibility: visible;
-            -moz-transform: translateY(0);
-            -webkit-transform: translateY(0);
-            -ms-transform: translateY(0);
-            -o-transform: translateY(0);
-            transform: translateY(0);
-            transition: all 300ms ease;
-            -moz-transition: all 300ms ease;
-            -webkit-transition: all 500ms ease;
-            -ms-transition: all 300ms ease;
-            -o-transition: all 300ms ease;
-        }
-
-        .main-menu .navigation > li > ul > li > ul > li {
-            position: relative;
-            display: block;
-            padding: 0 20px;
-            width: 100%;
-        }
-
-            .main-menu .navigation > li > ul > li > ul > li > a {
-                position: relative;
-                display: block;
-                border-bottom: 1px solid #e9e9e9;
-                padding: 13px 0px 13px;
-                color: #031f4b;
-                font-size: 15px;
-                line-height: 24px;
-                font-weight: 600;
-                text-align: left;
-                text-transform: capitalize;
-                transition: all 500ms ease;
-                font-family: 'Archivo', sans-serif;
             }
 
-            .main-menu .navigation > li > ul > li > ul > li:last-child > a {
-                border: none;
-            }
+.main-menu .navigation > li > ul:before {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #ffffff;
+    border-radius: 0;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+    z-index: -1;
+}
 
-        .main-menu .navigation > li > ul > li:hover > a {
-            padding-left: 15px;
-        }
+.main-menu .navigation > li.dropdown:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
 
-        .main-menu .navigation > li > ul > li > ul > li > a:hover {
-            padding-left: 15px;
-        }
+.main-menu .navigation > li > ul > li {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+}
 
-        .main-menu .navigation > li > ul > li > ul > li a:before {
-            position: absolute;
-            top: 0;
-            left: 0px;
-            bottom: 0;
-            font-family: FontAwesome;
-            content: "\f105";
-            font-size: 14px;
-            font-weight: 700;
-            margin: 12px 0;
-            opacity: 0;
-            transition: all 500ms ease;
-            -webkit-transition: all 300ms ease;
-            -moz-transition: all 300ms ease;
-            -ms-transition: all 300ms ease;
-            -o-transition: all 300ms ease;
-            transition: all 300ms ease;
-        }
+    .main-menu .navigation > li > ul > li > a {
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #e9e9e9;
+        padding: 13px 0px 13px;
+        color: #031f4b;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: capitalize;
+        transition: all 500ms ease;
+        font-family: 'Archivo', sans-serif;
+    }
 
-        .main-menu .navigation > li > ul > li > ul > li > a:hover:before {
-            opacity: 1;
-        }
-    /****
+    .main-menu .navigation > li > ul > li:last-child > a {
+        border: none;
+    }
+
+    .main-menu .navigation > li > ul > li > a:hover {
+        padding-left: 15px;
+    }
+
+    .main-menu .navigation > li > ul > li > a:before {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        bottom: 0;
+        font-family: FontAwesome;
+        content: "\f105";
+        font-size: 14px;
+        font-weight: 700;
+        margin: 12px 0;
+        opacity: 0;
+        transition: all 500ms ease;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+    .main-menu .navigation > li > ul > li.dropdown > a:after {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0;
+        font-family: FontAwesome;
+        content: "\f105";
+        color: #031f4b;
+        font-size: 14px;
+        font-weight: 700;
+        margin: 12px 0;
+        text-align: right;
+        z-index: 5;
+    }
+
+    .main-menu .navigation > li > ul > li:hover > a:before {
+        opacity: 1;
+    }
+
+    .main-menu .navigation > li > ul > li > ul {
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        width: 250px;
+        padding: 0;
+        display: none;
+        background: #ffffff;
+        border-radius: 0;
+        -webkit-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+        -ms-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+        -o-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05);
+        -moz-transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+        -ms-transform: translateY(30px);
+        -o-transform: translateY(30px);
+        transform: translateY(30px);
+        transition: all 100ms ease;
+        z-index: 100;
+    }
+
+.main-menu .navigation li > ul > li.dropdown:hover ul {
+    opacity: 1;
+    visibility: visible;
+    -moz-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -webkit-transition: all 500ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.main-menu .navigation > li > ul > li > ul > li {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+    width: 100%;
+}
+
+    .main-menu .navigation > li > ul > li > ul > li > a {
+        position: relative;
+        display: block;
+        border-bottom: 1px solid #e9e9e9;
+        padding: 13px 0px 13px;
+        color: #031f4b;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 600;
+        text-align: left;
+        text-transform: capitalize;
+        transition: all 500ms ease;
+        font-family: 'Archivo', sans-serif;
+    }
+
+    .main-menu .navigation > li > ul > li > ul > li:last-child > a {
+        border: none;
+    }
+
+.main-menu .navigation > li > ul > li:hover > a {
+    padding-left: 15px;
+}
+
+.main-menu .navigation > li > ul > li > ul > li > a:hover {
+    padding-left: 15px;
+}
+
+.main-menu .navigation > li > ul > li > ul > li a:before {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    bottom: 0;
+    font-family: FontAwesome;
+    content: "\f105";
+    font-size: 14px;
+    font-weight: 700;
+    margin: 12px 0;
+    opacity: 0;
+    transition: all 500ms ease;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.main-menu .navigation > li > ul > li > ul > li > a:hover:before {
+    opacity: 1;
+}
+/****
 .main-menu .navigation> li> ul.megamenu {
     position: absolute;
     left: -232px;
@@ -2191,21 +2211,21 @@ select:focus {
     float: left;
 }
 ***/
-    .main-menu .navbar-collapse > ul li.dropdown .dropdown-btn {
-        position: absolute;
-        right: 0px;
-        top: 0;
-        width: 50px;
-        height: 42px;
-        border-left: 1px solid #04102a;
-        text-align: center;
-        font-size: 16px;
-        line-height: 42px;
-        color: #ffffff;
-        cursor: pointer;
-        display: none;
-        z-index: 5;
-    }
+.main-menu .navbar-collapse > ul li.dropdown .dropdown-btn {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    width: 50px;
+    height: 42px;
+    border-left: 1px solid #04102a;
+    text-align: center;
+    font-size: 16px;
+    line-height: 42px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+    z-index: 5;
+}
 
 
 
@@ -10506,13 +10526,13 @@ select:focus {
 }
 
 img {
-    width:100%;
-    height:100%;
-    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cover-img {
-    height:400px;
+    height: 400px;
 }
 
 .text > ul > li {
@@ -10523,8 +10543,9 @@ img {
 .inner-content-2 {
     padding: 40px 30px 40px 30px;
     background: #f5f5f5;
-    border-radius:25px;
+    border-radius: 25px;
 }
+
 .flatpickr-calendar {
     background: transparent;
     opacity: 0;

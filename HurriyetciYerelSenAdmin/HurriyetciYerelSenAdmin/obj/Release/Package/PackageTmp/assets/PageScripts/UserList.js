@@ -3,7 +3,7 @@
         "proccessing": true,
         "serverSide": true,
         "responsive": true,
-        "order": [1, "desc"],
+        "order": [1, "asc"],
         "language": {
             "url": "../../assets/Datatable/Turkish.json"
         },

@@ -60,6 +60,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
         {
             var db = new Entities();
             var model = new UserModel();
+            model.UserPhoto = "/assets/img/avatars/base.png";
             ViewBag.Permissions = new SelectList(db.UserClasses.Where(x => x.Deleted != true).ToList(), "Id", "UserClassName");
             return View(model);
         }
@@ -96,9 +97,18 @@ namespace HurriyetciYerelSenAdmin.Controllers
                 UserEmail = data.UserEmail,
                 UserPassword = Cryption.Encrypt(data.UserPassword),
                 UserSurname = data.UserSurname,
-                UserPhoneNumber = data.UserPhoneNumber,
                 UserProfilePic = data.UserPhoto
             };
+            var number = data.UserPhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    user.UserPhoneNumber = "+9" + data.UserPhoneNumber;
+                    break;
+                case '5':
+                    user.UserPhoneNumber = "+90" + data.UserPhoneNumber;
+                    break;
+            }
             if (data.UserProfilePic != null)
             {
                 var fotoformat = Path.GetExtension(data.UserProfilePic.FileName);

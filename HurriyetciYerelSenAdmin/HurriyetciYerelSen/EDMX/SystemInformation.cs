@@ -28,5 +28,6 @@ namespace HurriyetciYerelSen.EDMX
         public string SystemTelephone { get; set; }
         public string SystemAdress { get; set; }
         public string SystemMapsLink { get; set; }
+        public string Meta { get; set; }
     }
 }

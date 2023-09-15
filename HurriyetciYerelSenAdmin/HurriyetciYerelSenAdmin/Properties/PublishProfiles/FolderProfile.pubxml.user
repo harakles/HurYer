@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\HurYerSenAdmin</_PublishTargetUrl>
-    <History>True|2023-09-13T23:11:27.2707947Z;True|2023-09-13T23:06:51.5152283+00:00;True|2023-09-13T16:08:33.4310710+00:00;True|2023-09-13T16:08:04.4709595+00:00;True|2023-09-13T16:07:42.2761967+00:00;True|2023-09-13T15:54:09.6162841+00:00;True|2023-09-13T15:44:49.3334030+00:00;True|2023-09-13T15:37:50.2022234+00:00;True|2023-09-13T15:34:29.0256036+00:00;True|2023-09-12T02:33:46.9122220+00:00;True|2023-09-12T02:28:00.3533867+00:00;True|2023-09-12T02:27:09.5911016+00:00;True|2023-09-12T02:22:16.7673199+00:00;True|2023-09-12T01:49:28.3074981+00:00;False|2023-09-08T21:04:29.2251222+00:00;False|2023-09-08T21:02:56.7175652+00:00;False|2023-09-08T21:02:12.3815549+00:00;False|2023-09-08T21:01:26.6823988+00:00;</History>
+    <History>True|2023-09-15T20:53:53.8633741Z;True|2023-09-15T15:47:23.5082007+00:00;True|2023-09-15T15:25:34.8701422+00:00;True|2023-09-15T11:02:39.3874045+00:00;True|2023-09-14T09:36:43.3163910+00:00;True|2023-09-13T23:11:27.2707947+00:00;True|2023-09-13T23:06:51.5152283+00:00;True|2023-09-13T16:08:33.4310710+00:00;True|2023-09-13T16:08:04.4709595+00:00;True|2023-09-13T16:07:42.2761967+00:00;True|2023-09-13T15:54:09.6162841+00:00;True|2023-09-13T15:44:49.3334030+00:00;True|2023-09-13T15:37:50.2022234+00:00;True|2023-09-13T15:34:29.0256036+00:00;True|2023-09-12T02:33:46.9122220+00:00;True|2023-09-12T02:28:00.3533867+00:00;True|2023-09-12T02:27:09.5911016+00:00;True|2023-09-12T02:22:16.7673199+00:00;True|2023-09-12T01:49:28.3074981+00:00;False|2023-09-08T21:04:29.2251222+00:00;False|2023-09-08T21:02:56.7175652+00:00;False|2023-09-08T21:02:12.3815549+00:00;False|2023-09-08T21:01:26.6823988+00:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -19,7 +19,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:04</publishTime>
     </File>
     <File Include="assets/css/demo.css">
-      <publishTime>09/08/2023 23:49:07</publishTime>
+      <publishTime>09/14/2023 12:59:47</publishTime>
     </File>
     <File Include="assets/Datatable/AutoFill-2.4.0/css/autoFill.bootstrap.css">
       <publishTime>09/08/2023 23:49:04</publishTime>
@@ -2239,73 +2239,73 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationBloodTypeList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:48</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationCaseList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:48</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationDistrictList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:48</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationEducationList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationGenderList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationOrganisationList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationProvinceList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/ApplicationStaffList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/BranchAdd.js">
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/BranchList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/BranchUpdateList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/CaseAdd.js">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/14/2023 12:51:21</publishTime>
     </File>
     <File Include="assets/PageScripts/CaseList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:04:55</publishTime>
     </File>
     <File Include="assets/PageScripts/ConfederationAdd.js">
       <publishTime>09/12/2023 01:39:45</publishTime>
     </File>
     <File Include="assets/PageScripts/ConfederationList.js">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/Dashboard.js">
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/MediaAdd.js">
-      <publishTime>09/13/2023 15:34:02</publishTime>
+      <publishTime>09/14/2023 12:28:50</publishTime>
     </File>
     <File Include="assets/PageScripts/MediaList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/MemberAdd.js">
       <publishTime>09/12/2023 01:39:45</publishTime>
     </File>
     <File Include="assets/PageScripts/MemberList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/RoleAdd.js">
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/RoleList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/PageScripts/SubBranchAdd.js">
       <publishTime>09/08/2023 23:49:06</publishTime>
@@ -2317,7 +2317,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/UserList.js">
-      <publishTime>09/08/2023 23:49:06</publishTime>
+      <publishTime>09/14/2023 13:05:47</publishTime>
     </File>
     <File Include="assets/svg/flags/au.svg">
       <publishTime>09/08/2023 23:49:07</publishTime>
@@ -2596,7 +2596,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:07</publishTime>
     </File>
     <File Include="assets/vendor/css/core.css">
-      <publishTime>09/08/2023 23:49:07</publishTime>
+      <publishTime>09/14/2023 12:58:32</publishTime>
     </File>
     <File Include="assets/vendor/css/pages/advanced-wizard.css">
       <publishTime>09/08/2023 23:49:07</publishTime>
@@ -5398,10 +5398,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:23</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.dll">
-      <publishTime>09/13/2023 23:11:19</publishTime>
+      <publishTime>09/15/2023 20:53:34</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.pdb">
-      <publishTime>09/13/2023 23:11:19</publishTime>
+      <publishTime>09/15/2023 20:53:34</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>09/08/2023 23:49:34</publishTime>
@@ -6757,7 +6757,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2023 02:33:28</publishTime>
     </File>
     <File Include="Views/Media/Add.cshtml">
-      <publishTime>09/08/2023 23:49:04</publishTime>
+      <publishTime>09/15/2023 15:47:09</publishTime>
     </File>
     <File Include="Views/Media/List.cshtml">
       <publishTime>09/08/2023 23:49:04</publishTime>
@@ -6778,13 +6778,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:04</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/14/2023 13:07:19</publishTime>
     </File>
     <File Include="Views/System/Details.cshtml">
-      <publishTime>09/12/2023 02:20:55</publishTime>
+      <publishTime>09/15/2023 20:47:03</publishTime>
     </File>
     <File Include="Views/System/Update.cshtml">
-      <publishTime>09/12/2023 02:21:53</publishTime>
+      <publishTime>09/15/2023 20:48:15</publishTime>
     </File>
     <File Include="Views/User/Add.cshtml">
       <publishTime>09/08/2023 23:49:04</publishTime>
@@ -6793,7 +6793,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:04</publishTime>
     </File>
     <File Include="Views/User/Settings.cshtml">
-      <publishTime>09/08/2023 23:49:04</publishTime>
+      <publishTime>09/14/2023 12:59:43</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/08/2023 23:49:04</publishTime>

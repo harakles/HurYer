@@ -2,6 +2,7 @@
 @using HurriyetciYerelSen.Managers
 @{ 
     var inf = GeneralManager.GetInf();
+    GeneralManager.Load();
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -12,8 +13,9 @@
     <!-- responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- For IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Hürriyet,Hürriyetçi yerel sen , sendika , kamu ,kadro , personel , kadrolu personel , @inf.SystemName " />
+    <meta property="og:title" content="@inf.SystemName">
+    <meta property="og:description" content="@inf.Meta">
+    <meta property="og:image" content="@Sabit.Admin@inf.SystemLogo">
 
     <link rel="icon" type="image/x-icon" href="@Sabit.Admin@inf.SystemIcon" />
 

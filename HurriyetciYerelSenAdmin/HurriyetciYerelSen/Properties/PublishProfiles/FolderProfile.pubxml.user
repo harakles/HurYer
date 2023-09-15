@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\HurYerSen</_PublishTargetUrl>
-    <History>True|2023-09-12T02:30:59.8484390Z;True|2023-09-12T02:27:35.1635300+00:00;True|2023-09-12T02:25:22.9984204+00:00;True|2023-09-12T02:12:20.8500122+00:00;True|2023-09-12T02:06:50.1583694+00:00;True|2023-09-12T02:04:02.0315911+00:00;True|2023-09-12T02:01:48.5474423+00:00;True|2023-09-12T01:59:51.6236991+00:00;True|2023-09-12T01:55:46.9893378+00:00;True|2023-09-12T01:47:38.6385265+00:00;</History>
+    <History>True|2023-09-15T20:53:23.1710534Z;True|2023-09-15T16:48:34.2913251+00:00;False|2023-09-15T16:48:12.8926616+00:00;True|2023-09-15T16:43:13.6004585+00:00;True|2023-09-15T16:39:19.3952129+00:00;True|2023-09-15T16:33:58.6186600+00:00;True|2023-09-15T16:20:18.8068697+00:00;True|2023-09-15T16:09:36.6680042+00:00;False|2023-09-15T16:09:17.7483611+00:00;True|2023-09-15T16:07:04.5878033+00:00;False|2023-09-15T16:06:44.4539037+00:00;True|2023-09-15T16:04:25.8915607+00:00;True|2023-09-15T15:45:41.4997348+00:00;True|2023-09-15T15:43:02.8629824+00:00;False|2023-09-15T15:42:34.0992691+00:00;True|2023-09-15T15:39:13.6479408+00:00;True|2023-09-15T15:28:17.8241035+00:00;True|2023-09-15T15:26:10.9290632+00:00;True|2023-09-15T15:24:03.5548602+00:00;True|2023-09-15T15:21:05.2980393+00:00;True|2023-09-12T02:30:59.8484390+00:00;True|2023-09-12T02:27:35.1635300+00:00;True|2023-09-12T02:25:22.9984204+00:00;True|2023-09-12T02:12:20.8500122+00:00;True|2023-09-12T02:06:50.1583694+00:00;True|2023-09-12T02:04:02.0315911+00:00;True|2023-09-12T02:01:48.5474423+00:00;True|2023-09-12T01:59:51.6236991+00:00;True|2023-09-12T01:55:46.9893378+00:00;True|2023-09-12T01:47:38.6385265+00:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -106,7 +106,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:48:59</publishTime>
     </File>
     <File Include="assets/css/style.css">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/15/2023 16:48:03</publishTime>
     </File>
     <File Include="assets/css/swiper.min.css">
       <publishTime>09/08/2023 23:48:59</publishTime>
@@ -916,7 +916,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2023 01:39:45</publishTime>
     </File>
     <File Include="assets/js/custom.js">
-      <publishTime>09/12/2023 02:11:57</publishTime>
+      <publishTime>09/15/2023 16:38:51</publishTime>
     </File>
     <File Include="assets/js/flatpickr/flatpickr.css">
       <publishTime>09/12/2023 01:39:45</publishTime>
@@ -1252,10 +1252,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:22</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>09/12/2023 02:30:55</publishTime>
+      <publishTime>09/15/2023 20:53:07</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>09/12/2023 02:30:55</publishTime>
+      <publishTime>09/15/2023 20:53:07</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>09/08/2023 23:49:22</publishTime>
@@ -1264,10 +1264,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:22</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSen.dll">
-      <publishTime>09/12/2023 02:30:42</publishTime>
+      <publishTime>09/15/2023 20:52:46</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSen.pdb">
-      <publishTime>09/12/2023 02:30:42</publishTime>
+      <publishTime>09/15/2023 20:52:46</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/08/2023 23:49:25</publishTime>
@@ -1564,7 +1564,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:01</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>09/12/2023 02:30:46</publishTime>
+      <publishTime>09/15/2023 20:52:51</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>09/08/2023 23:48:59</publishTime>
@@ -1639,7 +1639,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:48:59</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/12/2023 02:30:30</publishTime>
+      <publishTime>09/15/2023 20:43:09</publishTime>
     </File>
     <File Include="Views/TR/AnaSayfa.cshtml">
       <publishTime>09/12/2023 01:39:45</publishTime>
@@ -1663,7 +1663,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2023 01:39:45</publishTime>
     </File>
     <File Include="Views/TR/DuyuruDetay.cshtml">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/15/2023 15:27:58</publishTime>
     </File>
     <File Include="Views/TR/Duyurular.cshtml">
       <publishTime>09/12/2023 01:39:45</publishTime>
@@ -1675,7 +1675,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2023 01:39:45</publishTime>
     </File>
     <File Include="Views/TR/HaberDetay.cshtml">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/15/2023 15:25:20</publishTime>
     </File>
     <File Include="Views/TR/Haberler.cshtml">
       <publishTime>09/12/2023 01:39:45</publishTime>

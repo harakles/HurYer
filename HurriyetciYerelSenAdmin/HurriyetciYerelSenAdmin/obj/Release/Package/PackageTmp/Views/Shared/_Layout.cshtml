@@ -7,7 +7,7 @@
     var navbar = new List<UserPermission>();
     if (kullanici == null)
     {
-        Response.Redirect("/Login/Index?e=***Lütfen Önce Giriş Yapınız***", true);
+        Response.Redirect("/Login/Index?e=***Lütfen Önce Giriş Yapınız***",true);
     }
     else
     {
@@ -61,7 +61,7 @@
                         <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
                             <div class="container-xxl">
                                 <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
-                                    <a href="#" class="app-brand-link gap-2">
+                                    <a href="/Redirect/SessionCheck" class="app-brand-link gap-2">
                                         <span class="app-brand-logo demo">
                                             <img src="@inf.SystemLogo" alt="SystemLogo" />
                                         </span>

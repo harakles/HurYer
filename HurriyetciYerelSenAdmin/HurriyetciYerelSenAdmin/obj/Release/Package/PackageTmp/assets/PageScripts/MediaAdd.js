@@ -185,7 +185,7 @@ function MediaValidate() {
     const Form = document.getElementById("FormAuth");
     const Tittle = document.getElementById("MediaTittle");
     const DateInput = document.getElementById("MediaDate");
-    if (Tittle.value == null) {
+    if (Tittle.value == null || Tittle.value == "") {
         window.Swal.fire({
             title: 'Media Başlığını Boş Geçemezsiniz',
             icon: 'error',
@@ -195,7 +195,7 @@ function MediaValidate() {
         });
         return;
     }
-    if (DateInput.value == null) {
+    if (DateInput.value == null || DateInput.value == "") {
         window.Swal.fire({
             title: 'Tarihi Boş Geçemezsiniz',
             icon: 'error',

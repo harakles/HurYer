@@ -84,6 +84,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult Add(Branch data)
         {
             var db = new Entities();
+            var number = data.BranchPhone[0];
+            switch (number)
+            {
+                case '0':
+                    data.BranchPhone = "+9" + data.BranchPhone;
+                    break;
+                case '5':
+                    data.BranchPhone = "+90" + data.BranchPhone;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return RedirectToAction("List");
@@ -114,6 +124,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult SubBranchAdd(SubBranch data)
         {
             var db = new Entities();
+            var number = data.PhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    data.PhoneNumber = "+9" + data.PhoneNumber;
+                    break;
+                case '5':
+                    data.PhoneNumber = "+90" + data.PhoneNumber;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return Redirect($"/Branch/Update?Id={data.BranchID}");
@@ -145,6 +165,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
         public ActionResult BranchMemberAdd(BranchMember data) 
         {
             var db = new Entities();
+            var number = data.PhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    data.PhoneNumber = "+9" + data.PhoneNumber;
+                    break;
+                case '5':
+                    data.PhoneNumber = "+90" + data.PhoneNumber;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return Redirect($"/Branch/Update?Id={data.BranchID}");

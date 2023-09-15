@@ -56,7 +56,30 @@
                     <div class="blog-details-text-box-one">
                         @Html.Raw(Model.MediaTextEditor)
                     </div>
-
+                    <div class="blog-details-text-box-two">
+                        <div class="single-sidebar wow fadeInUp animated" data-wow-delay="0.7s" data-wow-duration="1200ms">
+                            <div class="top">
+                                <div class="title">
+                                    <h3>Fotoğraflar</h3>
+                                </div>
+                            </div>
+                            <ul class="instagram">
+                                @foreach (var x in Model.Galleries)
+                                {
+                                    <li>
+                                        <div class="img-box">
+                                            <img src="@Sabit.Admin@x.MediaUrl.Url" alt="Awesome Image">
+                                            <div class="overlay-content">
+                                                <a class="lightbox-image" data-fancybox="gallery" href="@Sabit.Admin@x.MediaUrl.Url">
+                                                    <i class="fa fa-search-plus" aria-hidden="true"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                    </div>
                     <div class="tag-box">
                         <div class="row">
                             <div class="col-md-12">

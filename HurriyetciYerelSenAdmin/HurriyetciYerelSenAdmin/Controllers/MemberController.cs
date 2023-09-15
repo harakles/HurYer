@@ -45,6 +45,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
             model.CentralDirectors = false;
             model.CentralDiscipline = false;
             model.Funders = false;
+            model.MemberPhoto = "/assets/img/avatars/base.png";
             return View(model);
         }
 
@@ -76,6 +77,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
                 {
                     data.MemberPhoto = "/assets/img/avatars/base.png";
                 }
+            }
+            var number = data.MemberPhoneNumber[0];
+            switch (number)
+            {
+                case '0':
+                    data.MemberPhoneNumber = "+9" + data.MemberPhoneNumber;
+                    break;
+                case '5':
+                    data.MemberPhoneNumber = "+90" + data.MemberPhoneNumber;
+                    break;
             }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();

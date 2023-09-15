@@ -46,6 +46,16 @@ namespace HurriyetciYerelSenAdmin.Controllers
                 SystemIconFile.SaveAs(fotoyol);
                 data.SystemIcon = "/Upload/System/Icon/" + fotoad;
             }
+            var number = data.SystemTelephone[0];
+            switch (number)
+            {
+                case '0':
+                    data.SystemTelephone = "+9" + data.SystemTelephone;
+                    break;
+                case '5':
+                    data.SystemTelephone = "+90" + data.SystemTelephone;
+                    break;
+            }
             db.Entry(data).State = data.Id > 0 ? EntityState.Modified : EntityState.Added;
             db.SaveChanges();
             return Redirect("/System/Details?Id=1");

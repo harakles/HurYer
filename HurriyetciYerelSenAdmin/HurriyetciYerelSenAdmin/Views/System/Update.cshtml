@@ -11,9 +11,9 @@
             </div>
             <div class="card-body">
                 <form id="FormAuth" action="/System/Update" method="POST" enctype="multipart/form-data">
-                    @Html.HiddenFor(x=>x.Id)
-                    @Html.HiddenFor(x=>x.SystemLogo)
-                    @Html.HiddenFor(x=>x.SystemIcon)
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.HiddenFor(x => x.SystemLogo)
+                    @Html.HiddenFor(x => x.SystemIcon)
                     <div class="row mb-4">
                         <label class="col-sm-1 col-form-label" for="basic-icon-default-company">Sistem Logosu</label>
                         <div class="col-sm-5">
@@ -201,6 +201,14 @@
                                        id="TwitterLink"
                                        value="@Model.TwitterLink"
                                        aria-describedby="basic-icon-default-fullname2" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <label class="col-sm-1 col-form-label" for="Meta">Site Açıklaması</label>
+                        <div class="col-sm-8">
+                            <div class="input-group input-group-merge">
+                                <textarea class="form-control" id="Meta" name="Meta" rows="2">@Model.Meta</textarea>
                             </div>
                         </div>
                     </div>
