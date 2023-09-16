@@ -2290,7 +2290,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:06</publishTime>
     </File>
     <File Include="assets/PageScripts/MediaAdd.js">
-      <publishTime>09/14/2023 12:28:50</publishTime>
+      <publishTime>09/16/2023 09:42:46</publishTime>
     </File>
     <File Include="assets/PageScripts/MediaList.js">
       <publishTime>09/14/2023 13:05:47</publishTime>
@@ -5398,10 +5398,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:23</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.dll">
-      <publishTime>09/16/2023 03:34:11</publishTime>
+      <publishTime>09/16/2023 09:42:53</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.pdb">
-      <publishTime>09/16/2023 03:34:11</publishTime>
+      <publishTime>09/16/2023 09:42:53</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>09/08/2023 23:49:34</publishTime>

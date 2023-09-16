@@ -162,20 +162,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
 (function () {
     // Flat Picker
     // --------------------------------------------------------------------
-    const 
-        MediaDate = document.querySelector('#MediaDate'),
-        MediaLastDate = document.querySelector('#MediaLastDate');
-
-    // Human Friendly
-    if (MediaLastDate) {
-        MediaLastDate.flatpickr({
-            dateFormat: 'd-m-Y'
-        });
-    }
+    const
+        MediaDate = document.querySelector('#MediaDate');
+        
 
     if (MediaDate) {
         MediaDate.flatpickr({
-            dateFormat: 'd-m-Y'
+            dateFormat: 'Y-m-d'
         });
     }
     
