@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\inetpub\wwwroot\HurYerSenAdmin</_PublishTargetUrl>
-    <History>True|2023-09-15T20:53:53.8633741Z;True|2023-09-15T15:47:23.5082007+00:00;True|2023-09-15T15:25:34.8701422+00:00;True|2023-09-15T11:02:39.3874045+00:00;True|2023-09-14T09:36:43.3163910+00:00;True|2023-09-13T23:11:27.2707947+00:00;True|2023-09-13T23:06:51.5152283+00:00;True|2023-09-13T16:08:33.4310710+00:00;True|2023-09-13T16:08:04.4709595+00:00;True|2023-09-13T16:07:42.2761967+00:00;True|2023-09-13T15:54:09.6162841+00:00;True|2023-09-13T15:44:49.3334030+00:00;True|2023-09-13T15:37:50.2022234+00:00;True|2023-09-13T15:34:29.0256036+00:00;True|2023-09-12T02:33:46.9122220+00:00;True|2023-09-12T02:28:00.3533867+00:00;True|2023-09-12T02:27:09.5911016+00:00;True|2023-09-12T02:22:16.7673199+00:00;True|2023-09-12T01:49:28.3074981+00:00;False|2023-09-08T21:04:29.2251222+00:00;False|2023-09-08T21:02:56.7175652+00:00;False|2023-09-08T21:02:12.3815549+00:00;False|2023-09-08T21:01:26.6823988+00:00;</History>
+    <History>False|2023-09-16T03:29:23.4972955Z;False|2023-09-16T03:29:16.6466116+00:00;False|2023-09-16T03:29:10.3398611+00:00;True|2023-09-16T03:24:47.2221834+00:00;True|2023-09-16T03:17:03.9153147+00:00;True|2023-09-16T03:14:57.4874430+00:00;True|2023-09-16T03:12:36.7642908+00:00;True|2023-09-16T03:07:01.9490706+00:00;True|2023-09-16T03:05:28.7144412+00:00;True|2023-09-15T20:53:53.8633741+00:00;True|2023-09-15T15:47:23.5082007+00:00;True|2023-09-15T15:25:34.8701422+00:00;True|2023-09-15T11:02:39.3874045+00:00;True|2023-09-14T09:36:43.3163910+00:00;True|2023-09-13T23:11:27.2707947+00:00;True|2023-09-13T23:06:51.5152283+00:00;True|2023-09-13T16:08:33.4310710+00:00;True|2023-09-13T16:08:04.4709595+00:00;True|2023-09-13T16:07:42.2761967+00:00;True|2023-09-13T15:54:09.6162841+00:00;True|2023-09-13T15:44:49.3334030+00:00;True|2023-09-13T15:37:50.2022234+00:00;True|2023-09-13T15:34:29.0256036+00:00;True|2023-09-12T02:33:46.9122220+00:00;True|2023-09-12T02:28:00.3533867+00:00;True|2023-09-12T02:27:09.5911016+00:00;True|2023-09-12T02:22:16.7673199+00:00;True|2023-09-12T01:49:28.3074981+00:00;False|2023-09-08T21:04:29.2251222+00:00;False|2023-09-08T21:02:56.7175652+00:00;False|2023-09-08T21:02:12.3815549+00:00;False|2023-09-08T21:01:26.6823988+00:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
@@ -5398,10 +5398,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:23</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.dll">
-      <publishTime>09/15/2023 20:53:34</publishTime>
+      <publishTime>09/16/2023 03:34:11</publishTime>
     </File>
     <File Include="bin/HurriyetciYerelSenAdmin.pdb">
-      <publishTime>09/15/2023 20:53:34</publishTime>
+      <publishTime>09/16/2023 03:34:11</publishTime>
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>09/08/2023 23:49:34</publishTime>
@@ -6118,7 +6118,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/08/2023 23:49:04</publishTime>
     </File>
     <File Include="EDMX/Model1.edmx.diagram">
-      <publishTime>09/12/2023 01:39:45</publishTime>
+      <publishTime>09/16/2023 03:26:54</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>09/08/2023 23:49:13</publishTime>
@@ -6757,7 +6757,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/12/2023 02:33:28</publishTime>
     </File>
     <File Include="Views/Media/Add.cshtml">
-      <publishTime>09/15/2023 15:47:09</publishTime>
+      <publishTime>09/16/2023 03:12:47</publishTime>
     </File>
     <File Include="Views/Media/List.cshtml">
       <publishTime>09/08/2023 23:49:04</publishTime>

@@ -300,7 +300,6 @@
       <EntityTypeMapping TypeName="SystemModel.SystemMedia">
         <MappingFragment StoreEntitySet="SystemMedia">
           <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-          <ScalarProperty Name="MediaLastDate" ColumnName="MediaLastDate" />
           <ScalarProperty Name="MediaDate" ColumnName="MediaDate" />
           <ScalarProperty Name="MediaCoverPhoto" ColumnName="MediaCoverPhoto" />
           <ScalarProperty Name="MediaTextEditor" ColumnName="MediaTextEditor" />

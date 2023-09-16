@@ -22,7 +22,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
             var data = query.Select(asset => new
             {
                 asset.Id,
-                MediaDate = asset.MediaDate.Value.ToString("dd-MM-yyyy"), 
+                MediaDate = asset.MediaDate.HasValue? asset.MediaDate.Value.ToString("dd-MM-yyyy"): "", 
                 asset.MediaTittle,
                 asset.MediaCoverPhoto,
                 MediaType = asset.MediaType.TypeName

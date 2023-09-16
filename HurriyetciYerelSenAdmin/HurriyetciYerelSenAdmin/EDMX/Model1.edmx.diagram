@@ -7,15 +7,15 @@
       <Diagram DiagramId="a34aaa056b614926a67292750cd84474" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="SystemModel.AboutU" Width="1.5" PointX="7.75" PointY="14.75" />
         <EntityTypeShape EntityType="SystemModel.Application" Width="1.5" PointX="3" PointY="1.125" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationBloodType" Width="1.5" PointX="0.75" PointY="6.875" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationCase" Width="1.5" PointX="0.75" PointY="3.5" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationDistrict" Width="1.5" PointX="0.75" PointY="12" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationEducation" Width="1.5" PointX="0.75" PointY="22.25" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationGender" Width="1.5" PointX="0.75" PointY="14.75" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationOrganisation" Width="1.5" PointX="0.75" PointY="19.75" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationProvince" Width="1.5" PointX="0.75" PointY="9.375" />
-        <EntityTypeShape EntityType="SystemModel.ApplicationStaff" Width="1.5" PointX="0.75" PointY="17.25" />
-        <EntityTypeShape EntityType="SystemModel.BranchMember" Width="1.5" PointX="13" PointY="9.125" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationBloodType" Width="1.5" PointX="0.75" PointY="19.75" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationCase" Width="1.5" PointX="0.75" PointY="14.5" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationDistrict" Width="1.5" PointX="0.75" PointY="17" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationEducation" Width="1.5" PointX="0.75" PointY="12" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationGender" Width="1.5" PointX="0.75" PointY="6.875" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationOrganisation" Width="1.5" PointX="0.75" PointY="9.375" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationProvince" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="SystemModel.ApplicationStaff" Width="1.5" PointX="0.75" PointY="22.25" />
+        <EntityTypeShape EntityType="SystemModel.BranchMember" Width="1.5" PointX="13" PointY="12.375" />
         <EntityTypeShape EntityType="SystemModel.Branch" Width="1.5" PointX="10.75" PointY="10.625" />
         <EntityTypeShape EntityType="SystemModel.Broadcast" Width="1.5" PointX="13" PointY="5" />
         <EntityTypeShape EntityType="SystemModel.BrodcastClass" Width="1.5" PointX="10.75" PointY="5.25" />
@@ -23,12 +23,12 @@
         <EntityTypeShape EntityType="SystemModel.Dropdown" Width="1.5" PointX="2.75" PointY="11.5" />
         <EntityTypeShape EntityType="SystemModel.FileGallery" Width="1.5" PointX="15.25" PointY="5" />
         <EntityTypeShape EntityType="SystemModel.File" Width="1.5" PointX="13" PointY="2.125" />
-        <EntityTypeShape EntityType="SystemModel.Gallery" Width="1.5" PointX="10.25" PointY="1.25" />
-        <EntityTypeShape EntityType="SystemModel.GalleryType" Width="1.5" PointX="8" PointY="8" />
-        <EntityTypeShape EntityType="SystemModel.MediaType" Width="1.5" PointX="5.75" PointY="1.625" />
-        <EntityTypeShape EntityType="SystemModel.MediaUrl" Width="1.5" PointX="8" PointY="5.25" />
+        <EntityTypeShape EntityType="SystemModel.Gallery" Width="1.5" PointX="10.25" PointY="1.125" />
+        <EntityTypeShape EntityType="SystemModel.GalleryType" Width="1.5" PointX="8" PointY="5" />
+        <EntityTypeShape EntityType="SystemModel.MediaType" Width="1.5" PointX="5.75" PointY="1.5" />
+        <EntityTypeShape EntityType="SystemModel.MediaUrl" Width="1.5" PointX="8" PointY="7.5" />
         <EntityTypeShape EntityType="SystemModel.Member" Width="1.5" PointX="15.75" PointY="8.75" />
-        <EntityTypeShape EntityType="SystemModel.SubBranch" Width="1.5" PointX="13" PointY="12.375" />
+        <EntityTypeShape EntityType="SystemModel.SubBranch" Width="1.5" PointX="13" PointY="9.125" />
         <EntityTypeShape EntityType="SystemModel.SystemInformation" Width="1.5" PointX="11.75" PointY="15.75" />
         <EntityTypeShape EntityType="SystemModel.SystemMedia" Width="1.5" PointX="8" PointY="1" />
         <EntityTypeShape EntityType="SystemModel.UserClass" Width="1.5" PointX="2.75" PointY="15.75" />

@@ -286,7 +286,6 @@
           <Property Name="MediaTextEditor" Type="nvarchar(max)" />
           <Property Name="MediaCoverPhoto" Type="nvarchar(max)" />
           <Property Name="MediaDate" Type="datetime" />
-          <Property Name="MediaLastDate" Type="datetime" />
           <Property Name="Deleted" Type="bit" />
         </EntityType>
         <EntityType Name="UserClasses">
@@ -1133,7 +1132,6 @@
           <Property Name="MediaTextEditor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MediaCoverPhoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="MediaDate" Type="DateTime" Precision="3" />
-          <Property Name="MediaLastDate" Type="DateTime" Precision="3" />
           <Property Name="Deleted" Type="Boolean" />
           <NavigationProperty Name="Galleries" Relationship="SystemModel.FK_Gallery_SystemMedia" FromRole="SystemMedia" ToRole="Gallery" />
           <NavigationProperty Name="MediaType" Relationship="SystemModel.FK_SystemMedia_MediaTypes" FromRole="SystemMedia" ToRole="MediaType" />
@@ -1748,7 +1746,6 @@
             <EntityTypeMapping TypeName="SystemModel.SystemMedia">
               <MappingFragment StoreEntitySet="SystemMedia">
                 <ScalarProperty Name="Deleted" ColumnName="Deleted" />
-                <ScalarProperty Name="MediaLastDate" ColumnName="MediaLastDate" />
                 <ScalarProperty Name="MediaDate" ColumnName="MediaDate" />
                 <ScalarProperty Name="MediaCoverPhoto" ColumnName="MediaCoverPhoto" />
                 <ScalarProperty Name="MediaTextEditor" ColumnName="MediaTextEditor" />

@@ -281,7 +281,6 @@
     <Property Name="MediaTextEditor" Type="nvarchar(max)" />
     <Property Name="MediaCoverPhoto" Type="nvarchar(max)" />
     <Property Name="MediaDate" Type="datetime" />
-    <Property Name="MediaLastDate" Type="datetime" />
     <Property Name="Deleted" Type="bit" />
   </EntityType>
   <EntityType Name="UserClasses">

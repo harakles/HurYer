@@ -34,8 +34,7 @@ namespace HurriyetciYerelSenAdmin.Managers
                 query = query.Where(p =>
                     p.MediaTittle.ToString().ToLower().Contains(value) ||
                     p.MediaType.TypeName.ToString().ToLower().Contains(value) ||
-                    p.MediaDate.ToString().ToLower().Contains(value) ||
-                    p.MediaLastDate.ToString().ToLower().Contains(value) 
+                    p.MediaDate.ToString().ToLower().Contains(value) 
                 ).OrderByDescending(p => p.Id);
             }
 
@@ -77,11 +76,6 @@ namespace HurriyetciYerelSenAdmin.Managers
                         query = orderDirection == Column.OrderDirection.Ascendant
                             ? query.OrderBy(x => x.MediaDate)
                             : query.OrderByDescending(x => x.MediaDate);
-                        break;
-                    case "MediaLastDate":
-                        query = orderDirection == Column.OrderDirection.Ascendant
-                            ? query.OrderBy(x => x.MediaLastDate)
-                            : query.OrderByDescending(x => x.MediaLastDate);
                         break;
                     case "MediaType":
                         query = orderDirection == Column.OrderDirection.Ascendant
