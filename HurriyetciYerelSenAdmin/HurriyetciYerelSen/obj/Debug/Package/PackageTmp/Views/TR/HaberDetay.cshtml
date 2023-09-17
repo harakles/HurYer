@@ -3,7 +3,7 @@
 @model SystemMedia
 @{
     ViewBag.Title = "HaberDetay";
-    var data = Request; 
+    var data = Request;
 }
 <!--Start breadcrumb area-->
 <section class="breadcrumb-area" style="background-image: url( );">
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                     <!--End sidebar categories Box-->
-                    @Html.Action("SonMedyalar", "TR", new {Id = Model.MediaTypeID })
+                    @Html.Action("SonMedyalar", "TR", new { Id = Model.MediaTypeID })
                 </div>
             </div>
             <!--End Sidebar Wrapper-->
@@ -133,3 +133,6 @@
     </div>
 </section>
 <!--End Blog single Area-->
+@section scripts{
+    <script src="~/assets/pageScripts/MediaSearch.js"></script>
+}

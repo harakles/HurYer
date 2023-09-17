@@ -74,10 +74,20 @@
                     <!--Start single sidebar-->
                     <div class="single-sidebar wow fadeInUp animated" data-wow-delay="0.1s" data-wow-duration="1200ms">
                         <div class="sidebar-search-box">
-                            <form class="search-form">
-                                <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="@Model[0].MediaTypeID">
-                                <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
+                            @if (Model.Count() >= 1)
+                            {
+                                <form class="search-form">
+                                    <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="@Model[0].MediaTypeID">
+                                    <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form class="search-form">
+                                    <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="2">
+                                    <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            }
                         </div>
                     </div>
                     <!--End single sidebar-->
@@ -88,7 +98,7 @@
                         </div>
                         <div class="categories-box">
                             <ul class="categories clearfix">
-                                <li ><a href="/TR/Haberler">Haberler</a></li>
+                                <li><a href="/TR/Haberler">Haberler</a></li>
                                 <li class="active"><a href="/TR/Duyurular">Duyurular</a></li>
                             </ul>
                         </div>
@@ -103,3 +113,6 @@
     </div>
 </section>
 <!--End Blog Area-->
+@section scripts{
+    <script src="~/assets/pageScripts/MediaSearch.js"></script>
+}

@@ -36,7 +36,7 @@
                         <a href="/TR/HaberDetay/@x.Id">
                             <div class="single-blog-style1 style1instyle3 wow fadeInLeft" data-wow-delay="100ms" data-wow-duration="1500ms">
                                 <div class="img-holder">
-                                    <div class="inner cover-img" >
+                                    <div class="inner cover-img">
                                         <img src="@Sabit.Admin@x.MediaCoverPhoto" alt="Awesome Image">
                                     </div>
                                     <div class="date-box">
@@ -71,10 +71,20 @@
                     <!--Start single sidebar-->
                     <div class="single-sidebar wow fadeInUp animated" data-wow-delay="0.1s" data-wow-duration="1200ms">
                         <div class="sidebar-search-box">
-                            <form class="search-form">
-                                <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="@Model[0].MediaTypeID">
-                                <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
-                            </form>
+                            @if (Model.Count() >= 1)
+                            {
+                                <form class="search-form">
+                                    <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="@Model[0].MediaTypeID">
+                                    <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            }
+                            else
+                            {
+                                <form class="search-form">
+                                    <input placeholder="Ara...." type="text" id="MediaSearch" data-typeid="1">
+                                    <button type="button" id="MediaSearchButton"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            }
                         </div>
                     </div>
                     <!--End single sidebar-->
@@ -100,3 +110,6 @@
     </div>
 </section>
 <!--End Blog Area-->
+@section scripts{
+    <script src="~/assets/pageScripts/MediaSearch.js"></script>
+}

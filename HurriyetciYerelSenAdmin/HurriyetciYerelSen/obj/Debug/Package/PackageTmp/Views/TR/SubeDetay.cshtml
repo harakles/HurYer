@@ -1,7 +1,95 @@
-﻿
-@{
-    ViewBag.Title = "SubeDetay";
-}
+﻿@using HurriyetciYerelSen.EDMX
+@model Branch
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area" style="background-image: url();">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>Şube Detayı</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/Subeler">Şubeler</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">Şube Detayı</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="coaching-style2-area">
+    <div class="container">
+        <div class="card d-flex">
+            <div class="card-title"><h1 class="branch-tittle">@Model.BranchName</h1></div>
+            <div class="card-body flex-wrap">
+                <ul class="visa-detail-featured d-flex flex-wrap">
+                    @foreach (var x in Model.BranchMembers)
+                    {
+                        <li class="clearfix col-xl-6 py-3">
+                            <div class="icon">
+                                <span class="flaticon-people thm-clr"></span>
+                            </div>
+                            <div class="text">
+                                <h3>@x.Position</h3>
+                                <p>@x.Name</p>
+                            </div>
+                        </li>
+                    }
 
-<h2>SubeDetay</h2>
-
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-pin thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Adress</h3>
+                            <p>@Model.BranchAdress</p>
+                        </div>
+                    </li>
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-phone thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Telefon</h3>
+                            <p>@Model.BranchPhone</p>
+                        </div>
+                    </li>
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-mail thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>E-Posta</h3>
+                            <p>@Model.BranchEMail</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="coaching-style2-area">
+    <div class="container">
+        <div class="row">
+            @foreach (var x in Model.SubBranches)
+            {
+                <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="0ms">
+                    <a href="/TR/IlceSubeDetay?Id=@x.Id">
+                        <div class="single-coaching-item-style2 text-center">
+                            <div class="coaching-item-style2-bg" style="background-image: url()"></div>
+                            <div class="inner">
+                                <div class="icon"><span class="flaticon-architecture-and-city"></span></div>
+                                <h3>@x.SubBranchName</h3>
+                                <p>@x.Branch.BranchName</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -85,6 +85,7 @@ namespace HurriyetciYerelSenAdmin.Controllers
             var db = new Entities();
             var data = db.Confederations.Find(Id);
             data.Deleted = true;
+            db.SaveChanges();
             return RedirectToAction("List");
         }
 

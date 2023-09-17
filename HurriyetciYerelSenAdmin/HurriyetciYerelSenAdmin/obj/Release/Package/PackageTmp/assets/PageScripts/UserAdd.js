@@ -130,7 +130,7 @@ function UserValidate() {
             cancelButtonText: 'Tamam',
         });
         return;
-    } else if (UserPhoneNumber.value.length < 13 || UserPhoneNumber.value.length > 14) {
+    } else if (UserPhoneNumber.value.length < 13 || UserPhoneNumber.value.length > 17) {
         window.Swal.fire({
             title: 'Lütfen Geçerli Bir Telefon Numarası Giriniz',
             icon: 'error',

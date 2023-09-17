@@ -10515,6 +10515,11 @@ select:focus {
     border-radius: 15px;
 }
 
+.footer-logo-new {
+    position: inherit;
+    z-index: 999;
+}
+
 @media (max-width: 1200px) {
     .footer-logo-new {
         display: none;
@@ -11469,4 +11474,9 @@ span.flatpickr-weekday {
 
 span.flatpickr-day.selected {
     font-weight: bold;
+}
+
+.branch-tittle {
+    text-align: center;
+    padding: 20px;
 }

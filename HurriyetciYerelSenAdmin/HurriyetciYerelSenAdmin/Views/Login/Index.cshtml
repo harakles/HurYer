@@ -43,7 +43,7 @@
             <!-- /Left Text -->
             <div class="d-none d-lg-flex col-lg-7 p-0">
                 <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
-                    
+
                 </div>
             </div>
             <!-- /Left Text -->
@@ -85,7 +85,7 @@
                                        name="Password"
                                        placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
                                        aria-describedby="password" />
-                                <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
+                                <span class="input-group-text cursor-pointer"><a onclick="PBC1();"><i class="ti ti-eye-off"></i></a></span>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -104,8 +104,7 @@
             <!-- /Login -->
         </div>
     </div>
-
-    @Scripts.Render("~/bundles/Script")
+    @Scripts.Render("~/Bundle/js")
     <script src="~/assets/js/pages-auth.js"></script>
 </body>
 </html>

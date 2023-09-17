@@ -184,7 +184,8 @@ namespace HurriyetciYerelSen.Controllers
             return View(detail);
         }
 
-        public ActionResult GetSubeler(string Search)
+
+        public ActionResult Subeler(string Search)
         {
             var db = new Entities();
             var data = new List<Branch>();
@@ -196,18 +197,20 @@ namespace HurriyetciYerelSen.Controllers
             {
                 data = db.Branchs.OrderBy(x => x.BranchNumber).Where(x => x.Deleted != true).ToList();
             }
-            return Json(data);
-        }
-
-        public ActionResult Subeler()
-        {
-            return View();
+            return View(data);
         }
 
         public ActionResult SubeDetay(int Id)
         {
             var db = new Entities();
             var data = db.Branchs.Find(Id);
+            return View(data);
+        }
+
+        public ActionResult IlceSube(int Id)
+        {
+            var db = new Entities();
+            var data = db.SubBranches.Find(Id);
             return View(data);
         }
 
@@ -291,6 +294,23 @@ namespace HurriyetciYerelSen.Controllers
             var db = new Entities();
             var data = new SelectList(db.ApplicationDistricts.Where(x => x.ProvinceId == Id && x.Deleted != true).ToList(), "Id", "District");
             return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult MediaAra(int TypeID , string Value)
+        {
+            var db = new Entities();
+            switch (TypeID)
+            {
+                case 1:
+                   var datah = db.SystemMedias.Where(x => x.Deleted != true && x.MediaTypeID == 1 && x.MediaTittle.Contains(Value)).ToList().ToPagedList(1, 6);
+                    return View("Haberler", datah);
+                case 2:
+                   var datad = db.SystemMedias.Where(x => x.Deleted != true && x.MediaTypeID == 1 && x.MediaTittle.Contains(Value)).ToList().ToPagedList(1, 6);
+                    return View("Haberler", datad);
+                default:
+                    var dataz = db.SystemMedias.Where(x => x.Deleted != true && x.MediaTypeID == 1 ).ToList().ToPagedList(1, 6);
+                    return View("Haberler",dataz);
+            }
         }
 
     }

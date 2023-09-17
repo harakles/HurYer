@@ -134,6 +134,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Content Include="assets\pageScripts\MediaSearch.js" />
     <Compile Include="Controllers\TRController.cs" />
     <Compile Include="EDMX\AboutU.cs">
       <DependentUpon>Model1.tt</DependentUpon>

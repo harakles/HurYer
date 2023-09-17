@@ -95,7 +95,7 @@ function MemberValidate() {
             cancelButtonText: 'Tamam',
         });
         return;
-    } else if (MemberPhoneNumber.value.length < 13 || MemberPhoneNumber.value.length > 14) {
+    } else if (MemberPhoneNumber.value.length < 13 || MemberPhoneNumber.value.length > 17) {
         window.Swal.fire({
             title: 'Lütfen Geçerli Bir Telefon Numarası Giriniz',
             icon: 'error',

@@ -28,10 +28,11 @@
                 <div class="sidebar-style1 style1instyle2">
                     <div class="single-sidebar-style1">
                         <ul class="page-links">
-                            <li><a href="/TR/Kurucular">Kurucular<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="/TR/Hakkimizda">Hakımızda<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="/TR/Ilkelerimiz">İlkelerimiz<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="/TR/MerakEdilenler">Merak Edilenler<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/Subeler">Şubeler<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="/TR/Kurucular">Kurucular<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="/TR/DisiplinKurulu">Disiplin Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li class="active"><a href="/TR/DenetlemeKurulu">Denetleme Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
                             <li><a href="/TR/YonetimKurulu">Yonetim Kurulu<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
@@ -50,8 +51,8 @@
                                 <h2>@x.MemberName @x.MemberSurname</h2>
                             </div>
                             <div class="row">
-                                <div class="col-xl-5">
-                                    <img src="@Sabit.Admin@x.MemberPhoto" alt="Awesome Image">
+                                <div class="col-xl-4">
+                                    <img style="height:300px;" src="@Sabit.Admin@x.MemberPhoto" alt="Awesome Image">
                                 </div>
                                 <div class="text col-xl-7">
                                     @Html.Raw(x.TextEditor)
