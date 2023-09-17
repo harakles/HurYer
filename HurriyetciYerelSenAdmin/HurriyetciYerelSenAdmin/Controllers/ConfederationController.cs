@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.Mvc;
 using DataTables.Mvc;
@@ -34,7 +35,10 @@ namespace HurriyetciYerelSenAdmin.Controllers
 
         public ActionResult Add()
         {
+            var db = new Entities();
             var data = new Confederation();
+            var inf = db.SystemInformations.FirstOrDefault();
+            data.Logo = inf.SystemLogo;
             return View(data);
         }
 

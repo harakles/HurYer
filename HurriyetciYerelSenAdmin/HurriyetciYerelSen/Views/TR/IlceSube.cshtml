@@ -1,7 +1,61 @@
-﻿
-@{
-    ViewBag.Title = "IlceSube";
-}
-
-<h2>IlceSube</h2>
-
+﻿@using HurriyetciYerelSen.EDMX 
+@model SubBranch
+<!--Start breadcrumb area-->
+<section class="breadcrumb-area" style="background-image: url();">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center clearfix">
+                    <div class="title wow slideInUp animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <h2>İlçe Şube</h2>
+                    </div>
+                    <div class="breadcrumb-menu wow slideInDown animated" data-wow-delay="0.3s" data-wow-duration="1500ms">
+                        <ul class="clearfix">
+                            <li><a href="/TR/Subeler">Şubeler</a></li>
+                            <li><i class="fa fa-angle-double-right" aria-hidden="true"></i></li>
+                            <li class="active">İlçe Şube</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="coaching-style2-area">
+    <div class="container">
+        <div class="card d-flex">
+            <div class="card-title"><h1 class="branch-tittle">@Model.SubBranchName</h1></div>
+            <div class="card-body flex-wrap">
+                <ul class="visa-detail-featured d-flex flex-wrap">
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-pin thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Adress</h3>
+                            <p>@Model.Adress</p>
+                        </div>
+                    </li>
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-phone thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>Telefon</h3>
+                            <p>@Model.PhoneNumber</p>
+                        </div>
+                    </li>
+                    <li class="clearfix col-xl-6 py-3">
+                        <div class="icon">
+                            <span class="flaticon-mail thm-clr"></span>
+                        </div>
+                        <div class="text">
+                            <h3>E-Posta</h3>
+                            <p>@Model.Email</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
